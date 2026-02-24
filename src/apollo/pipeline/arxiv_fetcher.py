@@ -11,7 +11,7 @@ from typing import Any
 
 import arxiv
 
-from config.settings import ARXIV_CATEGORY, MAX_FETCH_RESULTS
+from apollo.config.settings import ARXIV_CATEGORY, MAX_FETCH_RESULTS
 
 
 def fetch_papers(since_date: date, until_date: date) -> list[dict[str, Any]]:

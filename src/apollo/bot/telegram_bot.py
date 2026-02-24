@@ -20,7 +20,6 @@ import asyncio
 import logging
 import os
 import sqlite3
-import sys
 from datetime import date
 from pathlib import Path
 
@@ -30,11 +29,9 @@ from google.genai import types as genai_types
 from telegram import Update
 from telegram.ext import Application, ContextTypes, MessageHandler, filters
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(PROJECT_ROOT))
 load_dotenv()
 
-from config.settings import PIPELINE_DB
+from apollo.config.settings import PIPELINE_DB
 
 logger = logging.getLogger("apollo.bot")
 
@@ -53,6 +50,7 @@ APOLLO_PERSONA = (
     "Only respond with 'No relevant research found in my memory for this query.' "
     "if the question has absolutely no connection to any stored paper. "
     "Never introduce facts beyond what the context provides. "
+    "Do not use markdown formatting. Write in plain text only. "
     "Keep your response to 3 paragraphs maximum."
 )
 
@@ -206,7 +204,27 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         )
         return
 
-    await msg.reply_text(reply)
+    # Telegram message length limit is 4096 chars.
+    # We chunk at 4000 to be safe and try to split on newlines.
+    max_len = 4000
+    if len(reply) <= max_len:
+        await msg.reply_text(reply)
+    else:
+        while len(reply) > 0:
+            if len(reply) <= max_len:
+                await msg.reply_text(reply)
+                break
+            
+            # Find the last newline character within the allowed length
+            split_idx = reply.rfind("\n", 0, max_len)
+            if split_idx == -1:
+                split_idx = max_len
+                
+            chunk = reply[:split_idx]
+            await msg.reply_text(chunk)
+            
+            # Continue with the rest of the text, removing leading whitespace
+            reply = reply[split_idx:].lstrip()
 
 
 # ── Entry point ────────────────────────────────────────────────────────────────

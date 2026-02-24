@@ -22,25 +22,19 @@ import json
 import logging
 import os
 import sqlite3
-import sys
 import urllib.request
 from datetime import date, timedelta
-from pathlib import Path
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
-# Bootstrap paths before importing project modules
-PROJECT_ROOT = Path(__file__).resolve().parent
-sys.path.insert(0, str(PROJECT_ROOT))
-
-from config.settings import ANCHOR_DAYS, DATA_DIR, PIPELINE_DB
-from pipeline.arxiv_fetcher import fetch_papers
-from pipeline.digest_builder import build_and_publish
-from pipeline.filters import apply_filters
-from pipeline.memory_writer import store_papers
-from pipeline.scorer import score_papers
+from apollo.config.settings import ANCHOR_DAYS, DATA_DIR, PIPELINE_DB
+from apollo.pipeline.arxiv_fetcher import fetch_papers
+from apollo.pipeline.digest_builder import build_and_publish
+from apollo.pipeline.filters import apply_filters
+from apollo.pipeline.memory_writer import store_papers
+from apollo.pipeline.scorer import score_papers
 
 logging.basicConfig(
     level=logging.INFO,
