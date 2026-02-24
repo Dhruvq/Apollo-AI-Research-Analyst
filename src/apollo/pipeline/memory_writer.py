@@ -9,13 +9,32 @@ import json
 import logging
 import os
 import subprocess
+import sqlite3
+from pathlib import Path
 from typing import Any
 
-from config.settings import ZEROCLAW_MEMORY_LIMIT
+from apollo.config.settings import ZEROCLAW_MEMORY_LIMIT
 
 logger = logging.getLogger(__name__)
 
 _ZEROCLAW_BIN = "zeroclaw"
+_ZEROCLAW_BRAIN_DB = Path.home() / ".zeroclaw" / "workspace" / "memory" / "brain.db"
+
+
+def _entry_already_stored(search_pattern: str) -> bool:
+    """Check if a memory matching the SQLite LIKE pattern already exists in ZeroClaw."""
+    if not _ZEROCLAW_BRAIN_DB.exists():
+        return False
+    try:
+        conn = sqlite3.connect(str(_ZEROCLAW_BRAIN_DB))
+        row = conn.execute(
+            "SELECT 1 FROM memories WHERE content LIKE ?", (search_pattern,)
+        ).fetchone()
+        conn.close()
+        return row is not None
+    except Exception as e:
+        logger.warning(f"Could not check ZeroClaw brain.db for duplicates: {e}")
+        return False
 
 
 def _run_zeroclaw(message: str) -> bool:
@@ -99,21 +118,35 @@ def store_papers(papers: list[dict[str, Any]], cycle_id: str, digest_url: str) -
     print(f"[memory] Storing {total} entries in ZeroClaw memory...")
 
     for i, paper in enumerate(papers, 1):
+        # 1. Check for duplicate before storing
+        paper_id = paper["id"]
+        search_pattern = f'%\"id\": \"{paper_id}\"%'
+        if _entry_already_stored(search_pattern):
+            logger.info(f"Paper {paper_id} already exists in memory. Skipping.")
+            print(f"[memory] {i}/{len(papers)} skipped (already stored)")
+            continue
+
+        # 2. Store if not found
         message = _paper_memory_message(paper)
         success = _run_zeroclaw(message)
         if success:
             stored += 1
+            print(f"[memory] {i}/{len(papers)} stored")
         else:
-            logger.warning(f"Failed to store paper {paper['id']} in ZeroClaw")
-        print(f"[memory] {i}/{len(papers)} papers stored")
+            logger.warning(f"Failed to store paper {paper_id} in ZeroClaw")
 
     # Store digest summary
-    summary_msg = _digest_summary_message(cycle_id, papers, digest_url)
-    if _run_zeroclaw(summary_msg):
-        stored += 1
-        print("[memory] Digest summary stored")
+    summary_pattern = f'%\"type\": \"digest_summary\"%\"cycle_id\": \"{cycle_id}\"%'
+    if _entry_already_stored(summary_pattern):
+        logger.info(f"Digest summary for {cycle_id} already exists in memory. Skipping.")
+        print("[memory] Digest summary skipped (already stored)")
     else:
-        logger.warning("Failed to store digest summary in ZeroClaw")
+        summary_msg = _digest_summary_message(cycle_id, papers, digest_url)
+        if _run_zeroclaw(summary_msg):
+            stored += 1
+            print("[memory] Digest summary stored")
+        else:
+            logger.warning("Failed to store digest summary in ZeroClaw")
 
     print(f"[memory] Done — {stored}/{total} entries stored successfully")
     return stored

@@ -14,20 +14,22 @@ and runs a Telegram Q&A bot (@ApolloAIResearchBot).
 
 ## Key Files & Paths
 - **Main entry**: `run_biweekly.py` — orchestrates full pipeline
-- **Pipeline**: `pipeline/arxiv_fetcher.py`, `filters.py`, `scorer.py`, `memory_writer.py`, `digest_builder.py`
-- **Telegram bot**: `bot/telegram_bot.py` — standalone bot (python-telegram-bot + Gemini direct)
-- **Setup verifier**: `bot/telegram_config.py` — one-time env check + test message
-- **Config**: `config/settings.py` (all tuneable values), `config/authors.py` (author boost list)
+- **Package definition**: `pyproject.toml` — src layout; run `pip install -e .` in venv before use
+- **Pipeline**: `src/apollo/pipeline/arxiv_fetcher.py`, `filters.py`, `scorer.py`, `memory_writer.py`, `digest_builder.py`
+- **Telegram bot**: `src/apollo/bot/telegram_bot.py` — standalone bot (python-telegram-bot + Gemini direct)
+- **Setup verifier**: `src/apollo/bot/telegram_config.py` — one-time env check + test message
+- **Config**: `src/apollo/config/settings.py` (all tuneable values), `src/apollo/config/authors.py` (author boost list)
 - **ZeroClaw global config**: `~/.zeroclaw/config.toml` (NOT `zeroclaw/config.toml` in repo)
 - **ZeroClaw config template**: `zeroclaw/config.toml` — reference for replicating the project
 - **ZeroClaw memory DB**: `~/.zeroclaw/workspace/memory/brain.db` (read directly by bot)
 - **HTML template**: `templates/digest.html.jinja2` (dark GitHub-style theme)
 - **Pipeline state DB**: `data/pipeline.db` (gitignored SQLite — tracks cycles + bot rate limit)
+- **Tests**: `tests/` (renamed from `testsprite_tests/`)
 - **Digests**: `digests/YYYY-MM-DD.{json,md}` (committed), `docs/YYYY-MM-DD.html` (GitHub Pages)
 - **CI**: `.github/workflows/pages.yml` (auto-deploys `docs/` to Pages on push)
 
 ## Telegram Bot Architecture
-`bot/telegram_bot.py` is a **standalone Python bot** (NOT ZeroClaw's Telegram channel):
+`src/apollo/bot/telegram_bot.py` is a **standalone Python bot** (NOT ZeroClaw's Telegram channel):
 1. `python-telegram-bot` receives @ApolloAIResearchBot mentions in group (or DMs)
 2. Reads all stored papers directly from `~/.zeroclaw/workspace/memory/brain.db` via sqlite3
 3. Calls `gemini-2.5-flash` directly with Apollo persona + all paper context
@@ -66,7 +68,7 @@ Requires `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` in `.env`.
 
 ## Rate Limiting
 - **Scorer**: 2s sleep after every paper → ~30 RPM, within Gemma 3 27B free tier; 10s before retry
-- **Bot**: `DAILY_LIMIT` in `bot/telegram_bot.py` — global queries/day tracked in `bot_rate_limit` table
+- **Bot**: `DAILY_LIMIT` in `src/apollo/bot/telegram_bot.py` — global queries/day tracked in `bot_rate_limit` table
 
 ## ZeroClaw
 - **Global config**: `~/.zeroclaw/config.toml` (ZeroClaw ignores project-level configs)

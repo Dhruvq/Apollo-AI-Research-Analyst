@@ -17,7 +17,7 @@ from typing import Any
 from google import genai
 from google.genai import types as genai_types
 
-from config.settings import GEMINI_SCORER_MODEL, LLM_SCORING_PROMPT, TARGET_PAPERS
+from apollo.config.settings import GEMINI_SCORER_MODEL, LLM_SCORING_PROMPT, TARGET_PAPERS
 
 logger = logging.getLogger(__name__)
 

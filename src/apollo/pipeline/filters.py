@@ -11,8 +11,8 @@ from __future__ import annotations
 import re
 from typing import Any
 
-from config.authors import get_author_lookup
-from config.settings import KEYWORDS, SCORING_CANDIDATE_LIMIT
+from apollo.config.authors import get_author_lookup
+from apollo.config.settings import KEYWORDS, SCORING_CANDIDATE_LIMIT
 
 
 def _keyword_score(title: str, abstract: str) -> int:

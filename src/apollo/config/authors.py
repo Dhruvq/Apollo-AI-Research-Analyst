@@ -77,7 +77,7 @@ def get_author_lookup() -> dict[str, int]:
     Returns a dict mapping lowercase author name → boost weight.
     Used by filters.py for O(1) lookups.
     """
-    from config.settings import AUTHOR_BOOST_PER_MATCH
+    from apollo.config.settings import AUTHOR_BOOST_PER_MATCH
     return {
         name.lower(): (weight if weight is not None else AUTHOR_BOOST_PER_MATCH)
         for name, weight in HIGH_IMPACT_AUTHORS

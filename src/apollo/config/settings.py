@@ -5,7 +5,7 @@ Edit this file to tune keywords, model, and thresholds.
 
 # ── arXiv ─────────────────────────────────────────────────────────────────────
 ARXIV_CATEGORY = "cs.AI"
-MAX_FETCH_RESULTS = 500          # Hard cap per arXiv query call (pagination handled automatically)
+MAX_FETCH_RESULTS = 2000         # Hard cap per arXiv query call (pagination handled automatically)
 
 # ── Layer 1: keyword filter ───────────────────────────────────────────────────
 KEYWORDS = [
@@ -42,7 +42,7 @@ ANCHOR_DAYS = [1, 15]            # Day-of-month anchor dates for biweekly schedu
 import os
 from pathlib import Path
 
-ROOT_DIR = Path(__file__).resolve().parent.parent
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent.parent
 DATA_DIR = ROOT_DIR / "data"
 DIGESTS_DIR = ROOT_DIR / "digests"
 DOCS_DIR = ROOT_DIR / "docs"

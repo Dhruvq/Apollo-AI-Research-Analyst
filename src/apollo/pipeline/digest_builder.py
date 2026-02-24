@@ -18,7 +18,7 @@ from typing import Any
 
 from jinja2 import Environment, FileSystemLoader
 
-from config.settings import DIGESTS_DIR, DOCS_DIR, ROOT_DIR, TEMPLATES_DIR
+from apollo.config.settings import DIGESTS_DIR, DOCS_DIR, ROOT_DIR, TEMPLATES_DIR
 
 logger = logging.getLogger(__name__)
 
