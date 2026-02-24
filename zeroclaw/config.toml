@@ -1,0 +1,50 @@
+# ZeroClaw configuration template for Apollo
+#
+# This file documents the relevant settings applied to ~/.zeroclaw/config.toml
+# for this project. ZeroClaw has no per-project config path — the active config
+# is always ~/.zeroclaw/config.toml (written by `zeroclaw onboard`).
+#
+# To replicate this project, apply these settings to your ~/.zeroclaw/config.toml.
+#
+# ── Provider & Model ──────────────────────────────────────────────────────────
+#   default_provider = "gemini"          # native Google Gemini provider
+#   default_model    = "gemini-2.5-flash"
+#
+# ── Embeddings ────────────────────────────────────────────────────────────────
+#   embedding_provider   = "gemini"      # reads GOOGLE_API_KEY directly
+#   embedding_model      = "text-embedding-004"
+#   embedding_dimensions = 768
+#   vector_weight        = 0.7
+#   keyword_weight       = 0.3
+#
+# ── Memory auto-approve (required for non-interactive pipeline runs) ──────────
+#   auto_approve = [
+#     "file_read",
+#     "memory_recall",
+#     "memory_store",
+#     "memory_write",
+#     "memory_save",
+#   ]
+#
+# ── Web search (disable so retrieval uses only stored memory) ─────────────────
+#   [web_search]
+#   enabled = false
+#
+# ── Telegram channel (DISABLED — Apollo uses bot/telegram_bot.py instead) ─────
+#   [channels_config.telegram]
+#   bot_token = ""
+#
+# ── Only GOOGLE_API_KEY is required ───────────────────────────────────────────
+# The native "gemini" provider handles both LLM calls and embeddings with one key.
+# No OpenAI account or OPENAI_BASE_URL needed.
+#
+# ── Memory storage (pipeline runs) ───────────────────────────────────────────
+# Papers are stored via CLI subprocess (never by writing to SQLite directly):
+#   zeroclaw agent --message "Remember this research paper: {json}"
+#
+# ── Memory retrieval (Telegram bot) ──────────────────────────────────────────
+# The bot reads ZeroClaw's SQLite directly for reliable retrieval:
+#   ~/.zeroclaw/workspace/memory/brain.db → memories table → content column
+# ZeroClaw's LLM-based agent retrieval (zeroclaw agent --message "Recall...")
+# proved unreliable: non-deterministic results, wrong tool selection, partial
+# returns. Direct SQLite read is used instead.
