@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if is_index %}Apollo — AI Research Digest{% else %}Apollo Digest {{ cycle_id }}{% endif %}</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --accent-dim: #1f6feb;
+      --green: #3fb950;
+      --score-high: #3fb950;
+      --score-mid: #d29922;
+      --score-low: #f85149;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 860px; margin: 0 auto; }
+
+    /* Header */
+    header { border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+    header .logo { font-size: 1.1rem; color: var(--muted); margin-bottom: 0.5rem; }
+    header h1 { font-size: 2rem; font-weight: 700; color: var(--text); }
+    header .meta { font-size: 0.85rem; color: var(--muted); margin-top: 0.5rem; }
+
+    /* Archive nav */
+    .archive { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 2rem; }
+    .archive h2 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.75rem; }
+    .archive ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .archive li a {
+      display: inline-block;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .archive li a:hover { color: var(--accent); border-color: var(--accent-dim); text-decoration: none; }
+    .archive li a.current { border-color: var(--accent); color: var(--accent); }
+
+    /* Paper card */
+    .paper {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .paper-header { display: flex; align-items: flex-start; gap: 1rem; }
+    .rank {
+      flex-shrink: 0;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #fff;
+    }
+    .paper-title a { font-size: 1.05rem; font-weight: 600; color: var(--text); }
+    .paper-title a:hover { color: var(--accent); }
+    .paper-meta { margin-top: 0.35rem; font-size: 0.8rem; color: var(--muted); }
+
+    .scores { display: flex; gap: 0.6rem; margin: 0.75rem 0; flex-wrap: wrap; }
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid currentColor;
+      white-space: nowrap;
+    }
+    .badge-final { color: var(--accent); }
+    .badge-llm-high { color: var(--score-high); }
+    .badge-llm-mid  { color: var(--score-mid); }
+    .badge-llm-low  { color: var(--score-low); }
+
+    .llm-reason {
+      font-size: 0.875rem;
+      color: var(--accent);
+      font-style: italic;
+      margin-bottom: 0.6rem;
+      border-left: 3px solid var(--accent-dim);
+      padding-left: 0.75rem;
+    }
+    .abstract {
+      font-size: 0.875rem;
+      color: var(--muted);
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .arxiv-link { display: inline-block; margin-top: 0.75rem; font-size: 0.8rem; }
+
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--muted); text-align: center; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="logo">Apollo — Autonomous AI Research Analyst</div>
+    <h1>
+      {% if is_index %}Latest Digest{% else %}Digest{% endif %}
+      &mdash; {{ since_date }} to {{ until_date }}
+    </h1>
+    <div class="meta">
+      {{ papers | length }} papers &bull; {{ since_date }} to {{ until_date }} &bull; Generated {{ generated }} &bull;
+      cs.AI &bull; <a href="https://github.com/Dhruvq/Apollo-AI-Research-Analyst">GitHub</a>
+    </div>
+  </header>
+
+  {% if all_issues is defined and all_issues | length > 1 %}
+  <div class="archive">
+    <h2>Past Issues</h2>
+    <ul>
+      {% for issue in all_issues %}
+      <li>
+        <a href="{{ issue }}.html" {% if issue == cycle_id %}class="current"{% endif %}>
+          {{ issue }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% for paper in papers %}
+  {% set llm = paper.llm_score %}
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">{{ loop.index }}</div>
+      <div class="paper-title">
+        <a href="{{ paper.url }}" target="_blank" rel="noopener">{{ paper.title }}</a>
+        <div class="paper-meta">
+          {{ paper.authors[:3] | join(", ") }}{% if paper.authors | length > 3 %} et al.{% endif %}
+          &bull; {{ paper.submitted }}
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: {{ paper.final_score }}</span>
+      <span class="badge {% if llm >= 8 %}badge-llm-high{% elif llm >= 6 %}badge-llm-mid{% else %}badge-llm-low{% endif %}">
+        Impact: {{ llm }}/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: {{ paper.keyword_score }}</span>
+      {% if paper.author_boost > 0 %}
+      <span class="badge" style="color: var(--green)">Author boost: +{{ paper.author_boost }}</span>
+      {% endif %}
+    </div>
+
+    {% if paper.llm_reason %}
+    <div class="llm-reason">{{ paper.llm_reason }}</div>
+    {% endif %}
+
+    <div class="abstract">{{ paper.abstract }}</div>
+
+    <a class="arxiv-link" href="{{ paper.url }}" target="_blank" rel="noopener">
+      arXiv: {{ paper.url }}
+    </a>
+  </div>
+  {% endfor %}
+
+  <footer>
+    Apollo &mdash; Biweekly CS/AI Research Digest &bull;
+    Powered by <a href="https://github.com/zeroclaw-labs/zeroclaw">ZeroClaw</a> &amp;
+    <a href="https://gemini.google.com/">Gemini</a>
+  </footer>
+
+</div>
+</body>
+</html>

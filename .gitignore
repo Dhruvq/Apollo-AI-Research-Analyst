@@ -37,6 +37,8 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
+.DS_Store
+testsprite_tests/
 htmlcov/
 .tox/
 .nox/
@@ -60,6 +62,9 @@ cover/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+
+# Apollo pipeline state DB (local only — not committed)
+data/pipeline.db
 
 # Flask stuff:
 instance/
