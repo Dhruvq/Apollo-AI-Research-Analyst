@@ -1,6 +1,11 @@
 # Apollo: Autonomous AI Research Analyst
 
-[![Deploy docs](https://github.com/dhruvq/Apollo-AI-Research-Analyst/actions/workflows/pages.yml/badge.svg)](https://github.com/dhruvq/Apollo-AI-Research-Analyst/actions/workflows/pages.yml)
+![Python 3.10+](https://img.shields.io/badge/Python-3.10+-blue?style=flat&logo=python)
+![Gemini 2.5 Flash](https://img.shields.io/badge/Gemini%202.5%20Flash-API-orange?style=flat&logo=google-gemini)
+![Gemma 3 27B](https://img.shields.io/badge/Gemma%203%2027B-Scorer-blueviolet?style=flat)
+![Telegram API](https://img.shields.io/badge/Telegram%20API-Polling-blue?style=flat&logo=telegram)
+![arXiv cs.AI](https://img.shields.io/badge/arXiv-cs.AI-red?style=flat)
+![ZeroClaw Hybrid DB](https://img.shields.io/badge/Memory-ZeroClaw%20Hybrid%20DB-black?style=flat)
 
 A secure, local-first autonomous research assistant that ingests cutting-edge papers in the field of AI, stores structured memory, performs hybrid retrieval, and produces biweekly research intelligence reports.
 
@@ -79,7 +84,6 @@ cp zeroclaw/config.toml ~/.zeroclaw/config.toml
 
 **CRITICAL**: Ensure ZeroClaw's `web_search` is set to `enabled = false` and `telegram` is disabled (`bot_token = ""`), as Apollo handles the Telegram bot standalone.
 
----
 
 ## 💻 Usage
 
@@ -105,7 +109,6 @@ The bot will now respond to `@ApolloAIResearchBot` mentions in groups or direct 
 
 *Note: The chatbot reads directly from `~/.zeroclaw/workspace/memory/brain.db` because ZeroClaw's LLM retrieval is non-deterministic. It then passes the full context to Gemini 2.5 flash, ensuring accurate context window alignment!*
 
----
 
 ## Repository Structure
 
