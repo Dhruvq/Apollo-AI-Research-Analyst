@@ -104,6 +104,10 @@ The initial design used ZeroClaw's built-in Telegram channel to handle the bot e
 
 3. **Gemini 2.5 Flash for response generation** — all 25 paper records and the user's question are passed to `gemini-2.5-flash` via the `google-genai` SDK, with the Apollo persona as a system instruction. Gemini handles relevance filtering: the persona instructs it to cite only papers relevant to the question and to respond with "No relevant research found" if nothing matches. Calling Gemini directly means no agent scaffolding interferes — the model sees exactly the context and instructions intended.
 
+**Robust Response Handling**: The bot implements two crucial mechanisms to prevent responses from being cut off:
+- **Maximum Token Limit**: Gemini's `max_output_tokens` is configured to 8192 (the API maximum) to ensure even the most detailed summaries of 25 papers aren't truncated by generation limits.
+- **Telegram Chunking**: Telegram enforces a hard 4096-character limit per message. The bot automatically splits long responses into smaller chunks (`max_len = 4000`), intelligently seeking the last newline before the limit to avoid breaking mid-word, and sends them as sequential messages.
+
 **Rate limiting**: a `bot_rate_limit` table in `data/pipeline.db` tracks a global daily query count. The limit is set in `DAILY_LIMIT` at the top of `telegram_bot.py`.
 
 **Announcements**: `run_biweekly.py` posts digest announcements via a direct `urllib.request` POST to the Telegram Bot API (`sendMessage`). The message contains the top paper's LLM reason as a headline, the date window, and the GitHub Pages URL. Requires `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` in the environment.
