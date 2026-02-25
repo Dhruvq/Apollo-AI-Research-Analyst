@@ -119,10 +119,10 @@
     <div class="logo">Apollo — Autonomous AI Research Analyst</div>
     <h1>
       Latest Digest
-      &mdash; 2026-02-02 to 2026-02-22
+      &mdash; 2026-02-02 to 2026-02-24
     </h1>
     <div class="meta">
-      25 papers &bull; 2026-02-02 to 2026-02-22 &bull; Generated 2026-02-23 &bull;
+      25 papers &bull; 2026-02-02 to 2026-02-24 &bull; Generated 2026-02-24 &bull;
       cs.AI &bull; <a href="https://github.com/Dhruvq/Apollo-AI-Research-Analyst">GitHub</a>
     </div>
   </header>
@@ -134,6 +134,142 @@
   <div class="paper">
     <div class="paper-header">
       <div class="rank">1</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.11298v2" target="_blank" rel="noopener">Voxtral Realtime</a>
+        <div class="paper-meta">
+          Alexander H. Liu, Andy Ehrenberg, Andy Lo et al.
+          &bull; 2026-02-11
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 16</span>
+      <span class="badge badge-llm-high">
+        Impact: 9/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 1</span>
+      
+      <span class="badge" style="color: var(--green)">Author boost: +6</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">This paper presents a novel, end-to-end streaming ASR model achieving competitive performance with offline systems at very low latency, with a large multilingual dataset and open-source release, indicating high potential impact.</div>
+    
+
+    <div class="abstract">We introduce Voxtral Realtime, a natively streaming automatic speech recognition model that matches offline transcription quality at sub-second latency. Unlike approaches that adapt offline models through chunking or sliding windows, Voxtral Realtime is trained end-to-end for streaming, with explicit alignment between audio and text streams. Our architecture builds on the Delayed Streams Modeling framework, introducing a new causal audio encoder and Ada RMS-Norm for improved delay conditioning. We scale pretraining to a large-scale dataset spanning 13 languages. At a delay of 480ms, Voxtral Realtime achieves performance on par with Whisper, the most widely deployed offline transcription system. We release the model weights under the Apache 2.0 license.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.11298v2" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.11298v2
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">2</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.13575v1" target="_blank" rel="noopener">Elo-Evolve: A Co-evolutionary Framework for Language Model Alignment</a>
+        <div class="paper-meta">
+          Jing Zhao, Ting Zhen, Junwei bao et al.
+          &bull; 2026-02-14
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 14</span>
+      <span class="badge badge-llm-high">
+        Impact: 8/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
+      
+      <span class="badge" style="color: var(--green)">Author boost: +3</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">The paper presents a novel co-evolutionary approach to LLM alignment with strong theoretical grounding and empirical validation showing significant improvements over existing methods, suggesting high potential impact.</div>
+    
+
+    <div class="abstract">Current alignment methods for Large Language Models (LLMs) rely on compressing vast amounts of human preference data into static, absolute reward functions, leading to data scarcity, noise sensitivity, and training instability. We introduce Elo-Evolve, a co-evolutionary framework that redefines alignment as dynamic multi-agent competition within an adaptive opponent pool. Our approach makes two key innovations: (1) eliminating Bradley-Terry model dependencies by learning directly from binary win/loss outcomes in pairwise competitions, and (2) implementing Elo-orchestrated opponent selection that provides automatic curriculum learning through temperature-controlled sampling. We ground our approach in PAC learning theory, demonstrating that pairwise comparison achieves superior sample complexity and empirically validate a 4.5x noise reduction compared to absolute scoring approaches. Experimentally, we train a Qwen2.5-7B model using our framework with opponents including Qwen2.5-14B, Qwen2.5-32B, and Qwen3-8B models. Results demonstrate a clear performance hierarchy: point-based methods &lt; static pairwise training &lt; Elo-Evolve across Alpaca Eval 2.0 and MT-Bench, validating the progressive benefits of pairwise comparison and dynamic opponent selection for LLM alignment.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.13575v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.13575v1
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">3</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.18916v1" target="_blank" rel="noopener">Adaptive Collaboration of Arena-Based Argumentative LLMs for Explainable and Contestable Legal Reasoning</a>
+        <div class="paper-meta">
+          Hoang-Loc Cao, Phuc Ho, Truong Thanh Hung Nguyen et al.
+          &bull; 2026-02-21
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 13</span>
+      <span class="badge badge-llm-high">
+        Impact: 8/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 5</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">The paper presents a novel neuro-symbolic framework addressing a critical gap in LLM legal reasoning – explainability and contestability – with strong empirical results and a clear path for human interaction, suggesting significant research impact.</div>
+    
+
+    <div class="abstract">Legal reasoning requires not only high accuracy but also the ability to justify decisions through verifiable and contestable arguments. However, existing Large Language Model (LLM) approaches, such as Chain-of-Thought (CoT) and Retrieval-Augmented Generation (RAG), often produce unstructured explanations that lack a formal mechanism for verification or user intervention. To address this limitation, we propose Adaptive Collaboration of Argumentative LLMs (ACAL), a neuro-symbolic framework that integrates adaptive multi-agent collaboration with an Arena-based Quantitative Bipolar Argumentation Framework (A-QBAF). ACAL dynamically deploys expert agent teams to construct arguments, employs a clash resolution mechanism to adjudicate conflicting claims, and utilizes uncertainty-aware escalation for borderline cases. Crucially, our framework supports a Human-in-the-Loop (HITL) contestability workflow, enabling users to directly audit and modify the underlying reasoning graph to influence the final judgment. Empirical evaluations on the LegalBench benchmark demonstrate that ACAL outperforms strong baselines across Gemini-2.5-Flash-Lite and Gemini-2.5-Flash architectures, effectively balancing efficient predictive performance with structured transparency and contestability. Our implementation is available at: https://github.com/loc110504/ACAL.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.18916v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.18916v1
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">4</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.17999v1" target="_blank" rel="noopener">Aurora: Neuro-Symbolic AI Driven Advising Agent</a>
+        <div class="paper-meta">
+          Lorena Amanda Quincoso Lugones, Christopher Kverne, Nityam Sharadkumar Bhimani et al.
+          &bull; 2026-02-20
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 13</span>
+      <span class="badge badge-llm-high">
+        Impact: 8/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 5</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">The paper addresses a significant problem with a novel neuro-symbolic approach, demonstrates strong performance improvements over a baseline, and has potential for broad impact in higher education by scaling personalized advising.</div>
+    
+
+    <div class="abstract">Academic advising in higher education is under severe strain, with advisor-to-student ratios commonly exceeding 300:1. These structural bottlenecks limit timely access to guidance, increase the risk of delayed graduation, and contribute to inequities in student support. We introduce Aurora, a modular neuro-symbolic advising agent that unifies retrieval-augmented generation (RAG), symbolic reasoning, and normalized curricular databases to deliver policy-compliant, verifiable recommendations at scale. Aurora integrates three components: (i) a Boyce-Codd Normal Form (BCNF) catalog schema for consistent program rules, (ii) a Prolog engine for prerequisite and credit enforcement, and (iii) an instruction-tuned large language model for natural-language explanations of its recommendations. To assess performance, we design a structured evaluation suite spanning common and edge-case advising scenarios, including short-term scheduling, long-term roadmapping, skill-aligned pathways, and out-of-scope requests. Across this diverse set, Aurora improves semantic alignment with expert-crafted answers from 0.68 (Raw LLM baseline) to 0.93 (+36%), achieves perfect precision and recall in nearly half of in-scope cases, and consistently produces correct fallbacks for unanswerable prompts. On commodity hardware, Aurora delivers sub-second mean latency (0.71s across 20 queries), approximately 83X faster than a Raw LLM baseline (59.2s). By combining symbolic rigor with neural fluency, Aurora advances a paradigm for accurate, explainable, and scalable AI-driven advising.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.17999v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.17999v1
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">5</div>
       <div class="paper-title">
         <a href="https://arxiv.org/abs/2602.15513v1" target="_blank" rel="noopener">Improving MLLMs in Embodied Exploration and Question Answering with Human-Inspired Memory Modeling</a>
         <div class="paper-meta">
@@ -166,7 +302,7 @@
   
   <div class="paper">
     <div class="paper-header">
-      <div class="rank">2</div>
+      <div class="rank">6</div>
       <div class="paper-title">
         <a href="https://arxiv.org/abs/2602.15156v1" target="_blank" rel="noopener">Panini: Continual Learning in Token Space via Structured Memory</a>
         <div class="paper-meta">
@@ -186,7 +322,7 @@
     </div>
 
     
-    <div class="llm-reason">This paper addresses a significant challenge in LLM deployment (continual learning and RAG efficiency) with a novel approach (GSW) that shows promise for improving reasoning and reducing computational cost, potentially impacting how LLMs interact with evolving information.</div>
+    <div class="llm-reason">The paper addresses a significant challenge in LLM deployment (continual learning and RAG efficiency) with a novel approach using structured semantic memory, demonstrating strong potential for improving reasoning and reducing computational cost.</div>
     
 
     <div class="abstract">Language models are increasingly used to reason over content they were not trained on, such as new documents, evolving knowledge, and user-specific data. A common approach is retrieval-augmented generation (RAG), which stores verbatim documents externally (as chunks) and retrieves only a relevant subset at inference time for an LLM to reason over. However, this results in inefficient usage of test-time compute (LLM repeatedly reasons over the same documents); moreover, chunk retrieval can inject irrelevant context that increases unsupported generation. We propose a human-like non-parametric continual learning framework, where the base model remains fixed, and learning occurs by integrating each new experience into an external semantic memory state that accumulates and consolidates itself continually. We present Panini, which realizes this by representing documents as Generative Semantic Workspaces (GSW) -- an entity- and event-aware network of question-answer (QA) pairs, sufficient for an LLM to reconstruct the experienced situations and mine latent knowledge via reasoning-grounded inference chains on the network. Given a query, Panini only traverses the continually-updated GSW (not the verbatim documents or chunks), and retrieves the most likely inference chains. Across six QA benchmarks, Panini achieves the highest average performance, 5%-7% higher than other competitive baselines, while using 2-30x fewer answer-context tokens, supports fully open-source pipelines, and reduces unsupported answers on curated unanswerable queries. The results show that efficient and accurate structuring of experiences at write time -- as achieved by the GSW framework -- yields both efficiency and reliability gains at read time. Code is available at https://github.com/roychowdhuryresearch/gsw-memory.</div>
@@ -199,7 +335,374 @@
   
   <div class="paper">
     <div class="paper-header">
-      <div class="rank">3</div>
+      <div class="rank">7</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.13639v1" target="_blank" rel="noopener">Guided Collaboration in Heterogeneous LLM-Based Multi-Agent Systems via Entropy-Based Understanding Assessment and Experience Retrieval</a>
+        <div class="paper-meta">
+          Linlin Wang, Tianqing Zhu, Laiqiao Qin et al.
+          &bull; 2026-02-14
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 13</span>
+      <span class="badge badge-llm-high">
+        Impact: 8/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 5</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">The paper addresses a critical challenge in heterogeneous multi-agent systems (cognitive mismatch) with a novel entropy-based guidance framework, supported by counterintuitive experimental findings and offering potentially broad implications for improving collaborative AI systems.</div>
+    
+
+    <div class="abstract">With recent breakthroughs in large language models (LLMs) for reasoning, planning, and complex task generation, artificial intelligence systems are transitioning from isolated single-agent architectures to multi-agent systems with collaborative intelligence. However, in heterogeneous multi-agent systems (HMAS), capability differences among agents give rise to consistent cognitive problems, where strong and weak models fail to contribute effectively. We define the collaboration as a strong-weak system. Through comprehensive experiments, we disclose a counterintuitive phenomenon in the strong-weak system: a strong-weak collaboration may under-perform weak-weak combinations, revealing that cognitive mismatching are key bottlenecks limiting heterogeneous cooperation. To overcome these challenges, we propose an Entropy-Based Adaptive Guidance Framework that dynamically aligns the guidance with the cognitive state of each agent. The framework quantifies the understanding of weak agents through multi-dimensional entropy metrics - covering expression, uncertainty, structure, coherence, and relevance - and adaptively adjusts the intensity of the guidance at light, moderate and intensive levels. Furthermore, a Retrieval-Augmented Generation (RAG) mechanism is incorporated to retain successful collaboration experiences, enabling both immediate adaptation and long-term learning. Extensive experiments on three benchmark datasets, GSM8K, MBPP, and CVRP demonstrate that our approach consistently enhances the effectiveness and stability of heterogeneous collaboration. The results highlight that adaptive guidance not only mitigates cognitive imbalance but also establishes a scalable pathway toward more robust, cooperative multi-agent intelligence.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.13639v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.13639v1
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">8</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.13367v1" target="_blank" rel="noopener">Nanbeige4.1-3B: A Small General Model that Reasons, Aligns, and Acts</a>
+        <div class="paper-meta">
+          Chen Yang, Guangyue Peng, Jiaying Zhu et al.
+          &bull; 2026-02-13
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 13</span>
+      <span class="badge badge-llm-high">
+        Impact: 8/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 2</span>
+      
+      <span class="badge" style="color: var(--green)">Author boost: +3</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">The paper presents a novel, high-performing small language model with impressive capabilities across multiple domains, potentially impacting research on efficient and versatile AI systems, though broader adoption will depend on community validation.</div>
+    
+
+    <div class="abstract">We present Nanbeige4.1-3B, a unified generalist language model that simultaneously achieves strong agentic behavior, code generation, and general reasoning with only 3B parameters. To the best of our knowledge, it is the first open-source small language model (SLM) to achieve such versatility in a single model. To improve reasoning and preference alignment, we combine point-wise and pair-wise reward modeling, ensuring high-quality, human-aligned responses. For code generation, we design complexity-aware rewards in Reinforcement Learning, optimizing both correctness and efficiency. In deep search, we perform complex data synthesis and incorporate turn-level supervision during training. This enables stable long-horizon tool interactions, allowing Nanbeige4.1-3B to reliably execute up to 600 tool-call turns for complex problem-solving. Extensive experimental results show that Nanbeige4.1-3B significantly outperforms prior models of similar scale, such as Nanbeige4-3B-2511 and Qwen3-4B, even achieving superior performance compared to much larger models, such as Qwen3-30B-A3B. Our results demonstrate that small models can achieve both broad competence and strong specialization simultaneously, redefining the potential of 3B parameter models.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.13367v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.13367v1
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">9</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.12422v1" target="_blank" rel="noopener">CacheMind: From Miss Rates to Why -- Natural-Language, Trace-Grounded Reasoning for Cache Replacement</a>
+        <div class="paper-meta">
+          Kaushal Mhapsekar, Azam Ghanbari, Bita Aslrousta et al.
+          &bull; 2026-02-12
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 13</span>
+      <span class="badge badge-llm-high">
+        Impact: 8/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 5</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">This paper presents a novel application of LLMs to a traditionally hardware-focused problem (cache replacement), offering a potentially impactful shift towards more semantic and explainable cache analysis, supported by a new benchmark suite and strong results.</div>
+    
+
+    <div class="abstract">Cache replacement remains a challenging problem in CPU microarchitecture, often addressed using hand-crafted heuristics, limiting cache performance. Cache data analysis requires parsing millions of trace entries with manual filtering, making the process slow and non-interactive. To address this, we introduce CacheMind, a conversational tool that uses Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs) to enable semantic reasoning over cache traces. Architects can now ask natural language questions like, &#34;Why is the memory access associated with PC X causing more evictions?&#34;, and receive trace-grounded, human-readable answers linked to program semantics for the first time. To evaluate CacheMind, we present CacheMindBench, the first verified benchmark suite for LLM-based reasoning for the cache replacement problem. Using the SIEVE retriever, CacheMind achieves 66.67% on 75 unseen trace-grounded questions and 84.80% on 25 unseen policy-specific reasoning tasks; with RANGER, it achieves 89.33% and 64.80% on the same evaluations. Additionally, with RANGER, CacheMind achieves 100% accuracy on 4 out of 6 categories in the trace-grounded tier of CacheMindBench. Compared to LlamaIndex (10% retrieval success), SIEVE achieves 60% and RANGER achieves 90%, demonstrating that existing Retrieval-Augmented Generation (RAGs) are insufficient for precise, trace-grounded microarchitectural reasoning. We provided four concrete actionable insights derived using CacheMind, wherein bypassing use case improved cache hit rate by 7.66% and speedup by 2.04%, software fix use case gives speedup of 76%, and Mockingjay replacement policy use case gives speedup of 0.7%; showing the utility of CacheMind on non-trivial queries that require a natural-language interface.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.12422v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.12422v1
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">10</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.15895v1" target="_blank" rel="noopener">Understand Then Memory: A Cognitive Gist-Driven RAG Framework with Global Semantic Diffusion</a>
+        <div class="paper-meta">
+          Pengcheng Zhou, Haochen Li, Zhiqiang Nie et al.
+          &bull; 2026-02-11
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 13</span>
+      <span class="badge badge-llm-high">
+        Impact: 8/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 5</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">This paper presents a novel RAG framework (CogitoRAG) inspired by human cognition with a focus on semantic integrity and complex query handling, demonstrating strong potential for improving retrieval accuracy and reducing hallucinations, and the multi-faceted approach suggests broader implications for knowledge representation and retrieval.</div>
+    
+
+    <div class="abstract">Retrieval-Augmented Generation (RAG) effectively mitigates hallucinations in LLMs by incorporating external knowledge. However, the inherent discrete representation of text in existing frameworks often results in a loss of semantic integrity, leading to retrieval deviations. Inspired by the human episodic memory mechanism, we propose CogitoRAG, a RAG framework that simulates human cognitive memory processes. The core of this framework lies in the extraction and evolution of the Semantic Gist. During the offline indexing stage, CogitoRAG first deduces unstructured corpora into gist memory corpora, which are then transformed into a multi-dimensional knowledge graph integrating entities, relational facts, and memory nodes. In the online retrieval stage, the framework handles complex queries via Query Decomposition Module that breaks them into comprehensive sub-queries, mimicking the cognitive decomposition humans employ for complex information. Subsequently, Entity Diffusion Module performs associative retrieval across the graph, guided by structural relevance and an entity-frequency reward mechanism. Furthermore, we propose the CogniRank algorithm, which precisely reranks candidate passages by fusing diffusion-derived scores with semantic similarity. The final evidence is delivered to the generator in a passage-memory pairing format, providing high-density information support. Experimental results across five mainstream QA benchmarks and multi-task generation on GraphBench demonstrate that CogitoRAG significantly outperforms state-of-the-art RAG methods, showcasing superior capabilities in complex knowledge integration and reasoning.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.15895v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.15895v1
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">11</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.08369v1" target="_blank" rel="noopener">MemAdapter: Fast Alignment across Agent Memory Paradigms via Generative Subgraph Retrieval</a>
+        <div class="paper-meta">
+          Xin Zhang, Kailai Yang, Chenyue Li et al.
+          &bull; 2026-02-09
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 13</span>
+      <span class="badge badge-llm-high">
+        Impact: 8/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 5</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">This paper addresses a significant challenge in LLM agents – the lack of interoperability between different memory paradigms – with a novel and well-designed framework (MemAdapter) demonstrating strong empirical results and offering broader implications for building more flexible and powerful agents.</div>
+    
+
+    <div class="abstract">Memory mechanism is a core component of LLM-based agents, enabling reasoning and knowledge discovery over long-horizon contexts. Existing agent memory systems are typically designed within isolated paradigms (e.g., explicit, parametric, or latent memory) with tightly coupled retrieval methods that hinder cross-paradigm generalization and fusion. In this work, we take a first step toward unifying heterogeneous memory paradigms within a single memory system. We propose MemAdapter, a memory retrieval framework that enables fast alignment across agent memory paradigms. MemAdapter adopts a two-stage training strategy: (1) training a generative subgraph retriever from the unified memory space, and (2) adapting the retriever to unseen memory paradigms by training a lightweight alignment module through contrastive learning. This design improves the flexibility for memory retrieval and substantially reduces alignment cost across paradigms. Comprehensive experiments on three public evaluation benchmarks demonstrate that the generative subgraph retriever consistently outperforms five strong agent memory systems across three memory paradigms and agent model scales. Notably, MemAdapter completes cross-paradigm alignment within 13 minutes on a single GPU, achieving superior performance over original memory retrievers with less than 5% of training compute. Furthermore, MemAdapter enables effective zero-shot fusion across memory paradigms, highlighting its potential as a plug-and-play solution for agent memory systems.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.08369v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.08369v1
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">12</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.12108v1" target="_blank" rel="noopener">The Pensieve Paradigm: Stateful Language Models Mastering Their Own Context</a>
+        <div class="paper-meta">
+          Xiaoyuan Liu, Tian Liang, Dongyang Ma et al.
+          &bull; 2026-02-12
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 13</span>
+      <span class="badge badge-llm-high">
+        Impact: 9/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 4</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">This paper presents a genuinely novel approach to overcoming context window limitations in LLMs by enabling models to actively manage their own state and memory, with strong empirical results across multiple challenging tasks suggesting significant potential impact.</div>
+    
+
+    <div class="abstract">In the world of Harry Potter, when Dumbledore&#39;s mind is overburdened, he extracts memories into a Pensieve to be revisited later. In the world of AI, while we possess the Pensieve-mature databases and retrieval systems, our models inexplicably lack the &#34;wand&#34; to operate it. They remain like a Dumbledore without agency, passively accepting a manually engineered context as their entire memory. This work finally places the wand in the model&#39;s hand. We introduce StateLM, a new class of foundation models endowed with an internal reasoning loop to manage their own state. We equip our model with a suite of memory tools, such as context pruning, document indexing, and note-taking, and train it to actively manage these tools. By learning to dynamically engineering its own context, our model breaks free from the architectural prison of a fixed window. Experiments across various model sizes demonstrate StateLM&#39;s effectiveness across diverse scenarios. On long-document QA tasks, StateLMs consistently outperform standard LLMs across all model scales; on the chat memory task, they achieve absolute accuracy improvements of 10% to 20% over standard LLMs. On the deep research task BrowseComp-Plus, the performance gap becomes even more pronounced: StateLM achieves up to 52% accuracy, whereas standard LLM counterparts struggle around 5%. Ultimately, our approach shifts LLMs from passive predictors to state-aware agents where reasoning becomes a stateful and manageable process.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.12108v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.12108v1
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">13</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.11510v1" target="_blank" rel="noopener">AgentLeak: A Full-Stack Benchmark for Privacy Leakage in Multi-Agent LLM Systems</a>
+        <div class="paper-meta">
+          Faouzi El Yagoubi, Ranwa Al Mallah, Godwin Badu-Marfo
+          &bull; 2026-02-12
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 13</span>
+      <span class="badge badge-llm-high">
+        Impact: 9/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 4</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">This paper addresses a critical and novel privacy vulnerability in emerging multi-agent LLM systems, employs a rigorous full-stack benchmark with a comprehensive taxonomy, and has broad implications for the safe deployment of these systems, making it highly impactful.</div>
+    
+
+    <div class="abstract">Multi-agent Large Language Model (LLM) systems create privacy risks that current benchmarks cannot measure. When agents coordinate on tasks, sensitive data passes through inter-agent messages, shared memory, and tool arguments; pathways that output-only audits never inspect. We introduce AgentLeak, to the best of our knowledge the first full-stack benchmark for privacy leakage covering internal channels, spanning 1,000 scenarios across healthcare, finance, legal, and corporate domains, paired with a 32-class attack taxonomy and three-tier detection pipeline. Testing GPT-4o, GPT-4o-mini, Claude 3.5 Sonnet, Mistral Large, and Llama 3.3 70B across 4,979 traces reveals that multi-agent configurations reduce per-channel output leakage (C1: 27.2% vs 43.2% in single-agent) but introduce unmonitored internal channels that raise total system exposure to 68.9% (OR-aggregated across C1, C2, C5). Internal channels account for most of this gap: inter-agent messages (C2) leak at 68.8%, compared to 27.2% on C1 (output channel). This means that output-only audits miss 41.7% of violations. Claude 3.5 Sonnet, which emphasizes safety alignment in its design, achieves the lowest leakage rates on both external (3.3%) and internal (28.1%) channels, suggesting that model-level safety training may transfer to internal channel protection. Across all five models and four domains, the pattern C2 &gt; C1 holds consistently, confirming that inter-agent communication is the primary vulnerability. These findings underscore the need for coordination frameworks that incorporate internal-channel privacy protections and enforce privacy controls on inter-agent communication.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.11510v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.11510v1
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">14</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.10367v1" target="_blank" rel="noopener">LiveMedBench: A Contamination-Free Medical Benchmark for LLMs with Automated Rubric Evaluation</a>
+        <div class="paper-meta">
+          Zhiling Yan, Dingjie Song, Zhe Fang et al.
+          &bull; 2026-02-10
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 13</span>
+      <span class="badge badge-llm-high">
+        Impact: 9/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 4</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">This paper addresses critical issues in LLM medical evaluation – contamination and evolving knowledge – with a novel, automated, and rigorous benchmark, promising significant impact on the field&#39;s progress and responsible deployment of these models.</div>
+    
+
+    <div class="abstract">The deployment of Large Language Models (LLMs) in high-stakes clinical settings demands rigorous and reliable evaluation. However, existing medical benchmarks remain static, suffering from two critical limitations: (1) data contamination, where test sets inadvertently leak into training corpora, leading to inflated performance estimates; and (2) temporal misalignment, failing to capture the rapid evolution of medical knowledge. Furthermore, current evaluation metrics for open-ended clinical reasoning often rely on either shallow lexical overlap (e.g., ROUGE) or subjective LLM-as-a-Judge scoring, both inadequate for verifying clinical correctness. To bridge these gaps, we introduce LiveMedBench, a continuously updated, contamination-free, and rubric-based benchmark that weekly harvests real-world clinical cases from online medical communities, ensuring strict temporal separation from model training data. We propose a Multi-Agent Clinical Curation Framework that filters raw data noise and validates clinical integrity against evidence-based medical principles. For evaluation, we develop an Automated Rubric-based Evaluation Framework that decomposes physician responses into granular, case-specific criteria, achieving substantially stronger alignment with expert physicians than LLM-as-a-Judge. To date, LiveMedBench comprises 2,756 real-world cases spanning 38 medical specialties and multiple languages, paired with 16,702 unique evaluation criteria. Extensive evaluation of 38 LLMs reveals that even the best-performing model achieves only 39.2%, and 84% of models exhibit performance degradation on post-cutoff cases, confirming pervasive data contamination risks. Error analysis further identifies contextual application-not factual knowledge-as the dominant bottleneck, with 35-48% of failures stemming from the inability to tailor medical knowledge to patient-specific constraints.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.10367v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.10367v1
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">15</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.10177v2" target="_blank" rel="noopener">Towards Autonomous Mathematics Research</a>
+        <div class="paper-meta">
+          Tony Feng, Trieu H. Trinh, Garrett Bingham et al.
+          &bull; 2026-02-10
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 13</span>
+      <span class="badge badge-llm-high">
+        Impact: 9/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 1</span>
+      
+      <span class="badge" style="color: var(--green)">Author boost: +3</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">This paper demonstrates a significant leap towards autonomous mathematical research, evidenced by the generation of novel results and collaborative proofs, showcasing high novelty, scope, and potential for broad implications in both AI and mathematics.</div>
+    
+
+    <div class="abstract">Recent advances in foundational models have yielded reasoning systems capable of achieving a gold-medal standard at the International Mathematical Olympiad. The transition from competition-level problem-solving to professional research, however, requires navigating vast literature and constructing long-horizon proofs. In this work, we introduce Aletheia, a math research agent that iteratively generates, verifies, and revises solutions end-to-end in natural language. Specifically, Aletheia is powered by an advanced version of Gemini Deep Think for challenging reasoning problems, a novel inference-time scaling law that extends beyond Olympiad-level problems, and intensive tool use to navigate the complexities of mathematical research. We demonstrate the capability of Aletheia from Olympiad problems to PhD-level exercises and most notably, through several distinct milestones in AI-assisted mathematics research: (a) a research paper (Feng26) generated by AI without any human intervention in calculating certain structure constants in arithmetic geometry called eigenweights; (b) a research paper (LeeSeo26) demonstrating human-AI collaboration in proving bounds on systems of interacting particles called independent sets; and (c) an extensive semi-autonomous evaluation (Feng et al., 2026a) of 700 open problems on Bloom&#39;s Erdos Conjectures database, including autonomous solutions to four open questions. In order to help the public better understand the developments pertaining to AI and mathematics, we suggest quantifying standard levels of autonomy and novelty of AI-assisted results, as well as propose a novel concept of human-AI interaction cards for transparency. We conclude with reflections on human-AI collaboration in mathematics and share all prompts as well as model outputs at https://github.com/google-deepmind/superhuman/tree/main/aletheia.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.10177v2" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.10177v2
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">16</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.19534v1" target="_blank" rel="noopener">Large Language Model-Assisted UAV Operations and Communications: A Multifaceted Survey and Tutorial</a>
+        <div class="paper-meta">
+          Yousef Emami, Hao Zhou, Radha Reddy et al.
+          &bull; 2026-02-23
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 12</span>
+      <span class="badge badge-llm-high">
+        Impact: 8/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 4</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">This survey paper addresses a highly relevant and emerging intersection of LLMs and UAVs, offering a comprehensive overview and framework that could significantly guide future research and development in the field.</div>
+    
+
+    <div class="abstract">Uncrewed Aerial Vehicles (UAVs) are widely deployed across diverse applications due to their mobility and agility. Recent advances in Large Language Models (LLMs) offer a transformative opportunity to enhance UAV intelligence beyond conventional optimization-based and learning-based approaches. By integrating LLMs into UAV systems, advanced environmental understanding, swarm coordination, mobility optimization, and high-level task reasoning can be achieved, thereby allowing more adaptive and context-aware aerial operations. This survey systematically explores the intersection of LLMs and UAV technologies and proposes a unified framework that consolidates existing architectures, methodologies, and applications for UAVs. We first present a structured taxonomy of LLM adaptation techniques for UAVs, including pretraining, fine-tuning, Retrieval-Augmented Generation (RAG), and prompt engineering, along with key reasoning capabilities such as Chain-of-Thought (CoT) and In-Context Learning (ICL). We then examine LLM-assisted UAV communications and operations, covering navigation, mission planning, swarm control, safety, autonomy, and network management. After that, the survey further discusses Multimodal LLMs (MLLMs) for human-swarm interaction, perception-driven navigation, and collaborative control. Finally, we address ethical considerations, including bias, transparency, accountability, and Human-in-the-Loop (HITL) strategies, and outline future research directions. Overall, this work positions LLM-assisted UAVs as a foundation for intelligent and adaptive aerial systems.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.19534v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.19534v1
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">17</div>
+      <div class="paper-title">
+        <a href="https://arxiv.org/abs/2602.17902v1" target="_blank" rel="noopener">El Agente Gráfico: Structured Execution Graphs for Scientific Agents</a>
+        <div class="paper-meta">
+          Jiaru Bai, Abdulrahman Aldossary, Thomas Swanick et al.
+          &bull; 2026-02-19
+        </div>
+      </div>
+    </div>
+
+    <div class="scores">
+      <span class="badge badge-final">Final: 12</span>
+      <span class="badge badge-llm-high">
+        Impact: 8/10
+      </span>
+      <span class="badge" style="color: var(--muted)">Keywords: 4</span>
+      
+    </div>
+
+    
+    <div class="llm-reason">The paper addresses a critical challenge in LLM-driven scientific workflows – robustness and auditability – with a novel approach using structured execution graphs and typed objects, demonstrating strong potential for impact in automating complex scientific tasks.</div>
+    
+
+    <div class="abstract">Large language models (LLMs) are increasingly used to automate scientific workflows, yet their integration with heterogeneous computational tools remains ad hoc and fragile. Current agentic approaches often rely on unstructured text to manage context and coordinate execution, generating often overwhelming volumes of information that may obscure decision provenance and hinder auditability. In this work, we present El Agente Gráfico, a single-agent framework that embeds LLM-driven decision-making within a type-safe execution environment and dynamic knowledge graphs for external persistence. Central to our approach is a structured abstraction of scientific concepts and an object-graph mapper that represents computational state as typed Python objects, stored either in memory or persisted in an external knowledge graph. This design enables context management through typed symbolic identifiers rather than raw text, thereby ensuring consistency, supporting provenance tracking, and enabling efficient tool orchestration. We evaluate the system by developing an automated benchmarking framework across a suite of university-level quantum chemistry tasks previously evaluated on a multi-agent system, demonstrating that a single agent, when coupled to a reliable execution engine, can robustly perform complex, multi-step, and parallel computations. We further extend this paradigm to two other large classes of applications: conformer ensemble generation and metal-organic framework design, where knowledge graphs serve as both memory and reasoning substrates. Together, these results illustrate how abstraction and type safety can provide a scalable foundation for agentic scientific automation beyond prompt-centric designs.</div>
+
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.17902v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.17902v1
+    </a>
+  </div>
+  
+  
+  <div class="paper">
+    <div class="paper-header">
+      <div class="rank">18</div>
       <div class="paper-title">
         <a href="https://arxiv.org/abs/2602.16873v1" target="_blank" rel="noopener">AdaptOrch: Task-Adaptive Multi-Agent Orchestration in the Era of LLM Performance Convergence</a>
         <div class="paper-meta">
@@ -232,9 +735,9 @@
   
   <div class="paper">
     <div class="paper-header">
-      <div class="rank">4</div>
+      <div class="rank">19</div>
       <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.14612v1" target="_blank" rel="noopener">LongAudio-RAG: Event-Grounded Question Answering over Multi-Hour Long Audio</a>
+        <a href="https://arxiv.org/abs/2602.14612v2" target="_blank" rel="noopener">LongAudio-RAG: Event-Grounded Question Answering over Multi-Hour Long Audio</a>
         <div class="paper-meta">
           Naveen Vakada, Kartik Hegde, Arvind Krishna Sridhar et al.
           &bull; 2026-02-16
@@ -252,511 +755,13 @@
     </div>
 
     
-    <div class="llm-reason">This paper addresses a significant challenge in long-form audio understanding with a novel RAG approach grounded in acoustic events, demonstrating strong methodological rigor through a synthetic benchmark and edge-cloud deployment, suggesting substantial potential impact.</div>
+    <div class="llm-reason">This paper addresses a significant challenge in long-form audio processing with a novel and practical approach (LA-RAG) that combines acoustic event detection with RAG, demonstrating strong potential for impact in areas like surveillance, meeting analysis, and accessibility.</div>
     
 
     <div class="abstract">Long-duration audio is increasingly common in industrial and consumer settings, yet reviewing multi-hour recordings is impractical, motivating systems that answer natural-language queries with precise temporal grounding and minimal hallucination. Existing audio-language models show promise, but long-audio question answering remains difficult due to context-length limits. We introduce LongAudio-RAG (LA-RAG), a hybrid framework that grounds Large Language Model (LLM) outputs in retrieved, timestamped acoustic event detections rather than raw audio. Multi-hour streams are converted into structured event records stored in an SQL database, and at inference time the system resolves natural-language time references, classifies intent, retrieves only the relevant events, and generates answers using this constrained evidence. To evaluate performance, we construct a synthetic long-audio benchmark by concatenating recordings with preserved timestamps and generating template-based question-answer pairs for detection, counting, and summarization tasks. Finally, we demonstrate the practicality of our approach by deploying it in a hybrid edge-cloud environment, where the audio grounding model runs on-device on IoT-class hardware while the LLM is hosted on a GPU-backed server. This architecture enables low-latency event extraction at the edge and high-quality language reasoning in the cloud. Experiments show that structured, event-level retrieval significantly improves accuracy compared to vanilla Retrieval-Augmented Generation (RAG) or text-to-SQL approaches.</div>
 
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.14612v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.14612v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">5</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.16136v1" target="_blank" rel="noopener">Retrieval Collapses When AI Pollutes the Web</a>
-        <div class="paper-meta">
-          Hongyeon Yu, Dongchan Kim, Young-Bum Kim
-          &bull; 2026-02-18
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 12</span>
-      <span class="badge badge-llm-high">
-        Impact: 9/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">This paper identifies a critical and novel threat to information retrieval systems – &#39;Retrieval Collapse&#39; – with strong empirical evidence and significant implications for the future of search and RAG, particularly as AI-generated content continues to grow.</div>
-    
-
-    <div class="abstract">The rapid proliferation of AI-generated content on the Web presents a structural risk to information retrieval, as search engines and Retrieval-Augmented Generation (RAG) systems increasingly consume evidence produced by the Large Language Models (LLMs). We characterize this ecosystem-level failure mode as Retrieval Collapse, a two-stage process where (1) AI-generated content dominates search results, eroding source diversity, and (2) low-quality or adversarial content infiltrates the retrieval pipeline. We analyzed this dynamic through controlled experiments involving both high-quality SEO-style content and adversarially crafted content. In the SEO scenario, a 67\% pool contamination led to over 80\% exposure contamination, creating a homogenized yet deceptively healthy state where answer accuracy remains stable despite the reliance on synthetic sources. Conversely, under adversarial contamination, baselines like BM25 exposed $\sim$19\% of harmful content, whereas LLM-based rankers demonstrated stronger suppression capabilities. These findings highlight the risk of retrieval pipelines quietly shifting toward synthetic evidence and the need for retrieval-aware strategies to prevent a self-reinforcing cycle of quality decline in Web-grounded systems.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.16136v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.16136v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">6</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.15654v1" target="_blank" rel="noopener">Zombie Agents: Persistent Control of Self-Evolving LLM Agents via Self-Reinforcing Injections</a>
-        <div class="paper-meta">
-          Xianglin Yang, Yufei He, Shuo Ji et al.
-          &bull; 2026-02-17
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 12</span>
-      <span class="badge badge-llm-high">
-        Impact: 9/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">This paper identifies a novel and significant security vulnerability in a rapidly developing area (LLM agents) with a well-defined attack framework and broad implications for the trustworthiness of these systems.</div>
-    
-
-    <div class="abstract">Self-evolving LLM agents update their internal state across sessions, often by writing and reusing long-term memory. This design improves performance on long-horizon tasks but creates a security risk: untrusted external content observed during a benign session can be stored as memory and later treated as instruction. We study this risk and formalize a persistent attack we call a Zombie Agent, where an attacker covertly implants a payload that survives across sessions, effectively turning the agent into a puppet of the attacker.
-  We present a black-box attack framework that uses only indirect exposure through attacker-controlled web content. The attack has two phases. During infection, the agent reads a poisoned source while completing a benign task and writes the payload into long-term memory through its normal update process. During trigger, the payload is retrieved or carried forward and causes unauthorized tool behavior. We design mechanism-specific persistence strategies for common memory implementations, including sliding-window and retrieval-augmented memory, to resist truncation and relevance filtering. We evaluate the attack on representative agent setups and tasks, measuring both persistence over time and the ability to induce unauthorized actions while preserving benign task quality. Our results show that memory evolution can convert one-time indirect injection into persistent compromise, which suggests that defenses focused only on per-session prompt filtering are not sufficient for self-evolving agents.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.15654v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.15654v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">7</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.17544v1" target="_blank" rel="noopener">Evaluating Chain-of-Thought Reasoning through Reusability and Verifiability</a>
-        <div class="paper-meta">
-          Shashank Aggarwal, Ram Vikas Mishra, Amit Awekar
-          &bull; 2026-02-19
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
-      <span class="badge badge-llm-high">
-        Impact: 8/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">This paper introduces valuable new metrics (reusability and verifiability) for evaluating CoT reasoning beyond simple accuracy, highlighting a critical gap in current evaluation practices and offering potentially broad implications for LLM development and multi-agent systems.</div>
-    
-
-    <div class="abstract">In multi-agent IR pipelines for tasks such as search and ranking, LLM-based agents exchange intermediate reasoning in terms of Chain-of-Thought (CoT) with each other. Current CoT evaluation narrowly focuses on target task accuracy. However, this metric fails to assess the quality or utility of the reasoning process itself. To address this limitation, we introduce two novel measures: reusability and verifiability. We decouple CoT generation from execution using a Thinker-Executor framework. Reusability measures how easily an Executor can reuse the Thinker&#39;s CoT. Verifiability measures how frequently an Executor can match the Thinker&#39;s answer using the CoT. We evaluated four Thinker models against a committee of ten Executor models across five benchmarks. Our results reveal that reusability and verifiability do not correlate with standard accuracy, exposing a blind spot in current accuracy-based leaderboards for reasoning capability. Surprisingly, we find that CoTs from specialized reasoning models are not consistently more reusable or verifiable than those from general-purpose LLMs like Llama and Gemma.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.17544v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.17544v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">8</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.17529v1" target="_blank" rel="noopener">Enhancing Large Language Models (LLMs) for Telecom using Dynamic Knowledge Graphs and Explainable Retrieval-Augmented Generation</a>
-        <div class="paper-meta">
-          Dun Yuan, Hao Zhou, Xue Liu et al.
-          &bull; 2026-02-19
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
-      <span class="badge badge-llm-high">
-        Impact: 8/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">The paper addresses a practical problem (LLM application in telecom) with a well-defined and potentially impactful solution (KG-RAG) demonstrating significant performance gains, suggesting strong research impact and applicability.</div>
-    
-
-    <div class="abstract">Large language models (LLMs) have shown strong potential across a variety of tasks, but their application in the telecom field remains challenging due to domain complexity, evolving standards, and specialized terminology. Therefore, general-domain LLMs may struggle to provide accurate and reliable outputs in this context, leading to increased hallucinations and reduced utility in telecom operations.To address these limitations, this work introduces KG-RAG-a novel framework that integrates knowledge graphs (KGs) with retrieval-augmented generation (RAG) to enhance LLMs for telecom-specific tasks. In particular, the KG provides a structured representation of domain knowledge derived from telecom standards and technical documents, while RAG enables dynamic retrieval of relevant facts to ground the model&#39;s outputs. Such a combination improves factual accuracy, reduces hallucination, and ensures compliance with telecom specifications.Experimental results across benchmark datasets demonstrate that KG-RAG outperforms both LLM-only and standard RAG baselines, e.g., KG-RAG achieves an average accuracy improvement of 14.3% over RAG and 21.6% over LLM-only models. These results highlight KG-RAG&#39;s effectiveness in producing accurate, reliable, and explainable outputs in complex telecom scenarios.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.17529v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.17529v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">9</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.17330v1" target="_blank" rel="noopener">SubQuad: Near-Quadratic-Free Structure Inference with Distribution-Balanced Objectives in Adaptive Receptor framework</a>
-        <div class="paper-meta">
-          Rong Fu, Zijian Zhang, Wenxin Zhang et al.
-          &bull; 2026-02-19
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
-      <span class="badge badge-llm-high">
-        Impact: 8/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">The paper addresses significant bottlenecks in immune repertoire analysis with a novel, well-integrated pipeline demonstrating both performance gains and fairness considerations, suggesting strong potential for impact in the field.</div>
-    
-
-    <div class="abstract">Comparative analysis of adaptive immune repertoires at population scale is hampered by two practical bottlenecks: the near-quadratic cost of pairwise affinity evaluations and dataset imbalances that obscure clinically important minority clonotypes. We introduce SubQuad, an end-to-end pipeline that addresses these challenges by combining antigen-aware, near-subquadratic retrieval with GPU-accelerated affinity kernels, learned multimodal fusion, and fairness-constrained clustering. The system employs compact MinHash prefiltering to sharply reduce candidate comparisons, a differentiable gating module that adaptively weights complementary alignment and embedding channels on a per-pair basis, and an automated calibration routine that enforces proportional representation of rare antigen-specific subgroups. On large viral and tumor repertoires SubQuad achieves measured gains in throughput and peak memory usage while preserving or improving recall@k, cluster purity, and subgroup equity. By co-designing indexing, similarity fusion, and equity-aware objectives, SubQuad offers a scalable, bias-aware platform for repertoire mining and downstream translational tasks such as vaccine target prioritization and biomarker discovery.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.17330v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.17330v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">10</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.17049v1" target="_blank" rel="noopener">IntentCUA: Learning Intent-level Representations for Skill Abstraction and Multi-Agent Planning in Computer-Use Agents</a>
-        <div class="paper-meta">
-          Seoyoung Lee, Seobin Yoon, Seongbeen Lee et al.
-          &bull; 2026-02-19
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
-      <span class="badge badge-llm-high">
-        Impact: 8/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">The paper addresses a critical challenge in computer-use agents – long-horizon planning and intent alignment – with a novel multi-agent framework and strong empirical results, suggesting significant potential impact on the field of AI and human-computer interaction.</div>
-    
-
-    <div class="abstract">Computer-use agents operate over long horizons under noisy perception, multi-window contexts, evolving environment states. Existing approaches, from RL-based planners to trajectory retrieval, often drift from user intent and repeatedly solve routine subproblems, leading to error accumulation and inefficiency. We present IntentCUA, a multi-agent computer-use framework designed to stabilize long-horizon execution through intent-aligned plan memory. A Planner, Plan-Optimizer, and Critic coordinate over shared memory that abstracts raw interaction traces into multi-view intent representations and reusable skills. At runtime, intent prototypes retrieve subgroup-aligned skills and inject them into partial plans, reducing redundant re-planning and mitigating error propagation across desktop applications. In end-to-end evaluations, IntentCUA achieved a 74.83% task success rate with a Step Efficiency Ratio of 0.91, outperforming RL-based and trajectory-centric baselines. Ablations show that multi-view intent abstraction and shared plan memory jointly improve execution stability, with the cooperative multi-agent loop providing the largest gains on long-horizon tasks. These results highlight that system-level intent abstraction and memory-grounded coordination are key to reliable and efficient desktop automation in large, dynamic environments.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.17049v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.17049v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">11</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.16802v1" target="_blank" rel="noopener">References Improve LLM Alignment in Non-Verifiable Domains</a>
-        <div class="paper-meta">
-          Kejian Shi, Yixin Liu, Peifeng Wang et al.
-          &bull; 2026-02-18
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
-      <span class="badge badge-llm-high">
-        Impact: 8/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">This paper addresses a significant challenge in LLM alignment – applying RLHF to non-verifiable domains – with a novel and effective approach using reference-guided LLM evaluators, demonstrating strong results comparable to existing methods and offering broader implications for self-improvement techniques.</div>
-    
-
-    <div class="abstract">While Reinforcement Learning with Verifiable Rewards (RLVR) has shown strong effectiveness in reasoning tasks, it cannot be directly applied to non-verifiable domains lacking ground-truth verifiers, such as LLM alignment. In this work, we investigate whether reference-guided LLM-evaluators can bridge this gap by serving as soft &#34;verifiers&#34;. First, we design evaluation protocols that enhance LLM-based evaluators for LLM alignment using reference outputs. Through comprehensive experiments, we show that a reference-guided approach substantially improves the accuracy of less capable LLM-judges using references from frontier models; stronger LLM-judges can also be enhanced by high-quality (i.e., human-written) references. Building on these improved judges, we demonstrate the utility of high-quality references in alignment tuning, where LLMs guided with references are used as judges to self-improve. We show that reference-guided self-improvement yields clear gains over both direct SFT on reference outputs and self-improvement with reference-free judges, achieving performance comparable to training with ArmoRM, a strong finetuned reward model. Specifically, our method achieves 73.1% and 58.7% on AlpacaEval and Arena-Hard with Llama-3-8B-Instruct, and 70.0% and 74.1% with Qwen2.5-7B, corresponding to average absolute gains of +20.2 / +17.1 points over SFT distillation and +5.3 / +3.6 points over reference-free self-improvement on AlpacaEval / Arena-Hard. These results highlight the potential of using reference-guided LLM-evaluators to enable effective LLM post-training in non-verifiable domains.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.16802v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.16802v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">12</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.16708v2" target="_blank" rel="noopener">Policy Compiler for Secure Agentic Systems</a>
-        <div class="paper-meta">
-          Nils Palumbo, Sarthak Choudhary, Jihye Choi et al.
-          &bull; 2026-02-18
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
-      <span class="badge badge-llm-high">
-        Impact: 8/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">This paper addresses a critical security gap in LLM-based agentic systems with a novel approach to deterministic policy enforcement using dependency graphs and a Datalog-derived language, offering significant implications for real-world deployments.</div>
-    
-
-    <div class="abstract">LLM-based agents are increasingly being deployed in contexts requiring complex authorization policies: customer service protocols, approval workflows, data access restrictions, and regulatory compliance. Embedding these policies in prompts provides no enforcement guarantees. We present PCAS, a Policy Compiler for Agentic Systems that provides deterministic policy enforcement.
-  Enforcing such policies requires tracking information flow across agents, which linear message histories cannot capture. Instead, PCAS models the agentic system state as a dependency graph capturing causal relationships among events such as tool calls, tool results, and messages. Policies are expressed in a Datalog-derived language, as declarative rules that account for transitive information flow and cross-agent provenance. A reference monitor intercepts all actions and blocks violations before execution, providing deterministic enforcement independent of model reasoning.
-  PCAS takes an existing agent implementation and a policy specification, and compiles them into an instrumented system that is policy-compliant by construction, with no security-specific restructuring required. We evaluate PCAS on three case studies: information flow policies for prompt injection defense, approval workflows in a multi-agent pharmacovigilance system, and organizational policies for customer service. On customer service tasks, PCAS improves policy compliance from 48% to 93% across frontier models, with zero policy violations in instrumented runs.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.16708v2" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.16708v2
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">13</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.16671v1" target="_blank" rel="noopener">SPARC: Scenario Planning and Reasoning for Automated C Unit Test Generation</a>
-        <div class="paper-meta">
-          Jaid Monwar Chowdhury, Chi-An Fu, Reyhaneh Jabbarvand
-          &bull; 2026-02-18
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
-      <span class="badge badge-llm-high">
-        Impact: 8/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">SPARC addresses a significant challenge in software testing with a novel neuro-symbolic approach, demonstrating strong empirical results and offering broader implications for reliable LLM-based code generation.</div>
-    
-
-    <div class="abstract">Automated unit test generation for C remains a formidable challenge due to the semantic gap between high-level program intent and the rigid syntactic constraints of pointer arithmetic and manual memory management. While Large Language Models (LLMs) exhibit strong generative capabilities, direct intent-to-code synthesis frequently suffers from the leap-to-code failure mode, where models prematurely emit code without grounding in program structure, constraints, and semantics. This will result in non-compilable tests, hallucinated function signatures, low branch coverage, and semantically irrelevant assertions that cannot properly capture bugs. We introduce SPARC, a neuro-symbolic, scenario-based framework that bridges this gap through four stages: (1) Control Flow Graph (CFG) analysis, (2) an Operation Map that grounds LLM reasoning in validated utility helpers, (3) Path-targeted test synthesis, and (4) an iterative, self-correction validation loop using compiler and runtime feedback. We evaluate SPARC on 59 real-world and algorithmic subjects, where it outperforms the vanilla prompt generation baseline by 31.36% in line coverage, 26.01% in branch coverage, and 20.78% in mutation score, matching or exceeding the symbolic execution tool KLEE on complex subjects. SPARC retains 94.3% of tests through iterative repair and produces code with significantly higher developer-rated readability and maintainability. By aligning LLM reasoning with program structure, SPARC provides a scalable path for industrial-grade testing of legacy C codebases.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.16671v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.16671v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">14</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.16650v1" target="_blank" rel="noopener">Retrieval Augmented Generation of Literature-derived Polymer Knowledge: The Example of a Biodegradable Polymer Expert System</a>
-        <div class="paper-meta">
-          Sonakshi Gupta, Akhlak Mahmood, Wei Xiong et al.
-          &bull; 2026-02-18
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
-      <span class="badge badge-llm-high">
-        Impact: 8/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">This paper addresses a significant bottleneck in materials science (knowledge extraction from literature) with a novel application of RAG using both vector and graph-based approaches, demonstrating strong potential for accelerating polymer research and design.</div>
-    
-
-    <div class="abstract">Polymer literature contains a large and growing body of experimental knowledge, yet much of it is buried in unstructured text and inconsistent terminology, making systematic retrieval and reasoning difficult. Existing tools typically extract narrow, study-specific facts in isolation, failing to preserve the cross-study context required to answer broader scientific questions. Retrieval-augmented generation (RAG) offers a promising way to overcome this limitation by combining large language models (LLMs) with external retrieval, but its effectiveness depends strongly on how domain knowledge is represented. In this work, we develop two retrieval pipelines: a dense semantic vector-based approach (VectorRAG) and a graph-based approach (GraphRAG). Using over 1,000 polyhydroxyalkanoate (PHA) papers, we construct context-preserving paragraph embeddings and a canonicalized structured knowledge graph supporting entity disambiguation and multi-hop reasoning. We evaluate these pipelines through standard retrieval metrics, comparisons with general state-of-the-art systems such as GPT and Gemini, and qualitative validation by a domain chemist. The results show that GraphRAG achieves higher precision and interpretability, while VectorRAG provides broader recall, highlighting complementary trade-offs. Expert validation further confirms that the tailored pipelines, particularly GraphRAG, produce well-grounded, citation-reliable responses with strong domain relevance. By grounding every statement in evidence, these systems enable researchers to navigate the literature, compare findings across studies, and uncover patterns that are difficult to extract manually. More broadly, this work establishes a practical framework for building materials science assistants using curated corpora and retrieval design, reducing reliance on proprietary models while enabling trustworthy literature analysis at scale.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.16650v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.16650v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">15</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.15814v1" target="_blank" rel="noopener">Avey-B</a>
-        <div class="paper-meta">
-          Devang Acharya, Mohammad Hammoud
-          &bull; 2026-02-17
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
-      <span class="badge badge-llm-high">
-        Impact: 8/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">The paper presents a novel attention-free alternative to Transformers with strong empirical results and potential for efficient scaling, addressing a key limitation of current industrial NLP models.</div>
-    
-
-    <div class="abstract">Compact pretrained bidirectional encoders remain the backbone of industrial NLP under tight compute and memory budgets. Their effectiveness stems from self-attention&#39;s ability to deliver high-quality bidirectional contextualization with sequence-level parallelism, as popularized by BERT-style architectures. Recently, Avey was introduced as an autoregressive, attention-free alternative that naturally admits an encoder-only adaptation. In this paper, we reformulate Avey for the encoder-only paradigm and propose several innovations to its architecture, including decoupled static and dynamic parameterizations, stability-oriented normalization, and neural compression. Results show that this reformulated architecture compares favorably to four widely used Transformer-based encoders, consistently outperforming them on standard token-classification and information-retrieval benchmarks while scaling more efficiently to long contexts.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.15814v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.15814v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">16</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.15553v1" target="_blank" rel="noopener">RUVA: Personalized Transparent On-Device Graph Reasoning</a>
-        <div class="paper-meta">
-          Gabriele Conte, Alessio Mattiace, Gianni Carmosino et al.
-          &bull; 2026-02-17
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
-      <span class="badge badge-llm-high">
-        Impact: 8/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">This paper addresses a critical limitation of current Personal AI systems (lack of transparency and true data deletion) with a novel graph-based approach, offering strong potential for impact on privacy, accountability, and user control.</div>
-    
-
-    <div class="abstract">The Personal AI landscape is currently dominated by &#34;Black Box&#34; Retrieval-Augmented Generation. While standard vector databases offer statistical matching, they suffer from a fundamental lack of accountability: when an AI hallucinates or retrieves sensitive data, the user cannot inspect the cause nor correct the error. Worse, &#34;deleting&#34; a concept from a vector space is mathematically imprecise, leaving behind probabilistic &#34;ghosts&#34; that violate true privacy. We propose Ruva, the first &#34;Glass Box&#34; architecture designed for Human-in-the-Loop Memory Curation. Ruva grounds Personal AI in a Personal Knowledge Graph, enabling users to inspect what the AI knows and to perform precise redaction of specific facts. By shifting the paradigm from Vector Matching to Graph Reasoning, Ruva ensures the &#34;Right to be Forgotten.&#34; Users are the editors of their own lives; Ruva hands them the pen. The project and the demo video are available at http://sisinf00.poliba.it/ruva/.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.15553v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.15553v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">17</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.15294v1" target="_blank" rel="noopener">EAA: Automating materials characterization with vision language model agents</a>
-        <div class="paper-meta">
-          Ming Du, Yanqi Luo, Srutarshi Banerjee et al.
-          &bull; 2026-02-17
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
-      <span class="badge badge-llm-high">
-        Impact: 8/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">This paper presents a novel application of vision-language models to automate complex materials characterization workflows, with strong potential to broaden access and improve efficiency in scientific experimentation, and the MCP compatibility is a significant step towards interoperability.</div>
-    
-
-    <div class="abstract">We present Experiment Automation Agents (EAA), a vision-language-model-driven agentic system designed to automate complex experimental microscopy workflows. EAA integrates multimodal reasoning, tool-augmented action, and optional long-term memory to support both autonomous procedures and interactive user-guided measurements. Built on a flexible task-manager architecture, the system enables workflows ranging from fully agent-driven automation to logic-defined routines that embed localized LLM queries. EAA further provides a modern tool ecosystem with two-way compatibility for Model Context Protocol (MCP), allowing instrument-control tools to be consumed or served across applications. We demonstrate EAA at an imaging beamline at the Advanced Photon Source, including automated zone plate focusing, natural language-described feature search, and interactive data acquisition. These results illustrate how vision-capable agents can enhance beamline efficiency, reduce operational burden, and lower the expertise barrier for users.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.15294v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.15294v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">18</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.14471v1" target="_blank" rel="noopener">Socially-Weighted Alignment: A Game-Theoretic Framework for Multi-Agent LLM Systems</a>
-        <div class="paper-meta">
-          Furkan Mumcu, Yasin Yilmaz
-          &bull; 2026-02-16
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
-      <span class="badge badge-llm-high">
-        Impact: 8/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">The paper addresses a critical challenge in multi-agent LLM systems with a novel game-theoretic framework and provides both theoretical guarantees and empirical validation, suggesting strong potential for impact in the field of AI safety and multi-agent systems.</div>
-    
-
-    <div class="abstract">Deploying large language model (LLM) agents in shared environments introduces a fundamental tension between individual alignment and collective stability: locally rational decisions can impose negative externalities that degrade system-level performance. We propose Socially-Weighted Alignment (SWA), a game-theoretic framework that modifies inference-time decision making by interpolating between an agent&#39;s private objective and an estimate of group welfare via a social weight $λ\in[0,1]$. In a shared-resource congestion game with $n$ agents and congestion severity $β$, we show that SWA induces a critical threshold $λ^*=(n-β)/(n-1)$ above which agents no longer have marginal incentive to increase demand under overload, yielding a phase transition from persistent congestion to stable operation near capacity. We further provide an inference-time algorithmic instantiation of SWA that does not require parameter updates or multi-agent reinforcement learning, and use a multi-agent simulation to empirically validate the predicted threshold behavior.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.14471v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.14471v1
-    </a>
-  </div>
-  
-  
-  <div class="paper">
-    <div class="paper-header">
-      <div class="rank">19</div>
-      <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.14374v1" target="_blank" rel="noopener">Differentially Private Retrieval-Augmented Generation</a>
-        <div class="paper-meta">
-          Tingting Tang, James Flemings, Yongqin Wang et al.
-          &bull; 2026-02-16
-        </div>
-      </div>
-    </div>
-
-    <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
-      <span class="badge badge-llm-high">
-        Impact: 8/10
-      </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 3</span>
-      
-    </div>
-
-    
-    <div class="llm-reason">This paper addresses a critical privacy concern in a popular framework (RAG) with a novel algorithm (DP-KSA) that balances privacy guarantees with utility, demonstrating strong potential for impact in sensitive application areas.</div>
-    
-
-    <div class="abstract">Retrieval-augmented generation (RAG) is a widely used framework for reducing hallucinations in large language models (LLMs) on domain-specific tasks by retrieving relevant documents from a database to support accurate responses. However, when the database contains sensitive corpora, such as medical records or legal documents, RAG poses serious privacy risks by potentially exposing private information through its outputs. Prior work has demonstrated that one can practically craft adversarial prompts that force an LLM to regurgitate the augmented contexts. A promising direction is to integrate differential privacy (DP), a privacy notion that offers strong formal guarantees, into RAG systems. However, naively applying DP mechanisms into existing systems often leads to significant utility degradation. Particularly for RAG systems, DP can reduce the usefulness of the augmented contexts leading to increase risk of hallucination from the LLMs. Motivated by these challenges, we present DP-KSA, a novel privacy-preserving RAG algorithm that integrates DP using the propose-test-release paradigm. DP-KSA follows from a key observation that most question-answering (QA) queries can be sufficiently answered with a few keywords. Hence, DP-KSA first obtains an ensemble of relevant contexts, each of which will be used to generate a response from an LLM. We utilize these responses to obtain the most frequent keywords in a differentially private manner. Lastly, the keywords are augmented into the prompt for the final output. This approach effectively compresses the semantic space while preserving both utility and privacy. We formally show that DP-KSA provides formal DP guarantees on the generated output with respect to the RAG database. We evaluate DP-KSA on two QA benchmarks using three instruction-tuned LLMs, and our empirical results demonstrate that DP-KSA achieves a strong privacy-utility tradeoff.</div>
-
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.14374v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.14374v1
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.14612v2" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.14612v2
     </a>
   </div>
   
@@ -765,31 +770,31 @@
     <div class="paper-header">
       <div class="rank">20</div>
       <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.17607v1" target="_blank" rel="noopener">AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing</a>
+        <a href="https://arxiv.org/abs/2602.14160v1" target="_blank" rel="noopener">Process-Supervised Multi-Agent Reinforcement Learning for Reliable Clinical Reasoning</a>
         <div class="paper-meta">
-          Jianda Du, Youran Sun, Haizhao Yang
-          &bull; 2026-02-19
+          Chaeeun Lee, T. Michael Yates, Pasquale Minervini et al.
+          &bull; 2026-02-15
         </div>
       </div>
     </div>
 
     <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
+      <span class="badge badge-final">Final: 12</span>
       <span class="badge badge-llm-high">
-        Impact: 9/10
+        Impact: 8/10
       </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 2</span>
+      <span class="badge" style="color: var(--muted)">Keywords: 4</span>
       
     </div>
 
     
-    <div class="llm-reason">This paper presents a novel, PDE-agnostic framework for automated solver design with strong methodological rigor (multi-agent system, self-verification) and potentially broad implications for democratizing scientific computing by reducing the need for specialized expertise.</div>
+    <div class="llm-reason">This paper addresses a critical gap in LLM-based multi-agent systems by focusing on both outcome accuracy *and* process alignment in a high-stakes clinical reasoning task, demonstrating a novel approach with strong empirical results and clear broader implications for reliable AI in healthcare.</div>
     
 
-    <div class="abstract">PDEs are central to scientific and engineering modeling, yet designing accurate numerical solvers typically requires substantial mathematical expertise and manual tuning. Recent neural network-based approaches improve flexibility but often demand high computational cost and suffer from limited interpretability. We introduce \texttt{AutoNumerics}, a multi-agent framework that autonomously designs, implements, debugs, and verifies numerical solvers for general PDEs directly from natural language descriptions. Unlike black-box neural solvers, our framework generates transparent solvers grounded in classical numerical analysis. We introduce a coarse-to-fine execution strategy and a residual-based self-verification mechanism. Experiments on 24 canonical and real-world PDE problems demonstrate that \texttt{AutoNumerics} achieves competitive or superior accuracy compared to existing neural and LLM-based baselines, and correctly selects numerical schemes based on PDE structural properties, suggesting its viability as an accessible paradigm for automated PDE solving.</div>
+    <div class="abstract">Clinical decision-making requires nuanced reasoning over heterogeneous evidence and traceable justifications. While recent LLM multi-agent systems (MAS) show promise, they largely optimise for outcome accuracy while overlooking process-grounded reasoning aligned with clinical standards. One critical real-world case of this is gene-disease validity curation, where experts must determine whether a gene is causally implicated in a disease by synthesising diverse biomedical evidence. We introduce an agent-as-tool reinforcement learning framework for this task with two objectives: (i) process-level supervision to ensure reasoning follows valid clinical pathways, and (ii) efficient coordination via a hierarchical multi-agent system. Our evaluation on the ClinGen dataset shows that with outcome-only rewards, MAS with a GRPO-trained Qwen3-4B supervisor agent substantially improves final outcome accuracy from 0.195 with a base model supervisor to 0.732, but results in poor process alignment (0.392 F1). Conversely, with process + outcome rewards, MAS with GRPO-trained supervisor achieves higher outcome accuracy (0.750) while significantly improving process fidelity to 0.520 F1. Our code is available at https://github.com/chaeeunlee-io/GeneDiseaseCurationAgents.</div>
 
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.17607v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.17607v1
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.14160v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.14160v1
     </a>
   </div>
   
@@ -798,31 +803,31 @@
     <div class="paper-header">
       <div class="rank">21</div>
       <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.17176v1" target="_blank" rel="noopener">Universal Fine-Grained Symmetry Inference and Enforcement for Rigorous Crystal Structure Prediction</a>
+        <a href="https://arxiv.org/abs/2602.13933v1" target="_blank" rel="noopener">HyMem: Hybrid Memory Architecture with Dynamic Retrieval Scheduling</a>
         <div class="paper-meta">
-          Shi Yin, Jinming Mu, Xudong Zhu et al.
-          &bull; 2026-02-19
+          Xiaochen Zhao, Kaikai Wang, Xiaowen Zhang et al.
+          &bull; 2026-02-15
         </div>
       </div>
     </div>
 
     <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
+      <span class="badge badge-final">Final: 12</span>
       <span class="badge badge-llm-high">
-        Impact: 9/10
+        Impact: 8/10
       </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 2</span>
+      <span class="badge" style="color: var(--muted)">Keywords: 4</span>
       
     </div>
 
     
-    <div class="llm-reason">This paper presents a novel approach to crystal structure prediction by directly inferring and enforcing symmetry using large language models and constrained optimization, potentially overcoming limitations of existing methods and enabling the discovery of new materials.</div>
+    <div class="llm-reason">The paper addresses a critical limitation of LLM agents – long-term memory – with a novel hybrid architecture and dynamic retrieval, showing strong potential for improving performance and efficiency in complex dialogue scenarios.</div>
     
 
-    <div class="abstract">Crystal structure prediction (CSP), which aims to predict the three-dimensional atomic arrangement of a crystal from its composition, is central to materials discovery and mechanistic understanding. Existing deep learning models often treat crystallographic symmetry only as a soft heuristic or rely on space group and Wyckoff templates retrieved from known structures, which limits both physical fidelity and the ability to discover genuinely new material structures. In contrast to retrieval-based methods, our approach leverages large language models to encode chemical semantics and directly generate fine-grained Wyckoff patterns from composition, effectively circumventing the limitations inherent to database lookups. Crucially, we incorporate domain knowledge into the generative process through an efficient constrained-optimization search that rigorously enforces algebraic consistency between site multiplicities and atomic stoichiometry. By integrating this symmetry-consistent template into a diffusion backbone, our approach constrains the stochastic generative trajectory to a physically valid geometric manifold. This framework achieves state-of-the-art performance across stability, uniqueness, and novelty (SUN) benchmarks, alongside superior matching performance, thereby establishing a new paradigm for the rigorous exploration of targeted crystallographic space. This framework enables efficient expansion into previously uncharted materials space, eliminating reliance on existing databases or a priori structural knowledge.</div>
+    <div class="abstract">Large language model (LLM) agents demonstrate strong performance in short-text contexts but often underperform in extended dialogues due to inefficient memory management. Existing approaches face a fundamental trade-off between efficiency and effectiveness: memory compression risks losing critical details required for complex reasoning, while retaining raw text introduces unnecessary computational overhead for simple queries. The crux lies in the limitations of monolithic memory representations and static retrieval mechanisms, which fail to emulate the flexible and proactive memory scheduling capabilities observed in humans, thus struggling to adapt to diverse problem scenarios. Inspired by the principle of cognitive economy, we propose HyMem, a hybrid memory architecture that enables dynamic on-demand scheduling through multi-granular memory representations. HyMem adopts a dual-granular storage scheme paired with a dynamic two-tier retrieval system: a lightweight module constructs summary-level context for efficient response generation, while an LLM-based deep module is selectively activated only for complex queries, augmented by a reflection mechanism for iterative reasoning refinement. Experiments show that HyMem achieves strong performance on both the LOCOMO and LongMemEval benchmarks, outperforming full-context while reducing computational cost by 92.6\%, establishing a state-of-the-art balance between efficiency and performance in long-term memory management.</div>
 
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.17176v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.17176v1
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.13933v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.13933v1
     </a>
   </div>
   
@@ -831,31 +836,31 @@
     <div class="paper-header">
       <div class="rank">22</div>
       <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.16943v1" target="_blank" rel="noopener">Mind the GAP: Text Safety Does Not Transfer to Tool-Call Safety in LLM Agents</a>
+        <a href="https://arxiv.org/abs/2602.13647v1" target="_blank" rel="noopener">PT-RAG: Structure-Fidelity Retrieval-Augmented Generation for Academic Papers</a>
         <div class="paper-meta">
-          Arnold Cartagena, Ariane Teixeira
-          &bull; 2026-02-18
+          Rui Yu, Tianyi Wang, Ruixia Liu et al.
+          &bull; 2026-02-14
         </div>
       </div>
     </div>
 
     <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
+      <span class="badge badge-final">Final: 12</span>
       <span class="badge badge-llm-high">
-        Impact: 9/10
+        Impact: 8/10
       </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 2</span>
+      <span class="badge" style="color: var(--muted)">Keywords: 4</span>
       
     </div>
 
     
-    <div class="llm-reason">This paper addresses a critical and previously underexplored safety gap in LLM agents, employs a rigorous and comprehensive evaluation framework (GAP benchmark), and has broad implications for the safe deployment of increasingly powerful AI systems.</div>
+    <div class="llm-reason">The paper addresses a significant problem in RAG for academic papers – preserving document structure – with a novel approach (PaperTree index and path-guided retrieval) that has the potential to improve performance and efficiency, and the focus on low-entropy retrieval is a strong methodological contribution.</div>
     
 
-    <div class="abstract">Large language models deployed as agents increasingly interact with external systems through tool calls--actions with real-world consequences that text outputs alone do not carry. Safety evaluations, however, overwhelmingly measure text-level refusal behavior, leaving a critical question unanswered: does alignment that suppresses harmful text also suppress harmful actions? We introduce the GAP benchmark, a systematic evaluation framework that measures divergence between text-level safety and tool-call-level safety in LLM agents. We test six frontier models across six regulated domains (pharmaceutical, financial, educational, employment, legal, and infrastructure), seven jailbreak scenarios per domain, three system prompt conditions (neutral, safety-reinforced, and tool-encouraging), and two prompt variants, producing 17,420 analysis-ready datapoints. Our central finding is that text safety does not transfer to tool-call safety. Across all six models, we observe instances where the model&#39;s text output refuses a harmful request while its tool calls simultaneously execute the forbidden action--a divergence we formalize as the GAP metric. Even under safety-reinforced system prompts, 219 such cases persist across all six models. System prompt wording exerts substantial influence on tool-call behavior: TC-safe rates span 21 percentage points for the most robust model and 57 for the most prompt-sensitive, with 16 of 18 pairwise ablation comparisons remaining significant after Bonferroni correction. Runtime governance contracts reduce information leakage in all six models but produce no detectable deterrent effect on forbidden tool-call attempts themselves. These results demonstrate that text-only safety evaluations are insufficient for assessing agent behavior and that tool-call safety requires dedicated measurement and mitigation.</div>
+    <div class="abstract">Retrieval-augmented generation (RAG) is increasingly applied to question-answering over long academic papers, where accurate evidence allocation under a fixed token budget is critical. Existing approaches typically flatten academic papers into unstructured chunks during preprocessing, which destroys the native hierarchical structure. This loss forces retrieval to operate in a disordered space, thereby producing fragmented contexts, misallocating tokens to non-evidential regions under finite token budgets, and increasing the reasoning burden for downstream language models. To address these issues, we propose PT-RAG, an RAG framework that treats the native hierarchical structure of academic papers as a low-entropy retrieval prior. PT-RAG first inherits the native hierarchy to construct a structure-fidelity PaperTree index, which prevents entropy increase at the source. It then designs a path-guided retrieval mechanism that aligns query semantics to relevant sections and selects high relevance root-to-leaf paths under a fixed token budget, yielding compact, coherent, and low-entropy retrieval contexts. In contrast to existing RAG approaches, PT-RAG avoids entropy increase caused by destructive preprocessing and provides a native low-entropy structural basis for subsequent retrieval. To assess this design, we introduce entropy-based structural diagnostics that quantify retrieval fragmentation and evidence allocation accuracy. On three academic question-answering benchmarks, PT-RAG achieves consistently lower section entropy and evidence alignment cross entropy than strong baselines, indicating reduced context fragmentation and more precise allocation to evidential regions. These structural advantages directly translate into higher answer quality.</div>
 
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.16943v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.16943v1
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.13647v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.13647v1
     </a>
   </div>
   
@@ -864,31 +869,31 @@
     <div class="paper-header">
       <div class="rank">23</div>
       <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.16918v1" target="_blank" rel="noopener">Xray-Visual Models: Scaling Vision models on Industry Scale Data</a>
+        <a href="https://arxiv.org/abs/2602.13571v1" target="_blank" rel="noopener">LLM-Confidence Reranker: A Training-Free Approach for Enhancing Retrieval-Augmented Generation Systems</a>
         <div class="paper-meta">
-          Shlok Mishra, Tsung-Yu Lin, Linda Wang et al.
-          &bull; 2026-02-18
+          Zhipeng Song, Xiangyu Kong, Xinrui Bao et al.
+          &bull; 2026-02-14
         </div>
       </div>
     </div>
 
     <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
+      <span class="badge badge-final">Final: 12</span>
       <span class="badge badge-llm-high">
-        Impact: 9/10
+        Impact: 8/10
       </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 2</span>
+      <span class="badge" style="color: var(--muted)">Keywords: 4</span>
       
     </div>
 
     
-    <div class="llm-reason">The paper&#39;s scale of data, novel training pipeline, strong performance across benchmarks, and exploration of LLM integration suggest high potential for impact in the vision and multimodal learning fields.</div>
+    <div class="llm-reason">This paper presents a novel, training-free reranking method leveraging LLM confidence scores, addressing a key challenge in RAG systems with strong empirical results on standard benchmarks, suggesting significant potential impact.</div>
     
 
-    <div class="abstract">We present Xray-Visual, a unified vision model architecture for large-scale image and video understanding trained on industry-scale social media data. Our model leverages over 15 billion curated image-text pairs and 10 billion video-hashtag pairs from Facebook and Instagram, employing robust data curation pipelines that incorporate balancing and noise suppression strategies to maximize semantic diversity while minimizing label noise. We introduce a three-stage training pipeline that combines self-supervised MAE, semi-supervised hashtag classification, and CLIP-style contrastive learning to jointly optimize image and video modalities. Our architecture builds on a Vision Transformer backbone enhanced with efficient token reorganization (EViT) for improved computational efficiency. Extensive experiments demonstrate that Xray-Visual achieves state-of-the-art performance across diverse benchmarks, including ImageNet for image classification, Kinetics and HMDB51 for video understanding, and MSCOCO for cross-modal retrieval. The model exhibits strong robustness to domain shift and adversarial perturbations. We further demonstrate that integrating large language models as text encoders (LLM2CLIP) significantly enhances retrieval performance and generalization capabilities, particularly in real-world environments. Xray-Visual establishes new benchmarks for scalable, multimodal vision models, while maintaining superior accuracy and computational efficiency.</div>
+    <div class="abstract">Large language models (LLMs) have revolutionized natural language processing, yet hallucinations in knowledge-intensive tasks remain a critical challenge. Retrieval-augmented generation (RAG) addresses this by integrating external knowledge, but its efficacy depends on accurate document retrieval and ranking. Although existing rerankers demonstrate effectiveness, they frequently necessitate specialized training, impose substantial computational expenses, and fail to fully exploit the semantic capabilities of LLMs, particularly their inherent confidence signals. We propose the LLM-Confidence Reranker (LCR), a training-free, plug-and-play algorithm that enhances reranking in RAG systems by leveraging black-box LLM confidence derived from Maximum Semantic Cluster Proportion (MSCP). LCR employs a two-stage process: confidence assessment via multinomial sampling and clustering, followed by binning and multi-level sorting based on query and document confidence thresholds. This approach prioritizes relevant documents while preserving original rankings for high-confidence queries, ensuring robustness. Evaluated on BEIR and TREC benchmarks with BM25 and Contriever retrievers, LCR--using only 7--9B-parameter pre-trained LLMs--consistently improves NDCG@5 by up to 20.6% across pre-trained LLM and fine-tuned Transformer rerankers, without degradation. Ablation studies validate the hypothesis that LLM confidence positively correlates with document relevance, elucidating LCR&#39;s mechanism. LCR offers computational efficiency, parallelism for scalability, and broad compatibility, mitigating hallucinations in applications like medical diagnosis.</div>
 
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.16918v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.16918v1
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.13571v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.13571v1
     </a>
   </div>
   
@@ -897,31 +902,31 @@
     <div class="paper-header">
       <div class="rank">24</div>
       <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.16498v1" target="_blank" rel="noopener">Fast and Scalable Analytical Diffusion</a>
+        <a href="https://arxiv.org/abs/2602.13562v1" target="_blank" rel="noopener">Mitigating the Safety-utility Trade-off in LLM Alignment via Adaptive Safe Context Learning</a>
         <div class="paper-meta">
-          Xinyi Shang, Peng Sun, Jingyu Lin et al.
-          &bull; 2026-02-18
+          Yanbo Wang, Minzheng Wang, Jian Liang et al.
+          &bull; 2026-02-14
         </div>
       </div>
     </div>
 
     <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
+      <span class="badge badge-final">Final: 12</span>
       <span class="badge badge-llm-high">
-        Impact: 9/10
+        Impact: 8/10
       </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 2</span>
+      <span class="badge" style="color: var(--muted)">Keywords: 4</span>
       
     </div>
 
     
-    <div class="llm-reason">This paper addresses a significant scalability issue in analytical diffusion models with a novel theoretical justification and a practical, training-free solution, potentially broadening the applicability of these models to larger datasets and impacting future research in efficient generative modeling.</div>
+    <div class="llm-reason">This paper addresses a critical challenge in LLM alignment – the safety-utility trade-off – with a novel framework (ASCL) and a clever optimization technique (IFPO), showing strong potential for improving both safety and reasoning capabilities.</div>
     
 
-    <div class="abstract">Analytical diffusion models offer a mathematically transparent path to generative modeling by formulating the denoising score as an empirical-Bayes posterior mean. However, this interpretability comes at a prohibitive cost: the standard formulation necessitates a full-dataset scan at every timestep, scaling linearly with dataset size. In this work, we present the first systematic study addressing this scalability bottleneck. We challenge the prevailing assumption that the entire training data is necessary, uncovering the phenomenon of Posterior Progressive Concentration: the effective golden support of the denoising score is not static but shrinks asymptotically from the global manifold to a local neighborhood as the signal-to-noise ratio increases. Capitalizing on this, we propose Dynamic Time-Aware Golden Subset Diffusion (GoldDiff), a training-free framework that decouples inference complexity from dataset size. Instead of static retrieval, GoldDiff uses a coarse-to-fine mechanism to dynamically pinpoint the &#39;&#39;Golden Subset&#39;&#39; for inference. Theoretically, we derive rigorous bounds guaranteeing that our sparse approximation converges to the exact score. Empirically, GoldDiff achieves a $\bf 71 \times$ speedup on AFHQ while matching or achieving even better performance than full-scan baselines. Most notably, we demonstrate the first successful scaling of analytical diffusion to ImageNet-1K, unlocking a scalable, training-free paradigm for large-scale generative modeling.</div>
+    <div class="abstract">While reasoning models have achieved remarkable success in complex reasoning tasks, their increasing power necessitates stringent safety measures. For safety alignment, the core challenge lies in the inherent trade-off between safety and utility. However, prevailing alignment strategies typically construct CoT training data with explicit safety rules via context distillation. This approach inadvertently limits reasoning capabilities by creating a rigid association between rule memorization and refusal. To mitigate the safety-utility trade-off, we propose the Adaptive Safe Context Learning (ASCL) framework to improve the reasoning given proper context. ASCL formulates safety alignment as a multi-turn tool-use process, empowering the model to autonomously decide when to consult safety rules and how to generate the ongoing reasoning. Furthermore, to counteract the preference for rule consultation during RL, we introduce Inverse Frequency Policy Optimization (IFPO) to rebalance advantage estimates. By decoupling rule retrieval and subsequent reasoning, our method achieves higher overall performance compared to baselines.</div>
 
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.16498v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.16498v1
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.13562v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.13562v1
     </a>
   </div>
   
@@ -930,31 +935,31 @@
     <div class="paper-header">
       <div class="rank">25</div>
       <div class="paper-title">
-        <a href="https://arxiv.org/abs/2602.16050v1" target="_blank" rel="noopener">Evidence-Grounded Subspecialty Reasoning: Evaluating a Curated Clinical Intelligence Layer on the 2025 Endocrinology Board-Style Examination</a>
+        <a href="https://arxiv.org/abs/2602.18493v1" target="_blank" rel="noopener">Learning to Remember: End-to-End Training of Memory Agents for Long-Context Reasoning</a>
         <div class="paper-meta">
-          Amir Hosseinian, MohammadReza Zare Shahneh, Umer Mansoor et al.
-          &bull; 2026-02-17
+          Kehao Zhang, Shangtong Gui, Sheng Yang et al.
+          &bull; 2026-02-13
         </div>
       </div>
     </div>
 
     <div class="scores">
-      <span class="badge badge-final">Final: 11</span>
+      <span class="badge badge-final">Final: 12</span>
       <span class="badge badge-llm-high">
-        Impact: 9/10
+        Impact: 8/10
       </span>
-      <span class="badge" style="color: var(--muted)">Keywords: 2</span>
+      <span class="badge" style="color: var(--muted)">Keywords: 4</span>
       
     </div>
 
     
-    <div class="llm-reason">This paper demonstrates a significant performance improvement over state-of-the-art LLMs in a challenging subspecialty domain, highlighting the value of curated knowledge and structured reasoning, which has strong implications for clinical decision support and medical education.</div>
+    <div class="llm-reason">The paper presents a novel end-to-end learning framework for memory agents with a strong focus on dynamic reasoning and a new benchmark, demonstrating significant improvements over existing methods and suggesting broader implications for handling long-context information.</div>
     
 
-    <div class="abstract">Background: Large language models have demonstrated strong performance on general medical examinations, but subspecialty clinical reasoning remains challenging due to rapidly evolving guidelines and nuanced evidence hierarchies. Methods: We evaluated January Mirror, an evidence-grounded clinical reasoning system, against frontier LLMs (GPT-5, GPT-5.2, Gemini-3-Pro) on a 120-question endocrinology board-style examination. Mirror integrates a curated endocrinology and cardiometabolic evidence corpus with a structured reasoning architecture to generate evidence-linked outputs. Mirror operated under a closed-evidence constraint without external retrieval. Comparator LLMs had real-time web access to guidelines and primary literature. Results: Mirror achieved 87.5% accuracy (105/120; 95% CI: 80.4-92.3%), exceeding a human reference of 62.3% and frontier LLMs including GPT-5.2 (74.6%), GPT-5 (74.0%), and Gemini-3-Pro (69.8%). On the 30 most difficult questions (human accuracy less than 50%), Mirror achieved 76.7% accuracy. Top-2 accuracy was 92.5% for Mirror versus 85.25% for GPT-5.2. Conclusions: Mirror provided evidence traceability: 74.2% of outputs cited at least one guideline-tier source, with 100% citation accuracy on manual verification. Curated evidence with explicit provenance can outperform unconstrained web retrieval for subspecialty clinical reasoning and supports auditability for clinical deployment.</div>
+    <div class="abstract">Long-context LLMs and Retrieval-Augmented Generation (RAG) systems process information passively, deferring state tracking, contradiction resolution, and evidence aggregation to query time, which becomes brittle under ultra long streams with frequent updates. We propose the Unified Memory Agent (UMA), an end-to-end reinforcement learning framework that unifies memory operations and question answering within a single policy. UMA maintains a dual memory representation: a compact core summary for global context and a structured Memory Bank that supports explicit CRUD (create, update, delete, reorganize) over key value entries, enabling proactive consolidation during streaming. To evaluate long-horizon memory behavior, we introduce Ledger-QA, a diagnostic benchmark for continuous state tracking where answers are latent values derived from accumulated updates rather than lo cal span retrieval. Across 13 datasets spanning Ledger-QA, Test-Time Learning, and Accurate Retrieval, UMA substantially outperforms long-context and RAG baselines on dynamic reasoning and learning tasks while remaining competitive on standard retrieval benchmarks, underscoring the importance of learned, end-to-end memory management.</div>
 
-    <a class="arxiv-link" href="https://arxiv.org/abs/2602.16050v1" target="_blank" rel="noopener">
-      arXiv: https://arxiv.org/abs/2602.16050v1
+    <a class="arxiv-link" href="https://arxiv.org/abs/2602.18493v1" target="_blank" rel="noopener">
+      arXiv: https://arxiv.org/abs/2602.18493v1
     </a>
   </div>
   
