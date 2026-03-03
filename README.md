@@ -12,8 +12,10 @@ A secure, local-first autonomous research assistant that ingests cutting-edge pa
 Apollo scrapes arXiv `cs.AI` submissions, filters out the noise down to the top 25 most impactful papers using a rigorous 3-layer pipeline, and stores them in [ZeroClaw](https://github.com/topoteretes/zeroclaw) (a smart local memory db). It leverages `gemma-3-27b-it` for scoring papers to find the most impactful and `gemini-2.5-flash` for answering user queries via a live Telegram bot.
 
 ### 🎬 Apollo Demo
-
-[![Watch Apollo Demo](thumbnail.png)](https://github.com/Dhruvq/Apollo-AI-Research-Analyst/raw/refs/heads/main/apollo_demo.mp4)
+Click the thumbnail to watch the demo video.  
+<a href="https://github.com/Dhruvq/Apollo-AI-Research-Analyst/raw/refs/heads/main/apollo_demo.mp4">
+  <img src="thumbnail.png" alt="Watch Apollo Demo" width="45%">
+</a>
 
 *<small>Note: This project is not affiliated, associated, or in any way officially connected with VEED.</small>*
 
