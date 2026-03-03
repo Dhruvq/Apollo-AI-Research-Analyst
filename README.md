@@ -13,10 +13,9 @@ Apollo scrapes arXiv `cs.AI` submissions, filters out the noise down to the top 
 
 ### 🎬 Apollo Demo
 Click the thumbnail to watch the demo video.  
-<a href="https://github.com/Dhruvq/Apollo-AI-Research-Analyst/raw/refs/heads/main/apollo_demo.mp4">
+<a href="https://raw.githubusercontent.com/Dhruvq/Apollo-AI-Research-Analyst/main/apollo_demo.mp4">
   <img src="thumbnail.png" alt="Watch Apollo Demo" width="45%">
-</a>
-
+</a>  
 *<small>Note: This project is not affiliated, associated, or in any way officially connected with VEED.</small>*
 
 
