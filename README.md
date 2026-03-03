@@ -7,9 +7,9 @@
 ![arXiv cs.AI](https://img.shields.io/badge/arXiv-cs.AI-red?style=flat)
 ![ZeroClaw Hybrid DB](https://img.shields.io/badge/Memory-ZeroClaw%20Hybrid%20DB-black?style=flat)
 
-A secure, local-first autonomous research assistant that ingests cutting-edge papers in the field of AI, stores structured memory, performs hybrid retrieval, and produces biweekly research intelligence reports.
+A secure, local-first autonomous research assistant that ingests cutting-edge papers in the field of AI, stores structured memory, performs hybrid retrieval, and produces biweekly research intelligence reports. Check out the latest digest [here](https://dhruvq.github.io/Apollo-AI-Research-Analyst/)
 
-Apollo scrapes arXiv `cs.AI` submissions, filters out the noise down to the top 25 most impactful papers using a rigorous 3-layer pipeline, and stores them in [ZeroClaw](https://github.com/topoteretes/zeroclaw) (a smart local memory db). It leverages `gemma-3-27b-it` for scoring and `gemini-2.5-flash` for answering user queries via a live Telegram bot.
+Apollo scrapes arXiv `cs.AI` submissions, filters out the noise down to the top 25 most impactful papers using a rigorous 3-layer pipeline, and stores them in [ZeroClaw](https://github.com/topoteretes/zeroclaw) (a smart local memory db). It leverages `gemma-3-27b-it` for scoring papers to find the most impactful and `gemini-2.5-flash` for answering user queries via a live Telegram bot.
 
 
 ## 🌟 Key Features
@@ -19,7 +19,7 @@ Apollo scrapes arXiv `cs.AI` submissions, filters out the noise down to the top 
   1. **Keyword Scoring**: Matches abstract/title against high-signal AI terms (RAG, multi-agent, alignement, etc).
   2. **Author Boost**: Upweighs research from a curated list of ~40 top AI researchers/labs.
   3. **LLM Evaluation**: `gemma-3-27b-it` evaluates the top 150 candidates and scores them 1-10 on novelty and impact.
-- **Static Website Digests**: Automatically compiles the top 25 papers into a beautiful, dark-themed GitHub Pages HTML digest.
+- **Static Website Digests**: Automatically compiles the top 25 papers into a dark-themed [GitHub Pages HTML digest](https://dhruvq.github.io/Apollo-AI-Research-Analyst/).
 - **ZeroClaw Memory Integration**: Persistently stores all approved papers in ZeroClaw's local SQLite DB with hybrid search capabilities (Vector + Keyword).
 - **Interactive Telegram Assistant**: Query previous digest papers interactively via the standalone Python Telegram bot (@ApolloAIResearchBot).
 - **Run-if-Missed Consistency**: The scheduler automatically covers gaps in dates if the machine was offline during a regularly scheduled cycle.
