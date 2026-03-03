@@ -1,0 +1,533 @@
+{
+  "cycle_id": "2026-03-01",
+  "generated": "2026-03-03",
+  "paper_count": 25,
+  "papers": [
+    {
+      "id": "2603.00267v1",
+      "title": "Multi-Sourced, Multi-Agent Evidence Retrieval for Fact-Checking",
+      "abstract": "Misinformation spreading over the Internet poses a significant threat to both societies and individuals, necessitating robust and scalable fact-checking that relies on retrieving accurate and trustworthy evidence. Previous methods rely on semantic and social-contextual patterns learned from training data, which limits their generalization to new data distributions. Recently, Retrieval Augmented Generation (RAG) based methods have been proposed to utilize the reasoning capability of LLMs with retrieved grounding evidence documents. However, these methods largely rely on textual similarity for evidence retrieval and struggle to retrieve evidence that captures multi-hop semantic relations within rich document contents. These limitations lead to overlooking subtle factual correlations between the evidence and the claims to be fact-checked during evidence retrieval, thus causing inaccurate veracity predictions.\n  To address these issues, we propose WKGFC, which exploits authorized open knowledge graph as a core resource of evidence. LLM-enabled retrieval is designed to assess the claims and retrieve the most relevant knowledge subgraphs, forming structured evidence for fact verification. To augment the knowledge graph evidence, we retrieve web contents for completion. The above process is implemented as an automatic Markov Decision Process (MDP): A reasoning LLM agent decides what actions to take according to the current evidence and the claims. To adapt the MDP for fact-checking, we use prompt optimization to fine-tune the agentic LLM.",
+      "authors": [
+        "Shuzhi Gong",
+        "Richard O. Sinnott",
+        "Jianzhong Qi",
+        "Cecile Paris",
+        "Preslav Nakov",
+        "Zhuohan Xie"
+      ],
+      "submitted": "2026-02-27",
+      "url": "https://arxiv.org/abs/2603.00267v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a critical problem (misinformation) with a novel approach leveraging knowledge graphs and LLMs to improve evidence retrieval, potentially overcoming limitations of existing RAG methods and offering broader implications for fact-checking accuracy.",
+      "final_score": 13
+    },
+    {
+      "id": "2602.20934v1",
+      "title": "Architecting AgentOS: From Token-Level Context to Emergent System-Level Intelligence",
+      "abstract": "The paradigm of Large Language Models is undergoing a fundamental transition from static inference engines to dynamic autonomous cognitive systems.While current research primarily focuses on scaling context windows or optimizing prompt engineering the theoretical bridge between micro scale token processing and macro scale systemic intelligence remains fragmented.This paper proposes AgentOS,a holistic conceptual framework that redefines the LLM as a \"Reasoning Kernel\" governed by structured operating system logic.Central to this architecture is Deep Context Management which conceptualizes the context window as an Addressable Semantic Space rather than a passive buffer.We systematically deconstruct the transition from discrete sequences to coherent cognitive states introducing mechanisms for Semantic Slicing and Temporal Alignment to mitigate cognitive drift in multi-agent orchestration.By mapping classical OS abstractions such as memory paging interrupt handling and process scheduling onto LLM native constructs, this review provides a rigorous roadmap for architecting resilient scalable and self-evolving cognitive environments.Our analysis asserts that the next frontier of AGI development lies in the architectural efficiency of system-level coordination.",
+      "authors": [
+        "ChengYou Li",
+        "XiaoDong Liu",
+        "XiangBao Meng",
+        "XinYu Zhao"
+      ],
+      "submitted": "2026-02-24",
+      "url": "https://arxiv.org/abs/2602.20934v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "The paper presents a novel framework (AgentOS) for bridging LLM token processing to system-level intelligence, with strong conceptual rigor and potentially broad implications for AGI development, though empirical validation is currently lacking.",
+      "final_score": 13
+    },
+    {
+      "id": "2603.00121v1",
+      "title": "Graph-theoretic Agreement Framework for Multi-agent LLM Systems",
+      "abstract": "The shift from monolithic LLMs to distributed multi-agent architectures demands new frameworks for verifying and securing autonomous coordination. Unlike traditional multi-agent systems focused on cooperative state alignment, modern LLM patterns: multi-agent debate, constitutional oversight, helper-critic loops-rely on adversarial critique for error correction and reasoning refinement. Since LLMs are dynamical systems whose latent states are imperfectly observable from verbalized outputs, securing these networks requires understanding both macroscopic topology and microscopic agent observability. This paper establishes a rigorous graph-theoretic framework for analyzing consensus in signed, directed interaction networks, bridging graph theory and LLM reasoning by formally mapping Transformer cross-entropy log-odds to the signed Laplacian. We characterize agreement stability through structural balance theory, showing how unbalanced critique cycles produce logical frustration and persistent reasoning oscillations, and prove that unobservable latent states from hidden system prompts act as topological Trojan horses that destabilize cooperative consensus. To resolve unobservable deadlocks, we restrict interaction topologies to chordal graphs and apply matrix decomposition with Gram-Schmidt orthogonalization, proving that rank-one spectral edge perturbations deterministically break expertise symmetry by shifting eigenvalues into the stable left-half plane. Core contributions include consensus theorems, polynomial-time Perfect Elimination Ordering verification algorithms, and large-scale empirical validation on clustered ensembles of LLaMA-3, Mistral, and Gemma agents.",
+      "authors": [
+        "Muhammad Umar Javed"
+      ],
+      "submitted": "2026-02-23",
+      "url": "https://arxiv.org/abs/2603.00121v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "The paper presents a novel application of graph theory to a critical problem in multi-agent LLM systems \u2013 consensus and stability \u2013 with strong theoretical grounding and potentially broad implications for building more reliable and secure LLM-based agents.",
+      "final_score": 13
+    },
+    {
+      "id": "2602.18916v1",
+      "title": "Adaptive Collaboration of Arena-Based Argumentative LLMs for Explainable and Contestable Legal Reasoning",
+      "abstract": "Legal reasoning requires not only high accuracy but also the ability to justify decisions through verifiable and contestable arguments. However, existing Large Language Model (LLM) approaches, such as Chain-of-Thought (CoT) and Retrieval-Augmented Generation (RAG), often produce unstructured explanations that lack a formal mechanism for verification or user intervention. To address this limitation, we propose Adaptive Collaboration of Argumentative LLMs (ACAL), a neuro-symbolic framework that integrates adaptive multi-agent collaboration with an Arena-based Quantitative Bipolar Argumentation Framework (A-QBAF). ACAL dynamically deploys expert agent teams to construct arguments, employs a clash resolution mechanism to adjudicate conflicting claims, and utilizes uncertainty-aware escalation for borderline cases. Crucially, our framework supports a Human-in-the-Loop (HITL) contestability workflow, enabling users to directly audit and modify the underlying reasoning graph to influence the final judgment. Empirical evaluations on the LegalBench benchmark demonstrate that ACAL outperforms strong baselines across Gemini-2.5-Flash-Lite and Gemini-2.5-Flash architectures, effectively balancing efficient predictive performance with structured transparency and contestability. Our implementation is available at: https://github.com/loc110504/ACAL.",
+      "authors": [
+        "Hoang-Loc Cao",
+        "Phuc Ho",
+        "Truong Thanh Hung Nguyen",
+        "Phuc Truong Loc Nguyen",
+        "Dinh Thien Loc Nguyen",
+        "Hung Cao"
+      ],
+      "submitted": "2026-02-21",
+      "url": "https://arxiv.org/abs/2602.18916v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "The paper presents a novel neuro-symbolic framework addressing a critical gap in LLM legal reasoning \u2013 explainability and contestability \u2013 with strong empirical results and a clear path for human interaction, suggesting significant research impact.",
+      "final_score": 13
+    },
+    {
+      "id": "2602.17999v1",
+      "title": "Aurora: Neuro-Symbolic AI Driven Advising Agent",
+      "abstract": "Academic advising in higher education is under severe strain, with advisor-to-student ratios commonly exceeding 300:1. These structural bottlenecks limit timely access to guidance, increase the risk of delayed graduation, and contribute to inequities in student support. We introduce Aurora, a modular neuro-symbolic advising agent that unifies retrieval-augmented generation (RAG), symbolic reasoning, and normalized curricular databases to deliver policy-compliant, verifiable recommendations at scale. Aurora integrates three components: (i) a Boyce-Codd Normal Form (BCNF) catalog schema for consistent program rules, (ii) a Prolog engine for prerequisite and credit enforcement, and (iii) an instruction-tuned large language model for natural-language explanations of its recommendations. To assess performance, we design a structured evaluation suite spanning common and edge-case advising scenarios, including short-term scheduling, long-term roadmapping, skill-aligned pathways, and out-of-scope requests. Across this diverse set, Aurora improves semantic alignment with expert-crafted answers from 0.68 (Raw LLM baseline) to 0.93 (+36%), achieves perfect precision and recall in nearly half of in-scope cases, and consistently produces correct fallbacks for unanswerable prompts. On commodity hardware, Aurora delivers sub-second mean latency (0.71s across 20 queries), approximately 83X faster than a Raw LLM baseline (59.2s). By combining symbolic rigor with neural fluency, Aurora advances a paradigm for accurate, explainable, and scalable AI-driven advising.",
+      "authors": [
+        "Lorena Amanda Quincoso Lugones",
+        "Christopher Kverne",
+        "Nityam Sharadkumar Bhimani",
+        "Ana Carolina Oliveira",
+        "Agoritsa Polyzou",
+        "Christine Lisetti",
+        "Janki Bhimani"
+      ],
+      "submitted": "2026-02-20",
+      "url": "https://arxiv.org/abs/2602.17999v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a significant problem with a novel neuro-symbolic approach, demonstrates strong methodological rigor through a structured evaluation, and has broad implications for improving access to educational advising and potentially other policy-driven domains.",
+      "final_score": 13
+    },
+    {
+      "id": "2602.15513v2",
+      "title": "HIMM: Human-Inspired Long-Term Memory Modeling for Embodied Exploration and Question Answering",
+      "abstract": "Deploying Multimodal Large Language Models as the brain of embodied agents remains challenging, particularly under long-horizon observations and limited context budgets. Existing memory assisted methods often rely on textual summaries, which discard rich visual and spatial details and remain brittle in non-stationary environments. In this work, we propose a non-parametric memory framework that explicitly disentangles episodic and semantic memory for embodied exploration and question answering. Our retrieval-first, reasoning-assisted paradigm recalls episodic experiences via semantic similarity and verifies them through visual reasoning, enabling robust reuse of past observations without rigid geometric alignment. In parallel, we introduce a program-style rule extraction mechanism that converts experiences into structured, reusable semantic memory, facilitating cross-environment generalization. Extensive experiments demonstrate state-of-the-art performance on embodied question answering and exploration benchmarks, yielding a 7.3% gain in LLM-Match and an 11.4% gain in LLM MatchXSPL on A-EQA, as well as +7.7% success rate and +6.8% SPL on GOAT-Bench. Analyses reveal that our episodic memory primarily improves exploration efficiency, while semantic memory strengthens complex reasoning of embodied agents.",
+      "authors": [
+        "Ji Li",
+        "Bo Wang",
+        "Jing Xia",
+        "Mingyi Li",
+        "Shiyan Hu"
+      ],
+      "submitted": "2026-02-17",
+      "url": "https://arxiv.org/abs/2602.15513v2",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a critical challenge in embodied AI with a novel memory architecture combining episodic and semantic memory, demonstrating strong empirical results and offering potential for broader impact in robotics and agent learning.",
+      "final_score": 13
+    },
+    {
+      "id": "2602.15156v1",
+      "title": "Panini: Continual Learning in Token Space via Structured Memory",
+      "abstract": "Language models are increasingly used to reason over content they were not trained on, such as new documents, evolving knowledge, and user-specific data. A common approach is retrieval-augmented generation (RAG), which stores verbatim documents externally (as chunks) and retrieves only a relevant subset at inference time for an LLM to reason over. However, this results in inefficient usage of test-time compute (LLM repeatedly reasons over the same documents); moreover, chunk retrieval can inject irrelevant context that increases unsupported generation. We propose a human-like non-parametric continual learning framework, where the base model remains fixed, and learning occurs by integrating each new experience into an external semantic memory state that accumulates and consolidates itself continually. We present Panini, which realizes this by representing documents as Generative Semantic Workspaces (GSW) -- an entity- and event-aware network of question-answer (QA) pairs, sufficient for an LLM to reconstruct the experienced situations and mine latent knowledge via reasoning-grounded inference chains on the network. Given a query, Panini only traverses the continually-updated GSW (not the verbatim documents or chunks), and retrieves the most likely inference chains. Across six QA benchmarks, Panini achieves the highest average performance, 5%-7% higher than other competitive baselines, while using 2-30x fewer answer-context tokens, supports fully open-source pipelines, and reduces unsupported answers on curated unanswerable queries. The results show that efficient and accurate structuring of experiences at write time -- as achieved by the GSW framework -- yields both efficiency and reliability gains at read time. Code is available at https://github.com/roychowdhuryresearch/gsw-memory.",
+      "authors": [
+        "Shreyas Rajesh",
+        "Pavan Holur",
+        "Mehmet Yigit Turali",
+        "Chenda Duan",
+        "Vwani Roychowdhury"
+      ],
+      "submitted": "2026-02-16",
+      "url": "https://arxiv.org/abs/2602.15156v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a significant challenge in LLM deployment (continual learning and RAG efficiency) with a novel approach using structured semantic memory, demonstrating strong potential for improving reasoning and reducing computational cost.",
+      "final_score": 13
+    },
+    {
+      "id": "2602.22828v1",
+      "title": "TCM-DiffRAG: Personalized Syndrome Differentiation Reasoning Method for Traditional Chinese Medicine based on Knowledge Graph and Chain of Thought",
+      "abstract": "Background: Retrieval augmented generation (RAG) technology can empower large language models (LLMs) to generate more accurate, professional, and timely responses without fine tuning. However, due to the complex reasoning processes and substantial individual differences involved in traditional Chinese medicine (TCM) clinical diagnosis and treatment, traditional RAG methods often exhibit poor performance in this domain. Objective: To address the limitations of conventional RAG approaches in TCM applications, this study aims to develop an improved RAG framework tailored to the characteristics of TCM reasoning. Methods: We developed TCM-DiffRAG, an innovative RAG framework that integrates knowledge graphs (KG) with chains of thought (CoT). TCM-DiffRAG was evaluated on three distinctive TCM test datasets. Results: The experimental results demonstrated that TCM-DiffRAG achieved significant performance improvements over native LLMs. For example, the qwen-plus model achieved scores of 0.927, 0.361, and 0.038, which were significantly enhanced to 0.952, 0.788, and 0.356 with TCM-DiffRAG. The improvements were even more pronounced for non-Chinese LLMs. Additionally, TCM-DiffRAG outperformed directly supervised fine-tuned (SFT) LLMs and other benchmark RAG methods. Conclusions: TCM-DiffRAG shows that integrating structured TCM knowledge graphs with Chain of Thought based reasoning substantially improves performance in individualized diagnostic tasks. The joint use of universal and personalized knowledge graphs enables effective alignment between general knowledge and clinical reasoning. These results highlight the potential of reasoning-aware RAG frameworks for advancing LLM applications in traditional Chinese medicine.",
+      "authors": [
+        "Jianmin Li",
+        "Ying Chang",
+        "Su-Kit Tang",
+        "Yujia Liu",
+        "Yanwen Wang",
+        "Shuyuan Lin",
+        "Binkai Ou"
+      ],
+      "submitted": "2026-02-26",
+      "url": "https://arxiv.org/abs/2602.22828v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 7,
+      "llm_reason": "The paper addresses a specific, challenging problem (TCM diagnosis) with a novel application of RAG, KG, and CoT, showing promising results, but broader impact hinges on the generalizability of the approach beyond TCM.",
+      "final_score": 12
+    },
+    {
+      "id": "2603.01990v1",
+      "title": "According to Me: Long-Term Personalized Referential Memory QA",
+      "abstract": "Personalized AI assistants must recall and reason over long-term user memory, which naturally spans multiple modalities and sources such as images, videos, and emails. However, existing Long-term Memory benchmarks focus primarily on dialogue history, failing to capture realistic personalized references grounded in lived experience. We introduce ATM-Bench, the first benchmark for multimodal, multi-source personalized referential Memory QA. ATM-Bench contains approximately four years of privacy-preserving personal memory data and human-annotated question-answer pairs with ground-truth memory evidence, including queries that require resolving personal references, multi-evidence reasoning from multi-source and handling conflicting evidence. We propose Schema-Guided Memory (SGM) to structurally represent memory items originated from different sources. In experiments, we implement 5 state-of-the-art memory systems along with a standard RAG baseline and evaluate variants with different memory ingestion, retrieval, and answer generation techniques. We find poor performance (under 20\\% accuracy) on the ATM-Bench-Hard set, and that SGM improves performance over Descriptive Memory commonly adopted in prior works. Code available at: https://github.com/JingbiaoMei/ATM-Bench",
+      "authors": [
+        "Jingbiao Mei",
+        "Jinghong Chen",
+        "Guangyu Yang",
+        "Xinyu Hou",
+        "Margaret Li",
+        "Bill Byrne"
+      ],
+      "submitted": "2026-03-02",
+      "url": "https://arxiv.org/abs/2603.01990v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This paper addresses a critical gap in long-term memory QA by introducing a novel, realistic benchmark (ATM-Bench) and a promising approach (SGM), with strong experimental validation suggesting significant potential for advancing personalized AI assistants.",
+      "final_score": 12
+    },
+    {
+      "id": "2603.01783v1",
+      "title": "GAM-RAG: Gain-Adaptive Memory for Evolving Retrieval in Retrieval-Augmented Generation",
+      "abstract": "Retrieval-Augmented Generation (RAG) grounds large language models with external evidence, but many implementations rely on pre-built indices that remain static after construction. Related queries therefore repeat similar multi-hop traversal, increasing latency and compute. Motivated by schema-based learning in cognitive neuroscience, we propose GAM-RAG, a training-free framework that accumulates retrieval experience from recurring or related queries and updates retrieval memory over time. GAM-RAG builds a lightweight, relation-free hierarchical index whose links capture potential co-occurrence rather than fixed semantic relations. During inference, successful retrieval episodes provide sentence-level feedback, updating sentence memories so evidence useful for similar reasoning types becomes easier to activate later. To balance stability and adaptability under noisy feedback, we introduce an uncertainty-aware, Kalman-inspired gain rule that jointly updates memory states and perplexity-based uncertainty estimates. It applies fast updates for reliable novel signals and conservative refinement for stable or noisy memories. We provide a theoretical analysis of the update dynamics, and empirically show that GAM-RAG improves average performance by 3.95% over the strongest baseline and by 8.19% with 5-turn memory, while reducing inference cost by 61%. Our code and datasets are available at: https://anonymous.4open.science/r/GAM_RAG-2EF6.",
+      "authors": [
+        "Yifan Wang",
+        "Mingxuan Jiang",
+        "Zhihao Sun",
+        "Yixin Cao",
+        "Yicun Liu",
+        "Keyang Chen",
+        "Guangnan Ye",
+        "Hongfeng Chai"
+      ],
+      "submitted": "2026-03-02",
+      "url": "https://arxiv.org/abs/2603.01783v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "GAM-RAG addresses a significant limitation of current RAG systems \u2013 static knowledge \u2013 with a novel, theoretically grounded, and training-free approach to dynamically updating retrieval memory, potentially leading to substantial improvements in efficiency and performance.",
+      "final_score": 12
+    },
+    {
+      "id": "2603.01357v1",
+      "title": "ASTRA-bench: Evaluating Tool-Use Agent Reasoning and Action Planning with Personal User Context",
+      "abstract": "Next-generation AI must manage vast personal data, diverse tools, and multi-step reasoning, yet most benchmarks remain context-free and single-turn. We present ASTRA-bench (Assistant Skills in Tool-use, Reasoning \\& Action-planning), a benchmark that uniquely unifies time-evolving personal context with an interactive toolbox and complex user intents. Our event-driven pipeline generates 2,413 scenarios across four protagonists, grounded in longitudinal life events and annotated by referential, functional, and informational complexity. Evaluation of state-of-the-art models (e.g., Claude-4.5-Opus, DeepSeek-V3.2) reveals significant performance degradation under high-complexity conditions, with argument generation emerging as the primary bottleneck. These findings expose critical limitations in current agents' ability to ground reasoning within messy personal context and orchestrate reliable multi-step plans. We release ASTRA-bench with a full execution environment and evaluation scripts to provide a diagnostic testbed for developing truly context-aware AI assistants.",
+      "authors": [
+        "Zidi Xiu",
+        "David Q. Sun",
+        "Kevin Cheng",
+        "Maitrik Patel",
+        "Josh Date",
+        "Yizhe Zhang",
+        "Jiarui Lu",
+        "Omar Attia",
+        "Raviteja Vemulapalli",
+        "Oncel Tuzel",
+        "Meng Cao",
+        "Samy Bengio"
+      ],
+      "submitted": "2026-03-02",
+      "url": "https://arxiv.org/abs/2603.01357v1",
+      "keyword_score": 1,
+      "author_boost": 3,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This paper addresses a crucial gap in AI agent evaluation by focusing on realistic, context-dependent, multi-step reasoning and tool use, offering a valuable benchmark and revealing key limitations of current models, which suggests high potential for driving future research.",
+      "final_score": 12
+    },
+    {
+      "id": "2603.00960v1",
+      "title": "AWE: Adaptive Agents for Dynamic Web Penetration Testing",
+      "abstract": "Modern web applications are increasingly produced through AI-assisted development and rapid no-code deployment pipelines, widening the gap between accelerating software velocity and the limited adaptability of existing security tooling. Pattern-driven scanners fail to reason about novel contexts, while emerging LLM-based penetration testers rely on unconstrained exploration, yielding high cost, unstable behavior, and poor reproducibility.\n  We introduce AWE, a memory-augmented multi-agent framework for autonomous web penetration testing that embeds structured, vulnerability-specific analysis pipelines within a lightweight LLM orchestration layer. Unlike general-purpose agents, AWE couples context aware payload mutations and generations with persistent memory and browser-backed verification to produce deterministic, exploitation-driven results.\n  Evaluated on the 104-challenge XBOW benchmark, AWE achieves substantial gains on injection-class vulnerabilities - 87% XSS success (+30.5% over MAPTA) and 66.7% blind SQL injection success (+33.3%) - while being much faster, cheaper, and more token-efficient than MAPTA, despite using a midtier model (Claude Sonnet 4) versus MAPTA's GPT-5. MAPTA retains higher overall coverage due to broader exploratory capabilities, underscoring the complementary strengths of specialized and general-purpose architectures. Our results demonstrate that architecture matters as much as model reasoning capabilities: integrating LLMs into principled, vulnerability-aware pipelines yields substantial gains in accuracy, efficiency, and determinism for injection-class exploits. The source code for AWE is available at: https://github.com/stuxlabs/AWE",
+      "authors": [
+        "Akshat Singh Jaswal",
+        "Ashish Baghel"
+      ],
+      "submitted": "2026-03-01",
+      "url": "https://arxiv.org/abs/2603.00960v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a critical gap in web security by combining LLMs with structured analysis and memory, demonstrating significant performance improvements on a benchmark while being more efficient, suggesting strong potential for practical impact and further research.",
+      "final_score": 12
+    },
+    {
+      "id": "2603.00460v1",
+      "title": "MED-COPILOT: A Medical Assistant Powered by GraphRAG and Similar Patient Case Retrieval",
+      "abstract": "Clinical decision-making requires synthesizing heterogeneous evidence, including patient histories, clinical guidelines, and trajectories of comparable cases. While large language models (LLMs) offer strong reasoning capabilities, they remain prone to hallucinations and struggle to integrate long, structured medical documents. We present MED-COPILOT, an interactive clinical decision-support system designed for clinicians and medical trainees, which combines guideline-grounded GraphRAG retrieval with hybrid semantic-keyword similar-patient retrieval to support transparent and evidence-aware clinical reasoning. The system builds a structured knowledge graph from WHO and NICE guidelines, applies community-level summarization for efficient retrieval, and maintains a 36,000-case similar-patient database derived from SOAP-normalized MIMIC-IV notes and Synthea-generated records.\n  We evaluate our framework on clinical note completion and medical question answering, and demonstrate that it consistently outperforms parametric LLM baselines and standard RAG, improving both generation fidelity and clinical reasoning accuracy. The full system is available at https://huggingface.co/spaces/Cryo3978/Med_GraphRAG , enabling users to inspect retrieved evidence, visualize token-level similarity contributions, and conduct guided follow-up analysis. Our results demonstrate a practical and interpretable approach to integrating structured guideline knowledge with patient-level analogical evidence for clinical LLMs.",
+      "authors": [
+        "Shuheng Chen",
+        "Namratha Patil",
+        "Haonan Pan",
+        "Angel Hsing-Chi Hwang",
+        "Yao Du",
+        "Ruishan Liu",
+        "Jieyu Zhao"
+      ],
+      "submitted": "2026-02-28",
+      "url": "https://arxiv.org/abs/2603.00460v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This paper addresses a critical need in healthcare with a novel combination of techniques (GraphRAG and similar patient retrieval) and demonstrates strong empirical results on relevant tasks, suggesting significant potential impact for clinical decision support.",
+      "final_score": 12
+    },
+    {
+      "id": "2602.22603v2",
+      "title": "SideQuest: Model-Driven KV Cache Management for Long-Horizon Agentic Reasoning",
+      "abstract": "Long-running agentic tasks, such as deep research, require multi-hop reasoning over information distributed across multiple webpages and documents. In such tasks, the LLM context is dominated by tokens from external retrieval, causing memory usage to grow rapidly and limiting decode performance. While several KV cache compression techniques exist for long-context inputs, we find that existing heuristics fail to support multi-step reasoning models effectively. We address this challenge with SideQuest -- a novel approach that leverages the Large Reasoning Model (LRM) itself to perform KV cache compression by reasoning about the usefulness of tokens in its context. To prevent the tokens associated with this management process from polluting the model's memory, we frame KV cache compression as an auxiliary task executed in parallel to the main reasoning task. Our evaluations, using a model trained with just 215 samples, show that SideQuest reduces peak token usage by up to 65% on agentic tasks with minimal degradation in accuracy, outperforming heuristic-based KV cache compression techniques.",
+      "authors": [
+        "Sanjay Kariyappa",
+        "G. Edward Suh"
+      ],
+      "submitted": "2026-02-26",
+      "url": "https://arxiv.org/abs/2602.22603v2",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a critical bottleneck in long-context LLM applications (KV cache size) with a novel, model-driven approach that shows promising results and has broader implications for scaling agentic reasoning.",
+      "final_score": 12
+    },
+    {
+      "id": "2602.21447v1",
+      "title": "Adversarial Intent is a Latent Variable: Stateful Trust Inference for Securing Multimodal Agentic RAG",
+      "abstract": "Current stateless defences for multimodal agentic RAG fail to detect adversarial strategies that distribute malicious semantics across retrieval, planning, and generation components. We formulate this security challenge as a Partially Observable Markov Decision Process (POMDP), where adversarial intent is a latent variable inferred from noisy multi-stage observations. We introduce MMA-RAG^T, an inference-time control framework governed by a Modular Trust Agent (MTA) that maintains an approximate belief state via structured LLM reasoning. Operating as a model-agnostic overlay, MMA-RAGT mediates a configurable set of internal checkpoints to enforce stateful defence-in-depth. Extensive evaluation on 43,774 instances demonstrates a 6.50x average reduction factor in Attack Success Rate relative to undefended baselines, with negligible utility cost. Crucially, a factorial ablation validates our theoretical bounds: while statefulness and spatial coverage are individually necessary (26.4 pp and 13.6 pp gains respectively), stateless multi-point intervention can yield zero marginal benefit under homogeneous stateless filtering when checkpoint detections are perfectly correlated.",
+      "authors": [
+        "Inderjeet Singh",
+        "Vikas Pahuja",
+        "Aishvariya Priya Rathina Sabapathy",
+        "Chiara Picardi",
+        "Amit Giloni",
+        "Roman Vainshtein",
+        "Andr\u00e9s Murillo",
+        "Hisashi Kojima",
+        "Motoyoshi Sekiya",
+        "Yuki Unno",
+        "Junichi Suga"
+      ],
+      "submitted": "2026-02-24",
+      "url": "https://arxiv.org/abs/2602.21447v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a critical security gap in agentic RAG systems with a novel POMDP formulation and a practical, model-agnostic defense (MMA-RAG^T) demonstrating significant improvements and insightful ablation studies, suggesting substantial research impact.",
+      "final_score": 12
+    },
+    {
+      "id": "2602.20926v1",
+      "title": "HELP: HyperNode Expansion and Logical Path-Guided Evidence Localization for Accurate and Efficient GraphRAG",
+      "abstract": "Large Language Models (LLMs) often struggle with inherent knowledge boundaries and hallucinations, limiting their reliability in knowledge-intensive tasks. While Retrieval-Augmented Generation (RAG) mitigates these issues, it frequently overlooks structural interdependencies essential for multi-hop reasoning. Graph-based RAG approaches attempt to bridge this gap, yet they typically face trade-offs between accuracy and efficiency due to challenges such as costly graph traversals and semantic noise in LLM-generated summaries. In this paper, we propose HyperNode Expansion and Logical Path-Guided Evidence Localization strategies for GraphRAG (HELP), a novel framework designed to balance accuracy with practical efficiency through two core strategies: 1) HyperNode Expansion, which iteratively chains knowledge triplets into coherent reasoning paths abstracted as HyperNodes to capture complex structural dependencies and ensure retrieval accuracy; and 2) Logical Path-Guided Evidence Localization, which leverages precomputed graph-text correlations to map these paths directly to the corpus for superior efficiency. HELP avoids expensive random walks and semantic distortion, preserving knowledge integrity while drastically reducing retrieval latency. Extensive experiments demonstrate that HELP achieves competitive performance across multiple simple and multi-hop QA benchmarks and up to a 28.8$\\times$ speedup over leading Graph-based RAG baselines.",
+      "authors": [
+        "Yuqi Huang",
+        "Ning Liao",
+        "Kai Yang",
+        "Anning Hu",
+        "Shengchao Hu",
+        "Xiaoxing Wang",
+        "Junchi Yan"
+      ],
+      "submitted": "2026-02-24",
+      "url": "https://arxiv.org/abs/2602.20926v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a critical limitation of GraphRAG systems (accuracy vs. efficiency) with a novel approach combining HyperNode expansion and logical path guidance, showing strong potential for improving knowledge-intensive tasks and offering a practical solution to complex reasoning challenges.",
+      "final_score": 12
+    },
+    {
+      "id": "2602.20379v1",
+      "title": "Case-Aware LLM-as-a-Judge Evaluation for Enterprise-Scale RAG Systems",
+      "abstract": "Enterprise Retrieval-Augmented Generation (RAG) assistants operate in multi-turn, case-based workflows such as technical support and IT operations, where evaluation must reflect operational constraints, structured identifiers (e.g., error codes, versions), and resolution workflows. Existing RAG evaluation frameworks are primarily designed for benchmark-style or single-turn settings and often fail to capture enterprise-specific failure modes such as case misidentification, workflow misalignment, and partial resolution across turns.\n  We present a case-aware LLM-as-a-Judge evaluation framework for enterprise multi-turn RAG systems. The framework evaluates each turn using eight operationally grounded metrics that separate retrieval quality, grounding fidelity, answer utility, precision integrity, and case/workflow alignment. A severity-aware scoring protocol reduces score inflation and improves diagnostic clarity across heterogeneous enterprise cases. The system uses deterministic prompting with strict JSON outputs, enabling scalable batch evaluation, regression testing, and production monitoring.\n  Through a comparative study of two instruction-tuned models across short and long workflows, we show that generic proxy metrics provide ambiguous signals, while the proposed framework exposes enterprise-critical tradeoffs that are actionable for system improvement.",
+      "authors": [
+        "Mukul Chhabra",
+        "Luigi Medrano",
+        "Arush Verma"
+      ],
+      "submitted": "2026-02-23",
+      "url": "https://arxiv.org/abs/2602.20379v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This paper addresses a critical gap in RAG evaluation by focusing on the complexities of enterprise use cases, offering a novel and practically valuable framework with strong methodological rigor and potential for broad adoption in industry.",
+      "final_score": 12
+    },
+    {
+      "id": "2602.19534v2",
+      "title": "Large Language Model-Assisted UAV Operations and Communications: A Multifaceted Survey and Tutorial",
+      "abstract": "Uncrewed Aerial Vehicles (UAVs) are widely deployed across diverse applications due to their mobility and agility. Recent advances in Large Language Models (LLMs) offer a transformative opportunity to enhance UAV intelligence beyond conventional optimization-based and learning-based approaches. By integrating LLMs into UAV systems, advanced environmental understanding, swarm coordination, mobility optimization, and high-level task reasoning can be achieved, thereby allowing more adaptive and context-aware aerial operations. This survey systematically explores the intersection of LLMs and UAV technologies and proposes a unified framework that consolidates existing architectures, methodologies, and applications for UAVs. We first present a structured taxonomy of LLM adaptation techniques for UAVs, including pretraining, fine-tuning, Retrieval-Augmented Generation (RAG), and prompt engineering, along with key reasoning capabilities such as Chain-of-Thought (CoT) and In-Context Learning (ICL). We then examine LLM-assisted UAV communications and operations, covering navigation, mission planning, swarm control, safety, autonomy, and network management. After that, the survey further discusses Multimodal LLMs (MLLMs) for human-swarm interaction, perception-driven navigation, and collaborative control. Finally, we address ethical considerations, including bias, transparency, accountability, and Human-in-the-Loop (HITL) strategies, and outline future research directions. Overall, this work positions LLM-assisted UAVs as a foundation for intelligent and adaptive aerial systems.",
+      "authors": [
+        "Yousef Emami",
+        "Hao Zhou",
+        "Radha Reddy",
+        "Atefeh Hajijamali Arani",
+        "Biliang Wang",
+        "Kai Li",
+        "Luis Almeida",
+        "Zhu Han"
+      ],
+      "submitted": "2026-02-23",
+      "url": "https://arxiv.org/abs/2602.19534v2",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This survey paper addresses a highly relevant and emerging intersection of LLMs and UAVs, offering a comprehensive overview and framework that could significantly guide future research and development in the field.",
+      "final_score": 12
+    },
+    {
+      "id": "2602.17902v1",
+      "title": "El Agente Gr\u00e1fico: Structured Execution Graphs for Scientific Agents",
+      "abstract": "Large language models (LLMs) are increasingly used to automate scientific workflows, yet their integration with heterogeneous computational tools remains ad hoc and fragile. Current agentic approaches often rely on unstructured text to manage context and coordinate execution, generating often overwhelming volumes of information that may obscure decision provenance and hinder auditability. In this work, we present El Agente Gr\u00e1fico, a single-agent framework that embeds LLM-driven decision-making within a type-safe execution environment and dynamic knowledge graphs for external persistence. Central to our approach is a structured abstraction of scientific concepts and an object-graph mapper that represents computational state as typed Python objects, stored either in memory or persisted in an external knowledge graph. This design enables context management through typed symbolic identifiers rather than raw text, thereby ensuring consistency, supporting provenance tracking, and enabling efficient tool orchestration. We evaluate the system by developing an automated benchmarking framework across a suite of university-level quantum chemistry tasks previously evaluated on a multi-agent system, demonstrating that a single agent, when coupled to a reliable execution engine, can robustly perform complex, multi-step, and parallel computations. We further extend this paradigm to two other large classes of applications: conformer ensemble generation and metal-organic framework design, where knowledge graphs serve as both memory and reasoning substrates. Together, these results illustrate how abstraction and type safety can provide a scalable foundation for agentic scientific automation beyond prompt-centric designs.",
+      "authors": [
+        "Jiaru Bai",
+        "Abdulrahman Aldossary",
+        "Thomas Swanick",
+        "Marcel M\u00fcller",
+        "Yeonghun Kang",
+        "Zijian Zhang",
+        "Jin Won Lee",
+        "Tsz Wai Ko",
+        "Mohammad Ghazi Vakili",
+        "Varinia Bernales",
+        "Al\u00e1n Aspuru-Guzik"
+      ],
+      "submitted": "2026-02-19",
+      "url": "https://arxiv.org/abs/2602.17902v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This paper addresses a critical challenge in LLM-driven scientific workflows \u2013 robustness and auditability \u2013 with a novel approach using structured execution graphs and typed knowledge representation, demonstrating strong potential for impact in the field.",
+      "final_score": 12
+    },
+    {
+      "id": "2602.16873v1",
+      "title": "AdaptOrch: Task-Adaptive Multi-Agent Orchestration in the Era of LLM Performance Convergence",
+      "abstract": "As large language models from diverse providers converge toward comparable benchmark performance, the traditional paradigm of selecting a single best model per task yields diminishing returns. We argue that orchestration topology -- the structural composition of how multiple agents are coordinated, parallelized, and synthesized -- now dominates system-level performance over individual model capability. We present AdaptOrch, a formal framework for task-adaptive multi-agent orchestration that dynamically selects among four canonical topologies (parallel, sequential, hierarchical, and hybrid) based on task dependency graphs and empirically derived domain characteristics. Our framework introduces three key contributions: (1) a Performance Convergence Scaling Law, formalizing conditions under which orchestration selection outweighs model selection; (2) a Topology Routing Algorithm that maps task decomposition DAGs to optimal orchestration patterns in O(|V| + |E|) time; and (3) an Adaptive Synthesis Protocol with provable termination guarantees and heuristic consistency scoring for parallel agent outputs. We validate AdaptOrch across coding (SWE-bench), reasoning (GPQA), and retrieval-augmented generation tasks, demonstrating that topology-aware orchestration achieves 12-23% improvement over static single-topology baselines, even when using identical underlying models. Our results establish orchestration design as a first-class optimization target independent of model scaling.",
+      "authors": [
+        "Geunbin Yu"
+      ],
+      "submitted": "2026-02-18",
+      "url": "https://arxiv.org/abs/2602.16873v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a timely and important problem \u2013 moving beyond model selection to orchestration as LLMs converge \u2013 with a rigorous framework, novel algorithms, and strong empirical validation, suggesting significant potential impact on how multi-agent systems are designed and deployed.",
+      "final_score": 12
+    },
+    {
+      "id": "2602.14612v2",
+      "title": "LongAudio-RAG: Event-Grounded Question Answering over Multi-Hour Long Audio",
+      "abstract": "Long-duration audio is increasingly common in industrial and consumer settings, yet reviewing multi-hour recordings is impractical, motivating systems that answer natural-language queries with precise temporal grounding and minimal hallucination. Existing audio-language models show promise, but long-audio question answering remains difficult due to context-length limits. We introduce LongAudio-RAG (LA-RAG), a hybrid framework that grounds Large Language Model (LLM) outputs in retrieved, timestamped acoustic event detections rather than raw audio. Multi-hour streams are converted into structured event records stored in an SQL database, and at inference time the system resolves natural-language time references, classifies intent, retrieves only the relevant events, and generates answers using this constrained evidence. To evaluate performance, we construct a synthetic long-audio benchmark by concatenating recordings with preserved timestamps and generating template-based question-answer pairs for detection, counting, and summarization tasks. Finally, we demonstrate the practicality of our approach by deploying it in a hybrid edge-cloud environment, where the audio grounding model runs on-device on IoT-class hardware while the LLM is hosted on a GPU-backed server. This architecture enables low-latency event extraction at the edge and high-quality language reasoning in the cloud. Experiments show that structured, event-level retrieval significantly improves accuracy compared to vanilla Retrieval-Augmented Generation (RAG) or text-to-SQL approaches.",
+      "authors": [
+        "Naveen Vakada",
+        "Kartik Hegde",
+        "Arvind Krishna Sridhar",
+        "Yinyi Guo",
+        "Erik Visser"
+      ],
+      "submitted": "2026-02-16",
+      "url": "https://arxiv.org/abs/2602.14612v2",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This paper addresses a significant challenge in long-form audio understanding with a novel RAG approach grounded in acoustic events, demonstrating strong methodological rigor through a synthetic benchmark and edge-cloud deployment, suggesting substantial potential impact.",
+      "final_score": 12
+    },
+    {
+      "id": "2603.01692v1",
+      "title": "Reasoning as Gradient: Scaling MLE Agents Beyond Tree Search",
+      "abstract": "LLM-based agents for machine learning engineering (MLE) predominantly rely on tree search, a form of gradient-free optimization that uses scalar validation scores to rank candidates. As LLM reasoning capabilities improve, exhaustive enumeration becomes increasingly inefficient compared to directed updates, analogous to how accurate gradients enable efficient descent over random search. We introduce \\textsc{Gome}, an MLE agent that operationalizes gradient-based optimization. \\textsc{Gome} maps structured diagnostic reasoning to gradient computation, success memory to momentum, and multi-trace execution to distributed optimization. Under a closed-world protocol that isolates architectural effects from external knowledge, \\textsc{Gome} achieves a state-of-the-art 35.1\\% any-medal rate on MLE-Bench with a restricted 12-hour budget on a single V100 GPU. Scaling experiments across 10 models reveal a critical crossover: with weaker models, tree search retains advantages by compensating for unreliable reasoning through exhaustive exploration; as reasoning capability strengthens, gradient-based optimization progressively outperforms, with the gap widening at frontier-tier models. Given the rapid advancement of reasoning-oriented LLMs, this positions gradient-based optimization as an increasingly favorable paradigm. We release our codebase and GPT-5 traces.",
+      "authors": [
+        "Yifei Zhang",
+        "Xu Yang",
+        "Xiao Yang",
+        "Bowen Xian",
+        "Qizheng Li",
+        "Shikai Fang",
+        "Jingyuan Li",
+        "Jian Wang",
+        "Mingrui Xu",
+        "Weiqing Liu",
+        "Jiang Bian"
+      ],
+      "submitted": "2026-03-02",
+      "url": "https://arxiv.org/abs/2603.01692v1",
+      "keyword_score": 3,
+      "author_boost": 0,
+      "layer_score": 3,
+      "llm_score": 9,
+      "llm_reason": "This paper presents a novel and potentially impactful approach to MLE agent design by shifting from tree search to gradient-based optimization, demonstrating strong empirical results and a clear scaling trend with LLM capabilities, suggesting significant implications for the future of automated ML.",
+      "final_score": 12
+    },
+    {
+      "id": "2603.00270v1",
+      "title": "Transformers Remember First, Forget Last: Dual-Process Interference in LLMs",
+      "abstract": "When large language models encounter conflicting information in context, which memories survive -- early or recent? We adapt classical interference paradigms from cognitive psychology to answer this question, testing 39 LLMs across diverse architectures and scales. Every model shows the same pattern: proactive interference (PI) dominates retroactive interference (RI) universally (Cohen's d = 1.73, p < 0.0001), meaning early encodings are protected at the cost of recent information -- the opposite of human memory, where RI typically dominates. Three findings indicate that RI and PI reflect separate memory mechanisms. RI and PI are uncorrelated (R^2 = 0.044), rejecting a unified \"memory capacity.\" Model size predicts RI resistance (R^2 = 0.49) but not PI (R^2 = 0.06, n.s.) -- only RI is capacity-dependent. And error analysis reveals distinct failure modes: RI failures are passive retrieval failures (51%), while PI failures show active primacy intrusion (56%); both show <1% hallucination. These patterns parallel the consolidation-retrieval distinction in cognitive science, suggesting that transformer attention creates a primacy bias with direct implications for interference-heavy applications.",
+      "authors": [
+        "Sourav Chattaraj",
+        "Kanak Raj"
+      ],
+      "submitted": "2026-02-27",
+      "url": "https://arxiv.org/abs/2603.00270v1",
+      "keyword_score": 3,
+      "author_boost": 0,
+      "layer_score": 3,
+      "llm_score": 9,
+      "llm_reason": "This paper presents a novel and well-supported finding about LLM memory mechanisms, drawing strong parallels to cognitive science and offering important implications for understanding and mitigating interference in these models.",
+      "final_score": 12
+    },
+    {
+      "id": "2602.22557v1",
+      "title": "CourtGuard: A Model-Agnostic Framework for Zero-Shot Policy Adaptation in LLM Safety",
+      "abstract": "Current safety mechanisms for Large Language Models (LLMs) rely heavily on static, fine-tuned classifiers that suffer from adaptation rigidity, the inability to enforce new governance rules without expensive retraining. To address this, we introduce CourtGuard, a retrieval-augmented multi-agent framework that reimagines safety evaluation as Evidentiary Debate. By orchestrating an adversarial debate grounded in external policy documents, CourtGuard achieves state-of-the-art performance across 7 safety benchmarks, outperforming dedicated policy-following baselines without fine-tuning. Beyond standard metrics, we highlight two critical capabilities: (1) Zero-Shot Adaptability, where our framework successfully generalized to an out-of-domain Wikipedia Vandalism task (achieving 90\\% accuracy) by swapping the reference policy; and (2) Automated Data Curation and Auditing, where we leveraged CourtGuard to curate and audit nine novel datasets of sophisticated adversarial attacks. Our results demonstrate that decoupling safety logic from model weights offers a robust, interpretable, and adaptable path for meeting current and future regulatory requirements in AI governance.",
+      "authors": [
+        "Umid Suleymanov",
+        "Rufiz Bayramov",
+        "Suad Gafarli",
+        "Seljan Musayeva",
+        "Taghi Mammadov",
+        "Aynur Akhundlu",
+        "Murat Kantarcioglu"
+      ],
+      "submitted": "2026-02-26",
+      "url": "https://arxiv.org/abs/2602.22557v1",
+      "keyword_score": 3,
+      "author_boost": 0,
+      "layer_score": 3,
+      "llm_score": 9,
+      "llm_reason": "CourtGuard presents a novel, retrieval-augmented multi-agent framework addressing a critical limitation of current LLM safety approaches (adaptation rigidity) with strong empirical results, zero-shot adaptability, and implications for automated dataset curation, making it highly impactful.",
+      "final_score": 12
+    },
+    {
+      "id": "2602.20502v1",
+      "title": "ActionEngine: From Reactive to Programmatic GUI Agents via State Machine Memory",
+      "abstract": "Existing Graphical User Interface (GUI) agents operate through step-by-step calls to vision language models--taking a screenshot, reasoning about the next action, executing it, then repeating on the new page--resulting in high costs and latency that scale with the number of reasoning steps, and limited accuracy due to no persistent memory of previously visited pages.\n  We propose ActionEngine, a training-free framework that transitions from reactive execution to programmatic planning through a novel two-agent architecture: a Crawling Agent that constructs an updatable state-machine memory of the GUIs through offline exploration, and an Execution Agent that leverages this memory to synthesize complete, executable Python programs for online task execution.\n  To ensure robustness against evolving interfaces, execution failures trigger a vision-based re-grounding fallback that repairs the failed action and updates the memory.\n  This design drastically improves both efficiency and accuracy: on Reddit tasks from the WebArena benchmark, our agent achieves 95% task success with on average a single LLM call, compared to 66% for the strongest vision-only baseline, while reducing cost by 11.8x and end-to-end latency by 2x.\n  Together, these components yield scalable and reliable GUI interaction by combining global programmatic planning, crawler-validated action templates, and node-level execution with localized validation and repair.",
+      "authors": [
+        "Hongbin Zhong",
+        "Fazle Faisal",
+        "Luis Fran\u00e7a",
+        "Tanakorn Leesatapornwongsa",
+        "Adriana Szekeres",
+        "Kexin Rong",
+        "Suman Nath"
+      ],
+      "submitted": "2026-02-24",
+      "url": "https://arxiv.org/abs/2602.20502v1",
+      "keyword_score": 3,
+      "author_boost": 0,
+      "layer_score": 3,
+      "llm_score": 9,
+      "llm_reason": "This paper presents a novel two-agent architecture with a state machine memory to address key limitations of existing GUI agents, demonstrating significant improvements in efficiency, accuracy, and robustness, suggesting high potential research impact.",
+      "final_score": 12
+    }
+  ]
+}
