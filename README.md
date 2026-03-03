@@ -7,7 +7,7 @@
 ![arXiv cs.AI](https://img.shields.io/badge/arXiv-cs.AI-red?style=flat)
 ![ZeroClaw Hybrid DB](https://img.shields.io/badge/Memory-ZeroClaw%20Hybrid%20DB-black?style=flat)
 
-A secure, local-first autonomous research assistant that ingests cutting-edge papers in the field of AI, stores structured memory, performs hybrid retrieval, and produces biweekly research intelligence reports. Check out the latest digest [here](https://dhruvq.github.io/Apollo-AI-Research-Analyst/)
+An autonomous research assistant that ingests cutting-edge papers in the field of AI, stores structured memory, performs hybrid retrieval, and produces biweekly research intelligence reports. Check out the latest digest [here](https://dhruvq.github.io/Apollo-AI-Research-Analyst/)
 
 Apollo scrapes arXiv `cs.AI` submissions, filters out the noise down to the top 25 most impactful papers using a rigorous 3-layer pipeline, and stores them in [ZeroClaw](https://github.com/topoteretes/zeroclaw) (a smart local memory db). It leverages `gemma-3-27b-it` for scoring papers to find the most impactful and `gemini-2.5-flash` for answering user queries via a live Telegram bot.
 
