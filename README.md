@@ -17,7 +17,7 @@ Click the thumbnail to watch the demo video.
   <img src="thumbnail.png" alt="Watch Apollo Demo" width="35%">
 </a>
 
-*<small>Note: This project is not affiliated, associated, or in any way officially connected with VEED.</small>*
+*<small>Note: This project is not affiliated, associated, or in any way officially connected with VEED.(Sorry about the watermark!)</small>*
 
 
 ## 🌟 Key Features
