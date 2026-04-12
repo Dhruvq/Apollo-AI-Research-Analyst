@@ -25,11 +25,13 @@ logger = logging.getLogger(__name__)
 
 # ── JSON digest ───────────────────────────────────────────────────────────────
 
-def _write_json_digest(cycle_id: str, papers: list[dict[str, Any]]) -> Path:
+def _write_json_digest(cycle_id: str, papers: list[dict[str, Any]], since_date: str, until_date: str) -> Path:
     DIGESTS_DIR.mkdir(parents=True, exist_ok=True)
     path = DIGESTS_DIR / f"{cycle_id}.json"
     data = {
         "cycle_id": cycle_id,
+        "since_date": since_date,
+        "until_date": until_date,
         "generated": date.today().isoformat(),
         "paper_count": len(papers),
         "papers": papers,
@@ -76,7 +78,7 @@ def _write_md_digest(cycle_id: str, papers: list[dict[str, Any]]) -> Path:
 
 # ── HTML digest ───────────────────────────────────────────────────────────────
 
-def _write_html_digest(cycle_id: str, papers: list[dict[str, Any]], since_date: str, until_date: str) -> Path:
+def _write_html_digest(cycle_id: str, papers: list[dict[str, Any]], since_date: str, until_date: str, all_issues: list[str]) -> Path:
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     env = Environment(loader=FileSystemLoader(str(TEMPLATES_DIR)), autoescape=True)
     template = env.get_template("digest.html.jinja2")
@@ -86,6 +88,7 @@ def _write_html_digest(cycle_id: str, papers: list[dict[str, Any]], since_date: 
         generated=date.today().isoformat(),
         since_date=since_date,
         until_date=until_date,
+        all_issues=all_issues,
     )
     path = DOCS_DIR / f"{cycle_id}.html"
     path.write_text(html, encoding="utf-8")
@@ -95,15 +98,9 @@ def _write_html_digest(cycle_id: str, papers: list[dict[str, Any]], since_date: 
 
 # ── Index page ────────────────────────────────────────────────────────────────
 
-def _update_index(cycle_id: str, papers: list[dict[str, Any]], since_date: str, until_date: str) -> None:
+def _update_index(cycle_id: str, papers: list[dict[str, Any]], since_date: str, until_date: str, all_issues: list[str]) -> None:
     """Regenerate docs/index.html to show the latest digest and link all past issues."""
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
-
-    # Collect all past issue HTML files, sorted newest-first
-    all_issues = sorted(
-        [p.stem for p in DOCS_DIR.glob("????-??-??.html")],
-        reverse=True,
-    )
 
     env = Environment(loader=FileSystemLoader(str(TEMPLATES_DIR)), autoescape=True)
     template = env.get_template("digest.html.jinja2")
@@ -163,10 +160,26 @@ def build_and_publish(
         (digest_url, push_success)
         digest_url — GitHub Pages URL for the new digest HTML page
     """
-    _write_json_digest(cycle_id, papers)
+    _write_json_digest(cycle_id, papers, since_date, until_date)
     _write_md_digest(cycle_id, papers)
-    _write_html_digest(cycle_id, papers, since_date, until_date)
-    _update_index(cycle_id, papers, since_date, until_date)
+
+    # Compute all issues from JSON files since the current issue was just written
+    all_issues = sorted([p.stem for p in DIGESTS_DIR.glob("*.json")], reverse=True)
+
+    # Re-render ALL past html files so their sidebars contain the updated `all_issues`.
+    for issue_id in all_issues:
+        issue_json_path = DIGESTS_DIR / f"{issue_id}.json"
+        try:
+            with open(issue_json_path, "r", encoding="utf-8") as f:
+                issue_data = json.load(f)
+            i_papers = issue_data.get("papers", [])
+            i_since_date = issue_data.get("since_date", issue_id)
+            i_until_date = issue_data.get("until_date", issue_id)
+            _write_html_digest(issue_id, i_papers, i_since_date, i_until_date, all_issues)
+        except Exception as e:
+            logger.error(f"Failed to regenerate HTML for {issue_id}: {e}")
+
+    _update_index(cycle_id, papers, since_date, until_date, all_issues)
 
     # Derive the GitHub Pages URL from git remote
     digest_url = _get_pages_url(cycle_id)

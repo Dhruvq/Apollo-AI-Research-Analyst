@@ -27,7 +27,7 @@ Click the thumbnail to watch the demo video.
   1. **Keyword Scoring**: Matches abstract/title against high-signal AI terms (RAG, multi-agent, alignement, etc).
   2. **Author Boost**: Upweighs research from a curated list of ~40 top AI researchers/labs.
   3. **LLM Evaluation**: `gemma-3-27b-it` evaluates the top 150 candidates and scores them 1-10 on novelty and impact.
-- **Static Website Digests**: Automatically compiles the top 25 papers into a dark-themed [GitHub Pages HTML digest](https://dhruvq.github.io/Apollo-AI-Research-Analyst/).
+- **Static Website Digests**: Automatically compiles the top 25 papers into a dark-themed [GitHub Pages HTML digest](https://dhruvq.github.io/Apollo-AI-Research-Analyst/) and dynamically reconstructs older issues so their navigation sidebars reflect the complete history.
 - **ZeroClaw Memory Integration**: Persistently stores all approved papers in ZeroClaw's local SQLite DB with hybrid search capabilities (Vector + Keyword).
 - **Interactive Telegram Assistant**: Query previous digest papers interactively via the standalone Python Telegram bot (@ApolloAIResearchBot).
 - **Run-if-Missed Consistency**: The scheduler automatically covers gaps in dates if the machine was offline during a regularly scheduled cycle.

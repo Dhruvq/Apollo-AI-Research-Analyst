@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% if is_index %}Apollo — AI Research Digest{% else %}Apollo Digest {{ cycle_id }}{% endif %}</title>
+  <title>{% if is_index %}Apollo: AI Research Digest{% else %}Apollo Digest {{ cycle_id }}{% endif %}</title>
   <style>
     :root {
       --bg: #0d1117;
@@ -116,10 +116,9 @@
 <div class="container">
 
   <header>
-    <div class="logo">Apollo — Autonomous AI Research Analyst</div>
+    <div class="logo">Apollo: Autonomous AI Research Analyst</div>
     <h1>
-      {% if is_index %}Latest Digest{% else %}Digest{% endif %}
-      &mdash; {{ since_date }} to {{ until_date }}
+      {% if is_index %}Latest Digest{% else %}Digest{% endif %} [{{ since_date }} to {{ until_date }}]
     </h1>
     <div class="meta">
       {{ papers | length }} papers &bull; {{ since_date }} to {{ until_date }} &bull; Generated {{ generated }} &bull;
@@ -129,7 +128,7 @@
 
   {% if all_issues is defined and all_issues | length > 1 %}
   <div class="archive">
-    <h2>Past Issues</h2>
+    <h2>Issues</h2>
     <ul>
       {% for issue in all_issues %}
       <li>
@@ -180,7 +179,7 @@
   {% endfor %}
 
   <footer>
-    Apollo &mdash; Biweekly CS/AI Research Digest &bull;
+    Apollo: Biweekly CS/AI Research Digest &bull;
     Powered by <a href="https://github.com/zeroclaw-labs/zeroclaw">ZeroClaw</a> &amp;
     <a href="https://gemini.google.com/">Gemini</a>
   </footer>

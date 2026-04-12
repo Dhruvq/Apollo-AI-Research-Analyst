@@ -65,12 +65,14 @@ Three output formats are generated per cycle:
 
 | File | Purpose |
 |------|---------|
-| `digests/YYYY-MM-DD.json` | Structured data — full paper metadata, scores, reasons. Committed to repo for programmatic access. |
+| `digests/YYYY-MM-DD.json` | Structured data — full paper metadata, scores, reasons, and temporal boundaries (`since_date`, `until_date`). Committed to repo for programmatic access. |
 | `digests/YYYY-MM-DD.md` | Human-readable markdown — authors, scores, abstract excerpts. Viewable directly on GitHub. |
 | `docs/YYYY-MM-DD.html` | Full newsletter page rendered via Jinja2 template for GitHub Pages. |
 | `docs/index.html` | Homepage — always points to the latest digest with a linked archive of all past issues. |
 
 The HTML template (`templates/digest.html.jinja2`) uses a GitHub-dark colour scheme with score badges colour-coded by impact level (green ≥8, amber ≥6, red <6). Each paper card shows rank, layer scores, LLM reason, abstract, and clickable arXiv link.
+
+**Dynamic Archive Reconstruction**: To ensure all past digests maintain an up-to-date sidebar navigation linking to every issue ever generated, the script automatically parses all existing JSON files in `digests/` (which store historical `since_date` and `until_date` attributes) and statically re-renders every single HTML file in `docs/` on every run. This guarantees perfect navigation consistency across the entire static site archive without requiring a web backend.
 
 After generating files, `digest_builder.py` derives the GitHub Pages URL from the git remote, commits all new files with message `Digest: YYYY-MM-DD`, and pushes to `main`. GitHub Actions (`.github/workflows/pages.yml`) then auto-deploys the `docs/` folder to Pages.
 
