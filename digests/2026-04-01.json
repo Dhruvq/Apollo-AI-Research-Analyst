@@ -1,0 +1,515 @@
+{
+  "cycle_id": "2026-04-01",
+  "generated": "2026-04-11",
+  "paper_count": 25,
+  "papers": [
+    {
+      "id": "2603.28052v1",
+      "title": "Meta-Harness: End-to-End Optimization of Model Harnesses",
+      "abstract": "The performance of large language model (LLM) systems depends not only on model weights, but also on their harness: the code that determines what information to store, retrieve, and present to the model. Yet harnesses are still designed largely by hand, and existing text optimizers are poorly matched to this setting because they compress feedback too aggressively. We introduce Meta-Harness, an outer-loop system that searches over harness code for LLM applications. It uses an agentic proposer that accesses the source code, scores, and execution traces of all prior candidates through a filesystem. On online text classification, Meta-Harness improves over a state-of-the-art context management system by 7.7 points while using 4x fewer context tokens. On retrieval-augmented math reasoning, a single discovered harness improves accuracy on 200 IMO-level problems by 4.7 points on average across five held-out models. On agentic coding, discovered harnesses surpass the best hand-engineered baselines on TerminalBench-2. Together, these results show that richer access to prior experience can enable automated harness engineering.",
+      "authors": [
+        "Yoonho Lee",
+        "Roshen Nair",
+        "Qizheng Zhang",
+        "Kangwook Lee",
+        "Omar Khattab",
+        "Chelsea Finn"
+      ],
+      "submitted": "2026-03-30",
+      "url": "https://arxiv.org/abs/2603.28052v1",
+      "keyword_score": 3,
+      "author_boost": 6,
+      "layer_score": 9,
+      "llm_score": 9,
+      "llm_reason": "This paper presents a novel approach to optimizing LLM harnesses with strong empirical results across diverse tasks, demonstrating significant potential to improve LLM system performance and reduce resource consumption.",
+      "final_score": 18
+    },
+    {
+      "id": "2604.05458v1",
+      "title": "MA-IDS: Multi-Agent RAG Framework for IoT Network Intrusion Detection with an Experience Library",
+      "abstract": "Network Intrusion Detection Systems (NIDS) face important limitations. Signature-based methods are effective for known attack patterns, but they struggle to detect zero-day attacks and often miss modified variants of previously known attacks, while many machine learning approaches offer limited interpretability. These challenges become even more severe in IoT environments because of resource constraints and heterogeneous protocols. To address these issues, we propose MA-IDS, a Multi-Agent Intrusion Detection System that combines Large Language Models (LLMs) with Retrieval Augmented Generation (RAG) for reasoning-driven intrusion detection. The proposed framework grounds LLM reasoning through a persistent, self-building Experience Library. Two specialized agents collaborate through a FAISS-based vector database: a Traffic Classification Agent that retrieves past error rules before each inference, and an Error Analysis Agent that converts misclassifications into human-readable detection rules stored for future retrieval, enabling continual learning through external knowledge accumulation, without modifying the underlying language model. Evaluated on NF-BoT-IoT and NF-ToN-IoT benchmark datasets, MA-IDS achieves Macro F1-Scores of 89.75% and 85.22%, improving over zero-shot baselines of 17% and 4.96% by more than 72 and 80 percentage points. These results are competitive with SVM while providing rule-level explanations for every classification decision, demonstrating that retrieval-augmented reasoning offers a principled path toward explainable, self-improving intrusion detection for IoT networks.",
+      "authors": [
+        "Md Shamimul Islam",
+        "Luis G. Jaimes",
+        "Ayesha S. Dina"
+      ],
+      "submitted": "2026-04-07",
+      "url": "https://arxiv.org/abs/2604.05458v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "The paper presents a novel combination of multi-agent systems, RAG, and LLMs for IoT intrusion detection, addressing key limitations of existing methods with a focus on continual learning and interpretability, suggesting strong potential impact.",
+      "final_score": 13
+    },
+    {
+      "id": "2604.04853v1",
+      "title": "MemMachine: A Ground-Truth-Preserving Memory System for Personalized AI Agents",
+      "abstract": "Large Language Model (LLM) agents require persistent memory to maintain personalization, factual continuity, and long-horizon reasoning, yet standard context-window and retrieval-augmented generation (RAG) pipelines degrade over multi-session interactions. We present MemMachine, an open-source memory system that integrates short-term, long-term episodic, and profile memory within a ground-truth-preserving architecture that stores entire conversational episodes and reduces lossy LLM-based extraction. MemMachine uses contextualized retrieval that expands nucleus matches with surrounding context, improving recall when relevant evidence spans multiple dialogue turns. Across benchmarks, MemMachine achieves strong accuracy-efficiency tradeoffs: on LoCoMo it reaches 0.9169 using gpt4.1-mini; on LongMemEvalS (ICLR 2025), a six-dimension ablation yields 93.0 percent accuracy, with retrieval-stage optimizations -- retrieval depth tuning (+4.2 percent), context formatting (+2.0 percent), search prompt design (+1.8 percent), and query bias correction (+1.4 percent) -- outperforming ingestion-stage gains such as sentence chunking (+0.8 percent). GPT-5-mini exceeds GPT-5 by 2.6 percent when paired with optimized prompts, making it the most cost-efficient setup. Compared to Mem0, MemMachine uses roughly 80 percent fewer input tokens under matched conditions. A companion Retrieval Agent adaptively routes queries among direct retrieval, parallel decomposition, or iterative chain-of-query strategies, achieving 93.2 percent on HotpotQA-hard and 92.6 percent on WikiMultiHop under randomized-noise conditions. These results show that preserving episodic ground truth while layering adaptive retrieval yields robust, efficient long-term memory for personalized LLM agents.",
+      "authors": [
+        "Shu Wang",
+        "Edwin Yu",
+        "Oscar Love",
+        "Tom Zhang",
+        "Tom Wong",
+        "Steve Scargall",
+        "Charles Fan"
+      ],
+      "submitted": "2026-04-06",
+      "url": "https://arxiv.org/abs/2604.04853v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a critical challenge in LLM agents (memory degradation) with a novel architecture (MemMachine) and demonstrates strong empirical results on established and new benchmarks, suggesting significant potential impact on the field of personalized AI agents.",
+      "final_score": 13
+    },
+    {
+      "id": "2604.02211v1",
+      "title": "Multi-Agent Video Recommenders: Evolution, Patterns, and Open Challenges",
+      "abstract": "Video recommender systems are among the most popular and impactful applications of AI, shaping content consumption and influencing culture for billions of users. Traditional single-model recommenders, which optimize static engagement metrics, are increasingly limited in addressing the dynamic requirements of modern platforms. In response, multi-agent architectures are redefining how video recommender systems serve, learn, and adapt to both users and datasets. These agent-based systems coordinate specialized agents responsible for video understanding, reasoning, memory, and feedback, to provide precise, explainable recommendations. In this survey, we trace the evolution of multi-agent video recommendation systems (MAVRS). We combine ideas from multi-agent recommender systems, foundation models, and conversational AI, culminating in the emerging field of large language model (LLM)-powered MAVRS. We present a taxonomy of collaborative patterns and analyze coordination mechanisms across diverse video domains, ranging from short-form clips to educational platforms. We discuss representative frameworks, including early multi-agent reinforcement learning (MARL) systems such as MMRF and recent LLM-driven architectures like MACRec and Agent4Rec, to illustrate these patterns. We also outline open challenges in scalability, multimodal understanding, incentive alignment, and identify research directions such as hybrid reinforcement learning-LLM systems, lifelong personalization and self-improving recommender systems.",
+      "authors": [
+        "Srivaths Ranganathan",
+        "Abhishek Dharmaratnakar",
+        "Anushree Sinha",
+        "Debanshu Das"
+      ],
+      "submitted": "2026-04-02",
+      "url": "https://arxiv.org/abs/2604.02211v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "This survey paper synthesizes a rapidly evolving field, identifies key patterns and challenges, and connects it to broader trends like LLMs, suggesting significant potential to guide future research in video recommendation systems.",
+      "final_score": 13
+    },
+    {
+      "id": "2604.00556v1",
+      "title": "HabitatAgent: An End-to-End Multi-Agent System for Housing Consultation",
+      "abstract": "Housing selection is a high-stakes and largely irreversible decision problem. We study housing consultation as a decision-support interface for housing selection. Existing housing platforms and many LLM-based assistants often reduce this process to ranking or recommendation, resulting in opaque reasoning, brittle multi-constraint handling, and limited guarantees on factuality.\n  We present HabitatAgent, the first LLM-powered multi-agent architecture for end-to-end housing consultation. HabitatAgent comprises four specialized agent roles: Memory, Retrieval, Generation, and Validation. The Memory Agent maintains multi-layer user memory through internal stages for constraint extraction, memory fusion, and verification-gated updates; the Retrieval Agent performs hybrid vector--graph retrieval (GraphRAG); the Generation Agent produces evidence-referenced recommendations and explanations; and the Validation Agent applies multi-tier verification and targeted remediation. Together, these agents provide an auditable and reliable workflow for end-to-end housing consultation.\n  We evaluate HabitatAgent on 100 real user consultation scenarios (300 multi-turn question--answer pairs) under an end-to-end correctness protocol. A strong single-stage baseline (Dense+Rerank) achieves 75% accuracy, while HabitatAgent reaches 95%.",
+      "authors": [
+        "Hongyang Yang",
+        "Yanxin Zhang",
+        "Yang She",
+        "Yue Xiao",
+        "Hao Wu",
+        "Yiyang Zhang",
+        "Jiapeng Hou",
+        "Rongshan Zhang"
+      ],
+      "submitted": "2026-04-01",
+      "url": "https://arxiv.org/abs/2604.00556v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "The paper presents a novel multi-agent system addressing a complex real-world problem with a strong focus on reliability and auditability, utilizing a sophisticated architecture and rigorous evaluation with real user data, suggesting significant potential impact in human-AI interaction and decision support.",
+      "final_score": 13
+    },
+    {
+      "id": "2603.29002v1",
+      "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
+      "abstract": "Modern large language models (LLMs) increasingly depends on efficient long-context processing and generation mechanisms, including sparse attention, retrieval-augmented generation (RAG), and compressed contextual memory, to support complex reasoning. We show that these optimizations can be unified into a four-step memory processing pipeline: Prepare Memory, Compute Relevancy, Retrieval, and Apply to Inference. Through systematic profiling, we identify a 22%-97% memory processing overhead in LLM inference and strong heterogeneity in its computational characteristics. Motivated by this insight, we argue that \\textbf{heterogeneous systems} are well-suited to accelerate memory processing and thus end-to-end inference. We demonstrate this approach on a GPU-FPGA system by offloading sparse, irregular, and memory-bounded operations to FPGAs while retaining compute-intensive operations on GPUs. Evaluated on an AMD MI210 GPU and an Alveo U55C FPGA, our system is $1.04\\sim2.2\\times$ faster and requires $1.11\\sim4.7\\times$ less energy across multiple LLM inference optimizations than the GPU baseline (similar results hold on NVIDIA A100). These results establish heterogeneous systems as a practical direction for efficient LLM memory processing and inform future heterogeneous hardware design.",
+      "authors": [
+        "Zifan He",
+        "Rui Ma",
+        "Yizhou Sun",
+        "Jason Cong"
+      ],
+      "submitted": "2026-03-30",
+      "url": "https://arxiv.org/abs/2603.29002v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "The paper identifies a significant bottleneck in LLM inference, proposes a well-defined pipeline for analysis, and demonstrates a practical and effective heterogeneous acceleration approach with strong experimental results, suggesting substantial potential impact on future LLM system design.",
+      "final_score": 13
+    },
+    {
+      "id": "2603.27910v1",
+      "title": "GAAMA: Graph Augmented Associative Memory for Agents",
+      "abstract": "AI agents that interact with users across multiple sessions require persistent long-term memory to maintain coherent, personalized behavior. Current approaches either rely on flat retrieval-augmented generation (RAG), which loses structural relationships between memories, or use memory compression and vector retrieval that cannot capture the associative structure of multi-session conversations. There are few graph based techniques proposed in the literature, however they still suffer from hub dominated retrieval and poor hierarchical reasoning over evolving memory. We propose GAAMA, a graph-augmented associative memory system that constructs a concept-mediated hierarchical knowledge graph through a three-step pipeline: (1)~verbatim episode preservation from raw conversations, (2)~LLM-based extraction of atomic facts and topic-level concept nodes, and (3)~synthesis of higher-order reflections. The resulting graph uses four node types (episode, fact, reflection, concept) connected by five structural edge types, with concept nodes providing cross-cutting traversal paths that complement semantic similarity. Retrieval combines cosine-similarity-based $k$-nearest neighbor search with edge-type-aware Personalized PageRank (PPR) through an additive scoring function. On the LoCoMo-10 benchmark (1,540 questions across 10 multi-session conversations), GAAMA achieves 78.9\\% mean reward, outperforming a tuned RAG baseline (75.0\\%), HippoRAG (69.9\\%), A-Mem (47.2\\%), and Nemori (52.1\\%). Ablation analysis shows that augmenting graph-traversal-based ranking (Personalized PageRank) with semantic search consistently improves over pure semantic search on graph nodes (+1.0 percentage point overall).",
+      "authors": [
+        "Swarna Kamal Paul",
+        "Shubhendu Sharma",
+        "Nitin Sareen"
+      ],
+      "submitted": "2026-03-29",
+      "url": "https://arxiv.org/abs/2603.27910v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a critical need for long-term memory in AI agents with a novel graph-based approach that tackles limitations of existing RAG and vector retrieval methods, potentially leading to more coherent and personalized agent behavior.",
+      "final_score": 13
+    },
+    {
+      "id": "2603.27404v1",
+      "title": "Heterogeneous Debate Engine: Identity-Grounded Cognitive Architecture for Resilient LLM-Based Ethical Tutoring",
+      "abstract": "Large Language Models (LLMs) are being increasingly used as autonomous agents in complex reasoning tasks, opening the niche for dialectical interactions. However, Multi-Agent systems implemented with systematically unconstrained systems systematically undergo semantic drift and logical deterioration and thus can hardly be used in providing ethical tutoring where a precise answer is required. Current simulation often tends to degenerate into dialectical stagnation, the agents degenerate into recursive concurrence or circular arguments. A critical challenge remains: how to enforce doctrinal fidelity without suppressing the generative flexibility required for dialectical reasoning? To address this niche, we contribute the Heterogeneous Debate Engine (HDE), a cognitive architecture that combines Identity-Grounded Retrieval-Augmented Generation (ID-RAG) for doctrinal fidelity and Heuristic Theory of Mind for strategic opponent modeling. Our evaluation shows that architectural heterogeneity is a crucial variable to stability: contrary doctrinal initializations (e.g., Deontology vs. Utilitarianism) have increased the Argument Complexity Scores of students by an order of magnitude, over baselines. These findings validate the effectiveness of ID-RAG and Heuristic ToM as architectural requirements in maintaining high-fidelity (adversarial) pedagogy.",
+      "authors": [
+        "Jakub Mas\u0142owski",
+        "Jaros\u0142aw A. Chudziak"
+      ],
+      "submitted": "2026-03-28",
+      "url": "https://arxiv.org/abs/2603.27404v1",
+      "keyword_score": 5,
+      "author_boost": 0,
+      "layer_score": 5,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a critical problem in LLM-based debate systems \u2013 maintaining doctrinal fidelity and avoiding stagnation \u2013 with a novel architecture combining ID-RAG and Theory of Mind, showing promising results in improving argument complexity, suggesting significant potential impact in ethical tutoring and multi-agent reasoning.",
+      "final_score": 13
+    },
+    {
+      "id": "2604.06392v1",
+      "title": "Qualixar OS: A Universal Operating System for AI Agent Orchestration",
+      "abstract": "We present Qualixar OS, the first application-layer operating system for universal AI agent orchestration. Unlike kernel-level approaches (AIOS) or single-framework tools (AutoGen, CrewAI), Qualixar OS provides a complete runtime for heterogeneous multi-agent systems spanning 10 LLM providers, 8+ agent frameworks, and 7 transports. We contribute: (1) execution semantics for 12 multi-agent topologies including grid, forest, mesh, and maker patterns; (2) Forge, an LLM-driven team design engine with historical strategy memory; (3) three-layer model routing combining Q-learning, five strategies, and Bayesian POMDP with dynamic multi-provider discovery; (4) a consensus-based judge pipeline with Goodhart detection, JSD drift monitoring, and alignment trilemma navigation; (5) four-layer content attribution with HMAC signing and steganographic watermarks; (6) universal compatibility via the Claw Bridge supporting MCP and A2A protocols with a 25-command Universal Command Protocol; (7) a 24-tab production dashboard with visual workflow builder and skill marketplace. Qualixar OS is validated by 2,821 test cases across 217 event types and 8 quality modules. On a custom 20-task evaluation suite, the system achieves 100% accuracy at a mean cost of $0.000039 per task. Source-available under the Elastic License 2.0.",
+      "authors": [
+        "Varun Pratap Bhardwaj"
+      ],
+      "submitted": "2026-04-07",
+      "url": "https://arxiv.org/abs/2604.06392v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 9,
+      "llm_reason": "This paper addresses a critical emerging need in AI \u2013 orchestrating complex multi-agent systems \u2013 with a highly novel, comprehensive, and rigorously validated operating system, potentially setting a new standard for the field.",
+      "final_score": 13
+    },
+    {
+      "id": "2604.06269v1",
+      "title": "MAT-Cell: A Multi-Agent Tree-Structured Reasoning Framework for Batch-Level Single-Cell Annotation",
+      "abstract": "Automated cellular reasoning faces a core dichotomy: supervised methods fall into the Reference Trap and fail to generalize to out-of-distribution cell states, while large language models (LLMs), without grounded biological priors, suffer from a Signal-to-Noise Paradox that produces spurious associations. We propose MAT-Cell, a neuro-symbolic reasoning framework that reframes single-cell analysis from black-box classification into constructive, verifiable proof generation. MAT-Cell injects symbolic constraints through adaptive Retrieval-Augmented Generation (RAG) to ground neural reasoning in biological axioms and reduce transcriptomic noise. It further employs a dialectic verification process with homogeneous rebuttal agents to audit and prune reasoning paths, forming syllogistic derivation trees that enforce logical consistency.Across large-scale and cross-species benchmarks, MAT-Cell significantly outperforms state-of-the-art (SOTA) models and maintains robust per-formance in challenging scenarios where baselinemethods severely degrade. Code is available at https://gith ub.com/jiangliu91/MAT-Cell-A-Mul ti-Agent-Tree-Structured-Reasoni ng-Framework-for-Batch-Level-Sin gle-Cell-Annotation.",
+      "authors": [
+        "Yehui Yang",
+        "Zelin Zang",
+        "Changxi Chi",
+        "Jingbo Zhou",
+        "Xienan Zheng",
+        "Yuzhe Jia",
+        "Chang Yu",
+        "Jinlin Wu",
+        "Fuji Yang",
+        "Jiebo Luo",
+        "Zhen Lei",
+        "Stan Z. Li"
+      ],
+      "submitted": "2026-04-07",
+      "url": "https://arxiv.org/abs/2604.06269v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 9,
+      "llm_reason": "This paper addresses a critical problem in single-cell analysis with a novel neuro-symbolic framework that combines the strengths of LLMs and biological priors, demonstrating strong performance and offering a potentially impactful approach to overcome limitations of existing methods.",
+      "final_score": 13
+    },
+    {
+      "id": "2604.01599v1",
+      "title": "ByteRover: Agent-Native Memory Through LLM-Curated Hierarchical Context",
+      "abstract": "Memory-Augmented Generation (MAG) extends large language models with external memory to support long-context reasoning, but existing approaches universally treat memory as an external service that agents call into, delegating storage to separate pipelines of chunking, embedding, and graph extraction. This architectural separation means the system that stores knowledge does not understand it, leading to semantic drift between what the agent intended to remember and what the pipeline actually captured, loss of coordination context across agents, and fragile recovery after failures. In this paper, we propose ByteRover, an agent-native memory architecture that inverts the memory pipeline: the same LLM that reasons about a task also curates, structures, and retrieves knowledge. ByteRover represents knowledge in a hierarchical Context Tree, a file-based knowledge graph organized as Domain, Topic, Subtopic, and Entry, where each entry carries explicit relations, provenance, and an Adaptive Knowledge Lifecycle (AKL) with importance scoring, maturity tiers, and recency decay. Retrieval uses a 5-tier progressive strategy that resolves most queries at sub-100 ms latency without LLM calls, escalating to agentic reasoning only for novel questions. Experiments on LoCoMo and LongMemEval demonstrate that ByteRover achieves state-of-the-art accuracy on LoCoMo and competitive results on LongMemEval while requiring zero external infrastructure, no vector database, no graph database, no embedding service, with all knowledge stored as human-readable markdown files on the local filesystem.",
+      "authors": [
+        "Andy Nguyen",
+        "Danh Doan",
+        "Hoang Pham",
+        "Bao Ha",
+        "Dat Pham",
+        "Linh Nguyen",
+        "Hieu Nguyen",
+        "Thien Nguyen",
+        "Cuong Do",
+        "Phat Nguyen",
+        "Toan Nguyen"
+      ],
+      "submitted": "2026-04-02",
+      "url": "https://arxiv.org/abs/2604.01599v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 9,
+      "llm_reason": "ByteRover presents a novel agent-native memory architecture addressing key limitations of existing MAG systems with a well-defined hierarchical structure and efficient retrieval, potentially impacting the field of long-context reasoning and multi-agent systems.",
+      "final_score": 13
+    },
+    {
+      "id": "2604.08256v1",
+      "title": "HyperMem: Hypergraph Memory for Long-Term Conversations",
+      "abstract": "Long-term memory is essential for conversational agents to maintain coherence, track persistent tasks, and provide personalized interactions across extended dialogues. However, existing approaches as Retrieval-Augmented Generation (RAG) and graph-based memory mostly rely on pairwise relations, which can hardly capture high-order associations, i.e., joint dependencies among multiple elements, causing fragmented retrieval. To this end, we propose HyperMem, a hypergraph-based hierarchical memory architecture that explicitly models such associations using hyperedges. Particularly, HyperMem structures memory into three levels: topics, episodes, and facts, and groups related episodes and their facts via hyperedges, unifying scattered content into coherent units. Leveraging this structure, we design a hybrid lexical-semantic index and a coarse-to-fine retrieval strategy, supporting accurate and efficient retrieval of high-order associations. Experiments on the LoCoMo benchmark show that HyperMem achieves state-of-the-art performance with 92.73% LLM-as-a-judge accuracy, demonstrating the effectiveness of HyperMem for long-term conversations.",
+      "authors": [
+        "Juwei Yue",
+        "Chuanrui Hu",
+        "Jiawei Sheng",
+        "Zuyi Zhou",
+        "Wenyuan Zhang",
+        "Tingwen Liu",
+        "Li Guo",
+        "Yafeng Deng"
+      ],
+      "submitted": "2026-04-09",
+      "url": "https://arxiv.org/abs/2604.08256v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a key challenge in long-term conversation modeling with a novel hypergraph approach, demonstrating strong empirical results on a standard benchmark and offering potentially significant improvements over existing methods like RAG.",
+      "final_score": 12
+    },
+    {
+      "id": "2604.08178v1",
+      "title": "Aligning Agents via Planning: A Benchmark for Trajectory-Level Reward Modeling",
+      "abstract": "In classical Reinforcement Learning from Human Feedback (RLHF), Reward Models (RMs) serve as the fundamental signal provider for model alignment. As Large Language Models evolve into agentic systems capable of autonomous tool invocation and complex reasoning, the paradigm of reward modeling faces unprecedented challenges--most notably, the lack of benchmarks specifically designed to assess RM capabilities within tool-integrated environments. To address this gap, we present Plan-RewardBench, a trajectory-level preference benchmark designed to evaluate how well judges distinguish preferred versus distractor agent trajectories in complex tool-using scenarios. Plan-RewardBench covers four representative task families -- (i) Safety Refusal, (ii) Tool-Irrelevance / Unavailability, (iii) Complex Planning, and (iv) Robust Error Recovery -- comprising validated positive trajectories and confusable hard negatives constructed via multi-model natural rollouts, rule-based perturbations, and minimal-edit LLM perturbations. We benchmark representative RMs (generative, discriminative, and LLM-as-Judge) under a unified pairwise protocol, reporting accuracy trends across varying trajectory lengths and task categories. Furthermore, we provide diagnostic analyses of prevalent failure modes. Our results reveal that all three evaluator families face substantial challenges, with performance degrading sharply on long-horizon trajectories, underscoring the necessity for specialized training in agentic, trajectory-level reward modeling. Ultimately, Plan-RewardBench aims to serve as both a practical evaluation suite and a reusable blueprint for constructing agentic planning preference data.",
+      "authors": [
+        "Jiaxuan Wang",
+        "Yulan Hu",
+        "Wenjin Yang",
+        "Zheng Pan",
+        "Xin Li",
+        "Lan-Zhe Guo"
+      ],
+      "submitted": "2026-04-09",
+      "url": "https://arxiv.org/abs/2604.08178v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This paper addresses a critical gap in RLHF evaluation for agentic systems with a well-defined benchmark and thorough analysis of existing reward models, suggesting strong potential for guiding future research in alignment and robustness.",
+      "final_score": 12
+    },
+    {
+      "id": "2604.05418v1",
+      "title": "VideoStir: Understanding Long Videos via Spatio-Temporally Structured and Intent-Aware RAG",
+      "abstract": "Scaling multimodal large language models (MLLMs) to long videos is constrained by limited context windows. While retrieval-augmented generation (RAG) is a promising remedy by organizing query-relevant visual evidence into a compact context, most existing methods (i) flatten videos into independent segments, breaking their inherent spatio-temporal structure, and (ii) depend on explicit semantic matching, which can miss cues that are implicitly relevant to the query's intent. To overcome these limitations, we propose VideoStir, a structured and intent-aware long-video RAG framework. It firstly structures a video as a spatio-temporal graph at clip level, and then performs multi-hop retrieval to aggregate evidence across distant yet contextually related events. Furthermore, it introduces an MLLM-backed intent-relevance scorer that retrieves frames based on their alignment with the query's reasoning intent. To support this capability, we curate IR-600K, a large-scale dataset tailored for learning frame-query intent alignment. Experiments show that VideoStir is competitive with state-of-the-art baselines without relying on auxiliary information, highlighting the promise of shifting long-video RAG from flattened semantic matching to structured, intent-aware reasoning. Codes and checkpoints are available at Github.",
+      "authors": [
+        "Honghao Fu",
+        "Miao Xu",
+        "Yiwei Wang",
+        "Dailing Zhang",
+        "Liu Jun",
+        "Yujun Cai"
+      ],
+      "submitted": "2026-04-07",
+      "url": "https://arxiv.org/abs/2604.05418v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This paper addresses a significant challenge in long-video understanding with a novel approach combining spatio-temporal reasoning and intent alignment, supported by a new dataset, suggesting strong potential for impact in the field of multimodal LLMs.",
+      "final_score": 12
+    },
+    {
+      "id": "2604.04660v1",
+      "title": "Springdrift: An Auditable Persistent Runtime for LLM Agents with Case-Based Memory, Normative Safety, and Ambient Self-Perception",
+      "abstract": "We present Springdrift, a persistent runtime for long-lived LLM agents. The system integrates an auditable execution substrate (append-only memory, supervised processes, git-backed recovery), a case-based reasoning memory layer with hybrid retrieval (evaluated against a dense cosine baseline), a deterministic normative calculus for safety gating with auditable axiom trails, and continuous ambient self-perception via a structured self-state representation (the sensorium) injected each cycle without tool calls. These properties support behaviours difficult to achieve in session-bounded systems: cross-session task continuity, cross-channel context maintenance, end-to-end forensic reconstruction of decisions, and self-diagnostic behaviour. We report on a single-instance deployment over 23 days (19 operating days), during which the agent diagnosed its own infrastructure bugs, classified failure modes, identified an architectural vulnerability, and maintained context across email and web channels -- without explicit instruction. We introduce the term Artificial Retainer for this category: a non-human system with persistent memory, defined authority, domain-specific autonomy, and forensic accountability in an ongoing relationship with a specific principal -- distinguished from software assistants and autonomous agents, drawing on professional retainer relationships and the bounded autonomy of trained working animals. This is a technical report on a systems design and deployment case study, not a benchmark-driven evaluation. Evidence is from a single instance with a single operator, presented as illustration of what these architectural properties can support in practice. Implemented in approximately Gleam on Erlang/OTP. Code, artefacts, and redacted operational logs will be available at https://github.com/seamus-brady/springdrift upon publication.",
+      "authors": [
+        "Seamus Brady"
+      ],
+      "submitted": "2026-04-06",
+      "url": "https://arxiv.org/abs/2604.04660v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "The paper presents a novel and comprehensive runtime system addressing key challenges in long-lived LLM agents \u2013 persistence, safety, and self-awareness \u2013 with a compelling demonstration of emergent self-diagnostic capabilities, suggesting significant research impact.",
+      "final_score": 12
+    },
+    {
+      "id": "2604.04503v2",
+      "title": "Memory Intelligence Agent",
+      "abstract": "Deep research agents (DRAs) integrate LLM reasoning with external tools. Memory systems enable DRAs to leverage historical experiences, which are essential for efficient reasoning and autonomous evolution. Existing methods rely on retrieving similar trajectories from memory to aid reasoning, while suffering from key limitations of ineffective memory evolution and increasing storage and retrieval costs. To address these problems, we propose a novel Memory Intelligence Agent (MIA) framework, consisting of a Manager-Planner-Executor architecture. Memory Manager is a non-parametric memory system that can store compressed historical search trajectories. Planner is a parametric memory agent that can produce search plans for questions. Executor is another agent that can search and analyze information guided by the search plan. To build the MIA framework, we first adopt an alternating reinforcement learning paradigm to enhance cooperation between the Planner and the Executor. Furthermore, we enable the Planner to continuously evolve during test-time learning, with updates performed on-the-fly alongside inference without interrupting the reasoning process. Additionally, we establish a bidirectional conversion loop between parametric and non-parametric memories to achieve efficient memory evolution. Finally, we incorporate a reflection and an unsupervised judgment mechanisms to boost reasoning and self-evolution in the open world. Extensive experiments across eleven benchmarks demonstrate the superiority of MIA.",
+      "authors": [
+        "Jingyang Qiao",
+        "Weicheng Meng",
+        "Yu Cheng",
+        "Zhihang Lin",
+        "Zhizhong Zhang",
+        "Xin Tan",
+        "Jingyu Gong",
+        "Kun Shao",
+        "Yuan Xie"
+      ],
+      "submitted": "2026-04-06",
+      "url": "https://arxiv.org/abs/2604.04503v2",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This paper addresses key limitations in DRA memory systems with a novel framework and test-time learning, demonstrating strong potential for improving agent efficiency and scalability, though impact will depend on empirical validation and comparison to state-of-the-art.",
+      "final_score": 12
+    },
+    {
+      "id": "2604.02834v1",
+      "title": "ESL-Bench: An Event-Driven Synthetic Longitudinal Benchmark for Health Agents",
+      "abstract": "Longitudinal health agents must reason across multi-source trajectories that combine continuous device streams, sparse clinical exams, and episodic life events - yet evaluating them is hard: real-world data cannot be released at scale, and temporally grounded attribution questions seldom admit definitive answers without structured ground truth. We present ESL-Bench, an event-driven synthesis framework and benchmark providing 100 synthetic users, each with a 1-5 year trajectory comprising a health profile, a multi-phase narrative plan, daily device measurements, periodic exam records, and an event log with explicit per-indicator impact parameters. Each indicator follows a baseline stochastic process driven by discrete events with sigmoid-onset, exponential-decay kernels under saturation and projection constraints; a hybrid pipeline delegates sparse semantic artifacts to LLM-based planning and dense indicator dynamics to algorithmic simulation with hard physiological bounds. Users are each paired with 100 evaluation queries across five dimensions - Lookup, Trend, Comparison, Anomaly, Explanation - stratified into Easy, Medium, and Hard tiers, with all ground-truth answers programmatically computable from the recorded event-indicator relationships. Evaluating 13 methods spanning LLMs with tools, DB-native agents, and memory-augmented RAG, we find that DB agents (48-58%) substantially outperform memory RAG baselines (30-38%), with the gap concentrated on Comparison and Explanation queries where multi-hop reasoning and evidence attribution are required.",
+      "authors": [
+        "Chao Li",
+        "Cailiang Liu",
+        "Ang Gao",
+        "Kexin Deng",
+        "Shu Zhang",
+        "Langping Xu",
+        "Xiaotong Shi",
+        "Xionghao Ding",
+        "Jian Pei",
+        "Xun Jiang"
+      ],
+      "submitted": "2026-04-03",
+      "url": "https://arxiv.org/abs/2604.02834v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "ESL-Bench addresses a critical gap in evaluating longitudinal health agents with a novel synthetic benchmark offering comprehensive ground truth and realistic complexity, potentially accelerating research in this important area.",
+      "final_score": 12
+    },
+    {
+      "id": "2604.02409v1",
+      "title": "LumiVideo: An Intelligent Agentic System for Video Color Grading",
+      "abstract": "Video color grading is a critical post-production process that transforms flat, log-encoded raw footage into emotionally resonant cinematic visuals. Existing automated methods act as static, black-box executors that directly output edited pixels, lacking both interpretability and the iterative control required by professionals. We introduce LumiVideo, an agentic system that mimics the cognitive workflow of professional colorists through four stages: Perception, Reasoning, Execution, and Reflection. Given only raw log video, LumiVideo autonomously produces a cinematic base grade by analyzing the scene's physical lighting and semantic content. Its Reasoning engine synergizes an LLM's internalized cinematic knowledge with a Retrieval-Augmented Generation (RAG) framework via a Tree of Thoughts (ToT) search to navigate the non-linear color parameter space. Rather than generating pixels, the system compiles the deduced parameters into industry-standard ASC-CDL configurations and a globally consistent 3D LUT, analytically guaranteeing temporal consistency. An optional Reflection loop then allows creators to refine the result via natural language feedback. We further introduce LumiGrade, the first log-encoded video benchmark for evaluating automated grading. Experiments show that LumiVideo approaches human expert quality in fully automatic mode while enabling precise iterative control when directed.",
+      "authors": [
+        "Yuchen Guo",
+        "Junli Gong",
+        "Hongmin Cai",
+        "Yiu-ming Cheung",
+        "Weifeng Su"
+      ],
+      "submitted": "2026-04-02",
+      "url": "https://arxiv.org/abs/2604.02409v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This paper presents a novel agentic system for video color grading that combines LLMs, RAG, and ToT with a focus on interpretability and control, addressing a significant gap in automated video editing and offering potentially broad implications for creative workflows.",
+      "final_score": 12
+    },
+    {
+      "id": "2604.02276v1",
+      "title": "De Jure: Iterative LLM Self-Refinement for Structured Extraction of Regulatory Rules",
+      "abstract": "Regulatory documents encode legally binding obligations that LLM-based systems must respect. Yet converting dense, hierarchically structured legal text into machine-readable rules remains a costly, expert-intensive process. We present De Jure, a fully automated, domain-agnostic pipeline for extracting structured regulatory rules from raw documents, requiring no human annotation, domain-specific prompting, or annotated gold data. De Jure operates through four sequential stages: normalization of source documents into structured Markdown; LLM-driven semantic decomposition into structured rule units; multi-criteria LLM-as-a-judge evaluation across 19 dimensions spanning metadata, definitions, and rule semantics; and iterative repair of low-scoring extractions within a bounded regeneration budget, where upstream components are repaired before rule units are evaluated. We evaluate De Jure across four models on three regulatory corpora spanning finance, healthcare, and AI governance. On the finance domain, De Jure yields consistent and monotonic improvement in extraction quality, reaching peak performance within three judge-guided iterations. De Jure generalizes effectively to healthcare and AI governance, maintaining high performance across both open- and closed-source models. In a downstream compliance question-answering evaluation via RAG, responses grounded in De Jure extracted rules are preferred over prior work in 73.8% of cases at single-rule retrieval depth, rising to 84.0% under broader retrieval, confirming that extraction fidelity translates directly into downstream utility. These results demonstrate that explicit, interpretable evaluation criteria can substitute for human annotation in complex regulatory domains, offering a scalable and auditable path toward regulation-grounded LLM alignment.",
+      "authors": [
+        "Keerat Guliani",
+        "Deepkamal Gill",
+        "David Landsman",
+        "Nima Eshraghi",
+        "Krishna Kumar",
+        "Lovedeep Gondara"
+      ],
+      "submitted": "2026-04-02",
+      "url": "https://arxiv.org/abs/2604.02276v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This paper addresses a significant challenge in applying LLMs to a high-stakes domain (regulatory compliance) with a novel iterative self-refinement approach, strong methodological rigor through multi-criteria evaluation, and broad implications for automating legal rule extraction.",
+      "final_score": 12
+    },
+    {
+      "id": "2604.01413v2",
+      "title": "Adaptive Stopping for Multi-Turn LLM Reasoning",
+      "abstract": "Large Language Models (LLMs) increasingly rely on multi-turn reasoning and interaction, such as adaptive retrieval-augmented generation (RAG) and ReAct-style agents, to answer difficult questions. These methods improve accuracy by iteratively retrieving information, reasoning, or acting, but introduce a key challenge: \\textbf{When should the model stop?} Existing approaches rely on heuristic stopping rules or fixed turn budgets and provide no formal guarantees that the final prediction still contains the correct answer. This limitation is particularly problematic in high-stakes domains such as finance and healthcare, where unnecessary turns increase cost and latency, while stopping too early risks incorrect decisions. Conformal prediction (CP) provides formal coverage guarantees, but existing LLM-CP methods only apply to a single model output and cannot handle multi-turn pipelines with adaptive stopping. To address this gap, we propose Multi-Turn Language Models with Conformal Prediction (MiCP), the first CP framework for multi-turn reasoning. MiCP allocates different error budgets across turns, enabling the model to stop early while maintaining an overall coverage guarantee. We demonstrate MiCP on adaptive RAG and ReAct, where it achieves the target coverage on both single-hop and multi-hop question answering benchmarks while reducing the number of turns, inference cost, and prediction set size. We further introduce a new metric that jointly evaluates coverage validity and answering efficiency.",
+      "authors": [
+        "Xiaofan Zhou",
+        "Huy Nguyen",
+        "Bo Yu",
+        "Chenxi Liu",
+        "Lu Cheng"
+      ],
+      "submitted": "2026-04-01",
+      "url": "https://arxiv.org/abs/2604.01413v2",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This paper addresses a critical and practical problem in LLM reasoning \u2013 adaptive stopping \u2013 with a novel application of conformal prediction to multi-turn pipelines, offering both theoretical guarantees and potential for real-world impact in high-stakes domains.",
+      "final_score": 12
+    },
+    {
+      "id": "2604.01152v1",
+      "title": "Brainstacks: Cross-Domain Cognitive Capabilities via Frozen MoE-LoRA Stacks for Continual LLM Learning",
+      "abstract": "We present Brainstacks, a modular architecture for continual multi-domain fine-tuning of large language models that packages domain expertise as frozen adapter stacks composing additively on a shared frozen base at inference. Five interlocking components: (1) MoE-LoRA with Shazeer-style noisy top-2 routing across all seven transformer projections under QLoRA 4-bit quantization with rsLoRA scaling; (2) an inner loop performing residual boosting by freezing trained stacks and adding new ones; (3) an outer loop training sequential domain-specific stacks with curriculum-ordered dependencies; (4) null-space projection via randomized SVD constraining new stacks to subspaces orthogonal to prior directions, achieving zero forgetting in isolation; (5) an outcome-based sigmoid meta-router trained on empirically discovered domain-combination targets that selectively weights stacks, enabling cross-domain composition. Two boundary experiments: (6) PSN pretraining on a randomly initialized model; (7) per-domain RL (DPO/GRPO) validating compatibility with post-SFT alignment. Validated on TinyLlama-1.1B (4 domains, 9 stacks) and Gemma 3 12B IT (5 domains, 10 stacks), MoE-LoRA achieves 2.5x faster convergence than parameter-matched single LoRA, residual boosting breaks through the single-stack ceiling, and the routed system recovers generation quality destroyed by ungated stack accumulation. The central finding: the outcome-based router discovers that domain stacks encode transferable cognitive primitives (instruction-following clarity, numerical reasoning, procedural logic, chain-of-thought structure) rather than domain-specific knowledge, with medical prompts routing to chat+math stacks in 97% of cases despite zero medical data in those stacks.",
+      "authors": [
+        "Mohammad R. Abu Ayyash"
+      ],
+      "submitted": "2026-04-01",
+      "url": "https://arxiv.org/abs/2604.01152v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "The paper presents a novel and technically rigorous approach to continual learning for LLMs with promising results on multiple models and domains, potentially impacting how LLMs adapt to new information without catastrophic forgetting.",
+      "final_score": 12
+    },
+    {
+      "id": "2604.00901v2",
+      "title": "Experience as a Compass: Multi-agent RAG with Evolving Orchestration and Agent Prompts",
+      "abstract": "Multi-agent Retrieval-Augmented Generation (RAG), wherein each agent takes on a specific role, supports hard queries that require multiple steps and sources, or complex reasoning. Existing approaches, however, rely on static agent behaviors and fixed orchestration strategies, leading to brittle performance on diverse, multi-hop tasks. We identify two key limitations: the lack of continuously adaptive orchestration mechanisms and the absence of behavior-level learning for individual agents. To this end, we propose HERA, a hierarchical framework that jointly evolves multi-agent orchestration and role-specific agent prompts. At the global level, HERA optimizes query-specific agent topologies through reward-guided sampling and experience accumulation. At the local level, Role-Aware Prompt Evolution refines agent behaviors via credit assignment and dual-axes adaptation along operational and behavioral principles, enabling targeted, role-conditioned improvements. On six knowledge-intensive benchmarks, HERA achieves an average improvement of 38.69\\% over recent baselines while maintaining robust generalization and token efficiency. Topological analyses reveal emergent self-organization, where sparse exploration yields compact, high-utility multi-agent networks, demonstrating both efficient coordination and robust reasoning.",
+      "authors": [
+        "Sha Li",
+        "Naren Ramakrishnan"
+      ],
+      "submitted": "2026-04-01",
+      "url": "https://arxiv.org/abs/2604.00901v2",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses key limitations in multi-agent RAG with a novel hierarchical framework for evolving orchestration and agent prompts, demonstrating significant performance gains and emergent behavior, suggesting strong research impact.",
+      "final_score": 12
+    },
+    {
+      "id": "2604.00131v1",
+      "title": "Oblivion: Self-Adaptive Agentic Memory Control through Decay-Driven Activation",
+      "abstract": "Human memory adapts through selective forgetting: experiences become less accessible over time but can be reactivated by reinforcement or contextual cues. In contrast, memory-augmented LLM agents rely on \"always-on\" retrieval and \"flat\" memory storage, causing high interference and latency as histories grow. We introduce Oblivion, a memory control framework that casts forgetting as decay-driven reductions in accessibility, not explicit deletion. Oblivion decouples memory control into read and write paths. The read path decides when to consult memory, based on agent uncertainty and memory buffer sufficiency, avoiding redundant always-on access. The write path decides what to strengthen, by reinforcing memories contributing to forming the response. Together, this enables hierarchical memory organization that maintains persistent high-level strategies while dynamically loading details as needed. We evaluate on both static and dynamic long-horizon interaction benchmarks. Results show that Oblivion dynamically adapts memory access and reinforcement, balancing learning and forgetting under shifting contexts, highlighting that memory control is essential for effective LLM-agentic reasoning. The source code is available at https://github.com/nec-research/oblivion.",
+      "authors": [
+        "Ashish Rana",
+        "Chia-Chien Hung",
+        "Qumeng Sun",
+        "Julian Martin Kunkel",
+        "Carolin Lawrence"
+      ],
+      "submitted": "2026-03-31",
+      "url": "https://arxiv.org/abs/2604.00131v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "This paper addresses a critical limitation of LLM agents \u2013 memory management \u2013 with a novel approach inspired by human cognition, demonstrating strong potential for improving long-term reasoning and performance.",
+      "final_score": 12
+    },
+    {
+      "id": "2603.29194v1",
+      "title": "Multi-Layered Memory Architectures for LLM Agents: An Experimental Evaluation of Long-Term Context Retention",
+      "abstract": "Long-horizon dialogue systems suffer from semanticdrift and unstable memory retention across extended sessions. This paper presents a Multi-Layer Memory Framework that decomposes dialogue history into working, episodic, and semantic layers with adaptive retrieval gating and retention regularization. The architecture controls cross-session drift while maintaining bounded context growth and computational efficiency. Experiments on LOCOMO, LOCCO, and LoCoMo show improved performance, achieving 46.85 Success Rate, 0.618 overall F1 with 0.594 multi-hop F1, and 56.90% six-period retention while reducing false memory rate to 5.1% and context usage to 58.40%. Results confirm enhanced long-term retention and reasoning stability under constrained context budgets.",
+      "authors": [
+        "Sunil Tiwari",
+        "Payal Fofadiya"
+      ],
+      "submitted": "2026-03-31",
+      "url": "https://arxiv.org/abs/2603.29194v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "The paper addresses a critical challenge in LLM agents (long-term memory) with a novel architecture and demonstrates strong empirical results on established benchmarks, suggesting significant potential impact on the field.",
+      "final_score": 12
+    },
+    {
+      "id": "2603.28488v1",
+      "title": "Courtroom-Style Multi-Agent Debate with Progressive RAG and Role-Switching for Controversial Claim Verification",
+      "abstract": "Large language models (LLMs) remain unreliable for high-stakes claim verification due to hallucinations and shallow reasoning. While retrieval-augmented generation (RAG) and multi-agent debate (MAD) address this, they are limited by one-pass retrieval and unstructured debate dynamics. We propose a courtroom-style multi-agent framework, PROClaim, that reformulates verification as a structured, adversarial deliberation. Our approach integrates specialized roles (e.g., Plaintiff, Defense, Judge) with Progressive RAG (P-RAG) to dynamically expand and refine the evidence pool during the debate. Furthermore, we employ evidence negotiation, self-reflection, and heterogeneous multi-judge aggregation to enforce calibration, robustness, and diversity. In zero-shot evaluations on the Check-COVID benchmark, PROClaim achieves 81.7% accuracy, outperforming standard multi-agent debate by 10.0 percentage points, with P-RAG driving the primary performance gains (+7.5 pp). We ultimately demonstrate that structural deliberation and model heterogeneity effectively mitigate systematic biases, providing a robust foundation for reliable claim verification. Our code and data are publicly available at https://github.com/mnc13/PROClaim.",
+      "authors": [
+        "Masnun Nuha Chowdhury",
+        "Nusrat Jahan Beg",
+        "Umme Hunny Khan",
+        "Syed Rifat Raiyan",
+        "Md Kamrul Hasan",
+        "Hasan Mahmud"
+      ],
+      "submitted": "2026-03-30",
+      "url": "https://arxiv.org/abs/2603.28488v1",
+      "keyword_score": 4,
+      "author_boost": 0,
+      "layer_score": 4,
+      "llm_score": 8,
+      "llm_reason": "The paper presents a novel framework combining progressive RAG, role-switching, and structured debate for claim verification, demonstrating significant performance gains and addressing key limitations of existing methods with potential for broader impact in reliable information systems.",
+      "final_score": 12
+    }
+  ]
+}
